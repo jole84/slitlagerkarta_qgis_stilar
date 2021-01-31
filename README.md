@@ -32,14 +32,14 @@ my_south/middle/north
 
 ## QMetaTiles Render:
 
-# Stratvag:
+### Stratvag:
 512
 PNG
 Minimum zoom 9
 Maximum zoom 12
 40x40
 
-# Terrängkartan:
+### Terrängkartan:
 512
 JPG
 Minimum zoom 8
