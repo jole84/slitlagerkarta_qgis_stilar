@@ -30,7 +30,7 @@
       <symbol force_rhr="0" clip_to_extent="1" type="fill" name="0" alpha="1">
         <layer class="SimpleFill" enabled="1" locked="0" pass="0">
           <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="color" v="236,236,236,255"/>
+          <prop k="color" v="214,214,214,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
