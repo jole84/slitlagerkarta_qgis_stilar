@@ -5,6 +5,7 @@ Stilar till slitlagerkartan för QGIS
 1188861.3565,2205887.5321,7422418.8299,8727370.2243 [EPSG:3857]
 
 ### Lagerordning
+	ATK-mätplats
 	tx  
 	vs  
 	fs  
