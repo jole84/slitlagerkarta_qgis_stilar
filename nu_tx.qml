@@ -59,7 +59,7 @@
         <substitutions/>
       </text-style>
       <text-format formatNumbers="0" leftDirectionSymbol="&lt;" autoWrapLength="0" placeDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" reverseDirectionSymbol="0" wrapChar="" rightDirectionSymbol=">" addDirectionSymbol="0" decimals="3" plussign="0" multilineAlign="3"/>
-      <placement repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" geometryGenerator="" geometryGeneratorEnabled="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" preserveRotation="1" maxCurvedCharAngleOut="-25" placementFlags="10" fitInPolygonOnly="0" dist="0" offsetUnits="MapUnit" offsetType="0" overrunDistance="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistance="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" rotationAngle="0" polygonPlacementFlags="2" priority="5" repeatDistanceUnits="MM" overrunDistanceUnit="MM" centroidInside="0" yOffset="0" placement="1" lineAnchorPercent="0.5" geometryGeneratorType="PointGeometry" xOffset="0" quadOffset="4" lineAnchorType="0" centroidWhole="0" distUnits="MM" distMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleIn="25"/>
+      <placement repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" geometryGenerator="" geometryGeneratorEnabled="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" preserveRotation="1" maxCurvedCharAngleOut="-25" placementFlags="10" fitInPolygonOnly="0" dist="0" offsetUnits="MapUnit" offsetType="0" overrunDistance="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistance="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" rotationAngle="0" polygonPlacementFlags="2" priority="5" repeatDistanceUnits="MM" overrunDistanceUnit="MM" centroidInside="0" yOffset="0" placement="6" lineAnchorPercent="0.5" geometryGeneratorType="PointGeometry" xOffset="0" quadOffset="4" lineAnchorType="0" centroidWhole="0" distUnits="MM" distMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleIn="25"/>
       <rendering obstacle="1" drawLabels="1" upsidedownLabels="0" fontMinPixelSize="3" displayAll="1" minFeatureSize="0" fontLimitPixelSize="1" scaleVisibility="0" mergeLines="0" scaleMax="0" scaleMin="0" limitNumLabels="0" obstacleFactor="1" maxNumLabels="2000" labelPerPart="0" fontMaxPixelSize="10000" zIndex="0" obstacleType="1"/>
       <dd_properties>
         <Option type="Map">
@@ -75,6 +75,11 @@
               <Option value="CASE WHEN &quot;KKOD&quot; > 81 THEN '1,155,255' END" type="QString" name="expression"/>
               <Option value="3" type="int" name="type"/>
             </Option>
+            <Option type="Map" name="FontStyle">
+              <Option value="false" type="bool" name="active"/>
+              <Option value="1" type="int" name="type"/>
+              <Option value="" type="QString" name="val"/>
+            </Option>
             <Option type="Map" name="Italic">
               <Option value="true" type="bool" name="active"/>
               <Option value="CASE WHEN &quot;KKOD&quot; > 42 THEN 1 END" type="QString" name="expression"/>
@@ -86,8 +91,8 @@
               <Option value="3" type="int" name="type"/>
             </Option>
             <Option type="Map" name="OffsetQuad">
-              <Option value="true" type="bool" name="active"/>
-              <Option value="CASE WHEN condition THEN result&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 1 THEN 6&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 2 THEN 7&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 3 THEN 8&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 4 THEN 3&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 5 THEN 4&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 6 THEN 5&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 7 THEN 0&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 8 THEN 1&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 9 THEN 2&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="false" type="bool" name="active"/>
+              <Option value="CASE&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 1 THEN 6&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 2 THEN 7&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 3 THEN 8&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 4 THEN 3&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 5 THEN 4&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 6 THEN 5&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 7 THEN 0&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 8 THEN 1&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 9 THEN 2&#xd;&#xa;END" type="QString" name="expression"/>
               <Option value="3" type="int" name="type"/>
             </Option>
             <Option type="Map" name="Size">
