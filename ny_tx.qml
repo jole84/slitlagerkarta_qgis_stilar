@@ -1,11 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis styleCategories="AllStyleCategories" simplifyDrawingTol="1" minScale="100000000" maxScale="0" simplifyMaxScale="1" version="3.16.3-Hannover" labelsEnabled="1" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" readOnly="0" simplifyLocal="1" simplifyAlgorithm="0">
+<qgis simplifyDrawingTol="1" simplifyDrawingHints="0" version="3.16.3-Hannover" maxScale="0" minScale="100000000" readOnly="0" simplifyAlgorithm="0" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <temporal startField="" enabled="0" durationUnit="min" durationField="" mode="0" endField="" startExpression="" accumulate="0" fixedDuration="0" endExpression="">
+  <temporal mode="0" endExpression="" enabled="0" fixedDuration="0" durationUnit="min" startField="" durationField="" endField="" accumulate="0" startExpression="">
     <fixedRange>
       <start></start>
       <end></end>
@@ -14,12 +14,12 @@
   <renderer-v2 type="nullSymbol"/>
   <labeling type="simple">
     <settings calloutType="simple">
-      <text-style fontLetterSpacing="0" namedStyle="Normal" capitalization="0" isExpression="0" multilineHeight="1" fontUnderline="0" textOpacity="1" fieldName="TEXT" fontSizeMapUnitScale="3x:0,0,0,0,0,0" useSubstitutions="0" fontWeight="50" textOrientation="horizontal" previewBkgrdColor="255,255,255,255" allowHtml="0" fontFamily="GSDText" textColor="0,0,0,255" fontStrikeout="0" blendMode="0" fontSize="50" fontWordSpacing="0" fontItalic="0" fontSizeUnit="MapUnit" fontKerning="1">
-        <text-buffer bufferColor="255,255,255,255" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferDraw="0" bufferNoFill="1" bufferBlendMode="0" bufferSize="1" bufferSizeUnits="MM" bufferJoinStyle="128" bufferOpacity="1"/>
-        <text-mask maskSize="1.5" maskJoinStyle="128" maskType="0" maskSizeUnits="MM" maskEnabled="0" maskOpacity="1" maskedSymbolLayers="" maskSizeMapUnitScale="3x:0,0,0,0,0,0"/>
-        <background shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeSizeX="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeJoinStyle="64" shapeBlendMode="0" shapeFillColor="103,174,94,255" shapeBorderWidthUnit="MM" shapeOffsetX="0" shapeBorderWidth="0" shapeOpacity="1" shapeType="0" shapeSizeType="0" shapeOffsetY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeRadiiUnit="MM" shapeRadiiY="0" shapeSizeY="0" shapeRotationType="0" shapeDraw="1" shapeSizeUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetUnit="MM" shapeBorderColor="128,128,128,255" shapeSVGFile="" shapeRadiiX="0">
-          <symbol name="markerSymbol" type="marker" force_rhr="0" alpha="1" clip_to_extent="1">
-            <layer enabled="1" class="SimpleMarker" locked="0" pass="0">
+      <text-style fontStrikeout="0" namedStyle="Normal" fontLetterSpacing="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" textColor="0,0,0,255" multilineHeight="1" previewBkgrdColor="255,255,255,255" fontItalic="0" fontWordSpacing="0" useSubstitutions="0" allowHtml="0" textOrientation="horizontal" fontSize="50" fieldName="TEXT" fontKerning="1" fontSizeUnit="MapUnit" fontUnderline="0" fontWeight="50" blendMode="0" fontFamily="GSDText" textOpacity="1" capitalization="0" isExpression="0">
+        <text-buffer bufferColor="255,255,255,255" bufferBlendMode="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferNoFill="1" bufferSize="1" bufferSizeUnits="MM" bufferDraw="0" bufferJoinStyle="128" bufferOpacity="1"/>
+        <text-mask maskSize="1.5" maskOpacity="1" maskJoinStyle="128" maskEnabled="0" maskSizeUnits="MM" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskType="0" maskedSymbolLayers=""/>
+        <background shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetX="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeBlendMode="0" shapeType="0" shapeRotationType="0" shapeSizeUnit="MM" shapeOffsetUnit="MM" shapeSizeY="0" shapeSizeX="0" shapeJoinStyle="64" shapeFillColor="103,174,94,255" shapeRadiiX="0" shapeRadiiUnit="MM" shapeSizeType="0" shapeBorderColor="128,128,128,255" shapeBorderWidth="0" shapeRadiiY="0" shapeOpacity="1" shapeSVGFile="" shapeBorderWidthUnit="MM" shapeRotation="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="1" shapeOffsetY="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0">
+          <symbol clip_to_extent="1" alpha="1" type="marker" name="markerSymbol" force_rhr="0">
+            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="229,182,54,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -40,101 +40,106 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option value="" type="QString" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option value="collection" type="QString" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </background>
-        <shadow shadowOffsetDist="1" shadowBlendMode="6" shadowDraw="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetAngle="135" shadowOffsetUnit="MM" shadowScale="100" shadowOffsetGlobal="1" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOpacity="0.7" shadowRadius="1.5" shadowRadiusAlphaOnly="0" shadowUnder="0" shadowRadiusUnit="MM" shadowColor="0,0,0,255"/>
+        <shadow shadowOffsetGlobal="1" shadowRadiusUnit="MM" shadowOffsetDist="1" shadowColor="0,0,0,255" shadowBlendMode="6" shadowRadius="1.5" shadowUnder="0" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetAngle="135" shadowDraw="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowScale="100" shadowRadiusAlphaOnly="0" shadowOffsetUnit="MM" shadowOpacity="0.7"/>
         <dd_properties>
           <Option type="Map">
-            <Option value="" name="name" type="QString"/>
+            <Option value="" type="QString" name="name"/>
             <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
+            <Option value="collection" type="QString" name="type"/>
           </Option>
         </dd_properties>
         <substitutions/>
       </text-style>
-      <text-format useMaxLineLengthForAutoWrap="1" addDirectionSymbol="0" plussign="0" rightDirectionSymbol=">" reverseDirectionSymbol="0" decimals="3" multilineAlign="3" formatNumbers="0" wrapChar="" leftDirectionSymbol="&lt;" placeDirectionSymbol="0" autoWrapLength="0"/>
-      <placement placement="1" repeatDistance="0" distMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" geometryGenerator="" polygonPlacementFlags="2" yOffset="0" repeatDistanceUnits="MM" maxCurvedCharAngleIn="25" overrunDistanceUnit="MM" lineAnchorPercent="0.5" lineAnchorType="0" fitInPolygonOnly="0" preserveRotation="1" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" distUnits="MM" offsetType="0" placementFlags="10" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" quadOffset="4" maxCurvedCharAngleOut="-25" priority="5" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" offsetUnits="MapUnit" dist="0" centroidWhole="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" overrunDistance="0" rotationAngle="0" geometryGeneratorEnabled="0" layerType="PointGeometry"/>
-      <rendering zIndex="0" obstacleFactor="1" fontMinPixelSize="3" drawLabels="1" limitNumLabels="0" obstacle="1" obstacleType="1" minFeatureSize="0" scaleMax="0" scaleVisibility="0" fontLimitPixelSize="1" displayAll="1" labelPerPart="0" maxNumLabels="2000" mergeLines="0" scaleMin="0" upsidedownLabels="0" fontMaxPixelSize="10000"/>
+      <text-format leftDirectionSymbol="&lt;" formatNumbers="0" rightDirectionSymbol=">" reverseDirectionSymbol="0" addDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" placeDirectionSymbol="0" plussign="0" wrapChar="" decimals="3" multilineAlign="3" autoWrapLength="0"/>
+      <placement distUnits="MM" centroidWhole="0" offsetType="0" geometryGeneratorEnabled="0" maxCurvedCharAngleIn="25" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" fitInPolygonOnly="0" quadOffset="4" distMapUnitScale="3x:0,0,0,0,0,0" rotationAngle="0" repeatDistanceUnits="MM" lineAnchorType="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" yOffset="0" placement="1" centroidInside="0" geometryGeneratorType="PointGeometry" layerType="PointGeometry" dist="0" priority="5" geometryGenerator="" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleOut="-25" preserveRotation="1" overrunDistance="0" polygonPlacementFlags="2" xOffset="0" lineAnchorPercent="0.5" offsetUnits="MapUnit" placementFlags="10" repeatDistance="0" overrunDistanceUnit="MM"/>
+      <rendering obstacleFactor="1" displayAll="1" obstacleType="1" scaleMax="0" maxNumLabels="2000" scaleVisibility="0" fontMinPixelSize="3" labelPerPart="0" minFeatureSize="0" fontLimitPixelSize="1" scaleMin="0" upsidedownLabels="0" mergeLines="0" zIndex="0" obstacle="1" drawLabels="1" limitNumLabels="0" fontMaxPixelSize="10000"/>
       <dd_properties>
         <Option type="Map">
-          <Option value="" name="name" type="QString"/>
-          <Option name="properties" type="Map">
-            <Option name="Bold" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE WHEN &quot;KKOD&quot; = 18 THEN 1 END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+          <Option value="" type="QString" name="name"/>
+          <Option type="Map" name="properties">
+            <Option type="Map" name="Bold">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE WHEN &quot;KKOD&quot; = 18 THEN 1 END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="Color" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 42 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 43 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 44 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN '255,255,255'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; > 81 THEN '1,155,255'&#xd;&#xa;END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="Color">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 42 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 43 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 44 THEN '131,206,96'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN '255,255,255'&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; > 81 THEN '1,155,255'&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="FontStyle" type="Map">
-              <Option value="false" name="active" type="bool"/>
-              <Option value="1" name="type" type="int"/>
-              <Option value="" name="val" type="QString"/>
+            <Option type="Map" name="FontLetterSpacing">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="TSPARR" type="QString" name="field"/>
+              <Option value="2" type="int" name="type"/>
             </Option>
-            <Option name="Italic" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; &lt;= 28 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 71 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 72 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 73 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 78 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN 0&#xd;&#xa;&#x9;ELSE 1&#xd;&#xa;END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="FontStyle">
+              <Option value="false" type="bool" name="active"/>
+              <Option value="1" type="int" name="type"/>
+              <Option value="" type="QString" name="val"/>
             </Option>
-            <Option name="LabelRotation" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="360 - (&quot;trikt&quot;)" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="Italic">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; &lt;= 28 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 71 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 72 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 73 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 78 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN 0&#xd;&#xa;&#x9;ELSE 1&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="OffsetQuad" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 1 THEN 2&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 2 THEN 1&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 3 THEN 0&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 4 THEN 5&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 5 THEN 4&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 6 THEN 3&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 7 THEN 8&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 8 THEN 7&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 9 THEN 6&#xd;&#xa;END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="LabelRotation">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="360 - (&quot;trikt&quot;)" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="ShapeDraw" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN '103,174,94'&#xd;&#xa;&#x9;ELSE 0&#xd;&#xa;END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="OffsetQuad">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 1 THEN 2&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 2 THEN 1&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 3 THEN 0&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 4 THEN 5&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 5 THEN 4&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 6 THEN 3&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 7 THEN 8&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 8 THEN 7&#xd;&#xa;&#x9;WHEN &quot;TJUST&quot; = 9 THEN 6&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="ShapeFillColor" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="if(left(&quot;text&quot;,1)='E','103,174,94','33,175,249')" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="ShapeDraw">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN '103,174,94'&#xd;&#xa;&#x9;ELSE 0&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
-            <Option name="Size" type="Map">
-              <Option value="true" name="active" type="bool"/>
-              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 1 THEN 200 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 2 THEN 250 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 3 THEN 260 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 4 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 5 THEN 330 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 6 THEN 360 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 7 THEN 450 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 8 THEN 500 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 9 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 14 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 15 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 16 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 17 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 18 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 24 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 25 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 27 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 28 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 42 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 43 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 44 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 45 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 46 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 47 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 48 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 49 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 51 THEN 190&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 52 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 53 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 54 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 55 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 56 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 57 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 58 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 59 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 61 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 62 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 63 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 64 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 65 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 66 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 67 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 71 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 72 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 73 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 74 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 75 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 76 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 77 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 78 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 82 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 83 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 84 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 85 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 86 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 87 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 88 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 89 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 182 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 183 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 184 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 185 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 186 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 187 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 188 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 189 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 192 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 193 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 194 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 195 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 196 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 197 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 198 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 199 THEN 650&#xd;&#xa;END" name="expression" type="QString"/>
-              <Option value="3" name="type" type="int"/>
+            <Option type="Map" name="ShapeFillColor">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="if(left(&quot;text&quot;,1)='E','103,174,94','33,175,249')" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
+            </Option>
+            <Option type="Map" name="Size">
+              <Option value="true" type="bool" name="active"/>
+              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 1 THEN 200 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 2 THEN 250 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 3 THEN 260 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 4 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 5 THEN 330 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 6 THEN 360 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 7 THEN 450 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 8 THEN 500 &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 9 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 14 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 15 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 16 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 17 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 18 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 24 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 25 THEN 290&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 27 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 28 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 42 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 43 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 44 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 45 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 46 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 47 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 48 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 49 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 51 THEN 190&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 52 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 53 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 54 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 55 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 56 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 57 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 58 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 59 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 61 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 62 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 63 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 64 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 65 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 66 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 67 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 71 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 72 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 73 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 74 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 75 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 76 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 77 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 78 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 82 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 83 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 84 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 85 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 86 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 87 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 88 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 89 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 182 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 183 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 184 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 185 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 186 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 187 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 188 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 189 THEN 650&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 192 THEN 200&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 193 THEN 250&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 194 THEN 260&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 195 THEN 330&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 196 THEN 360&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 197 THEN 450&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 198 THEN 500&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 199 THEN 650&#xd;&#xa;END" type="QString" name="expression"/>
+              <Option value="3" type="int" name="type"/>
             </Option>
           </Option>
-          <Option value="collection" name="type" type="QString"/>
+          <Option value="collection" type="QString" name="type"/>
         </Option>
       </dd_properties>
       <callout type="simple">
         <Option type="Map">
-          <Option value="pole_of_inaccessibility" name="anchorPoint" type="QString"/>
-          <Option name="ddProperties" type="Map">
-            <Option value="" name="name" type="QString"/>
+          <Option value="pole_of_inaccessibility" type="QString" name="anchorPoint"/>
+          <Option type="Map" name="ddProperties">
+            <Option value="" type="QString" name="name"/>
             <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
+            <Option value="collection" type="QString" name="type"/>
           </Option>
-          <Option value="false" name="drawToAllParts" type="bool"/>
-          <Option value="0" name="enabled" type="QString"/>
-          <Option value="point_on_exterior" name="labelAnchorPoint" type="QString"/>
-          <Option value="&lt;symbol name=&quot;symbol&quot; type=&quot;line&quot; force_rhr=&quot;0&quot; alpha=&quot;1&quot; clip_to_extent=&quot;1&quot;>&lt;layer enabled=&quot;1&quot; class=&quot;SimpleLine&quot; locked=&quot;0&quot; pass=&quot;0&quot;>&lt;prop k=&quot;align_dash_pattern&quot; v=&quot;0&quot;/>&lt;prop k=&quot;capstyle&quot; v=&quot;square&quot;/>&lt;prop k=&quot;customdash&quot; v=&quot;5;2&quot;/>&lt;prop k=&quot;customdash_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;customdash_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;dash_pattern_offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;dash_pattern_offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;dash_pattern_offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;draw_inside_polygon&quot; v=&quot;0&quot;/>&lt;prop k=&quot;joinstyle&quot; v=&quot;bevel&quot;/>&lt;prop k=&quot;line_color&quot; v=&quot;60,60,60,255&quot;/>&lt;prop k=&quot;line_style&quot; v=&quot;solid&quot;/>&lt;prop k=&quot;line_width&quot; v=&quot;0.3&quot;/>&lt;prop k=&quot;line_width_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;ring_filter&quot; v=&quot;0&quot;/>&lt;prop k=&quot;tweak_dash_pattern_on_corners&quot; v=&quot;0&quot;/>&lt;prop k=&quot;use_custom_dash&quot; v=&quot;0&quot;/>&lt;prop k=&quot;width_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; name=&quot;name&quot; type=&quot;QString&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; name=&quot;type&quot; type=&quot;QString&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>" name="lineSymbol" type="QString"/>
-          <Option value="0" name="minLength" type="double"/>
-          <Option value="3x:0,0,0,0,0,0" name="minLengthMapUnitScale" type="QString"/>
-          <Option value="MM" name="minLengthUnit" type="QString"/>
-          <Option value="0" name="offsetFromAnchor" type="double"/>
-          <Option value="3x:0,0,0,0,0,0" name="offsetFromAnchorMapUnitScale" type="QString"/>
-          <Option value="MM" name="offsetFromAnchorUnit" type="QString"/>
-          <Option value="0" name="offsetFromLabel" type="double"/>
-          <Option value="3x:0,0,0,0,0,0" name="offsetFromLabelMapUnitScale" type="QString"/>
-          <Option value="MM" name="offsetFromLabelUnit" type="QString"/>
+          <Option value="false" type="bool" name="drawToAllParts"/>
+          <Option value="0" type="QString" name="enabled"/>
+          <Option value="point_on_exterior" type="QString" name="labelAnchorPoint"/>
+          <Option value="&lt;symbol clip_to_extent=&quot;1&quot; alpha=&quot;1&quot; type=&quot;line&quot; name=&quot;symbol&quot; force_rhr=&quot;0&quot;>&lt;layer locked=&quot;0&quot; class=&quot;SimpleLine&quot; enabled=&quot;1&quot; pass=&quot;0&quot;>&lt;prop k=&quot;align_dash_pattern&quot; v=&quot;0&quot;/>&lt;prop k=&quot;capstyle&quot; v=&quot;square&quot;/>&lt;prop k=&quot;customdash&quot; v=&quot;5;2&quot;/>&lt;prop k=&quot;customdash_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;customdash_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;dash_pattern_offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;dash_pattern_offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;dash_pattern_offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;draw_inside_polygon&quot; v=&quot;0&quot;/>&lt;prop k=&quot;joinstyle&quot; v=&quot;bevel&quot;/>&lt;prop k=&quot;line_color&quot; v=&quot;60,60,60,255&quot;/>&lt;prop k=&quot;line_style&quot; v=&quot;solid&quot;/>&lt;prop k=&quot;line_width&quot; v=&quot;0.3&quot;/>&lt;prop k=&quot;line_width_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;ring_filter&quot; v=&quot;0&quot;/>&lt;prop k=&quot;tweak_dash_pattern_on_corners&quot; v=&quot;0&quot;/>&lt;prop k=&quot;use_custom_dash&quot; v=&quot;0&quot;/>&lt;prop k=&quot;width_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; type=&quot;QString&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; type=&quot;QString&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>" type="QString" name="lineSymbol"/>
+          <Option value="0" type="double" name="minLength"/>
+          <Option value="3x:0,0,0,0,0,0" type="QString" name="minLengthMapUnitScale"/>
+          <Option value="MM" type="QString" name="minLengthUnit"/>
+          <Option value="0" type="double" name="offsetFromAnchor"/>
+          <Option value="3x:0,0,0,0,0,0" type="QString" name="offsetFromAnchorMapUnitScale"/>
+          <Option value="MM" type="QString" name="offsetFromAnchorUnit"/>
+          <Option value="0" type="double" name="offsetFromLabel"/>
+          <Option value="3x:0,0,0,0,0,0" type="QString" name="offsetFromLabelMapUnitScale"/>
+          <Option value="MM" type="QString" name="offsetFromLabelUnit"/>
         </Option>
       </callout>
     </settings>
@@ -150,13 +155,13 @@
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
-  <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory maxScaleDenominator="1e+08" backgroundColor="#ffffff" spacingUnit="MM" scaleDependency="Area" penAlpha="255" minScaleDenominator="0" penColor="#000000" rotationOffset="270" enabled="0" diagramOrientation="Up" backgroundAlpha="255" penWidth="0" sizeScale="3x:0,0,0,0,0,0" direction="0" barWidth="5" spacingUnitScale="3x:0,0,0,0,0,0" spacing="5" width="15" sizeType="MM" opacity="1" minimumSize="0" lineSizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" scaleBasedVisibility="0" showAxis="1" height="15" lineSizeType="MM">
-      <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
-      <attribute color="#000000" label="" field=""/>
+  <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+    <DiagramCategory scaleDependency="Area" barWidth="5" sizeType="MM" width="15" sizeScale="3x:0,0,0,0,0,0" height="15" rotationOffset="270" penWidth="0" enabled="0" lineSizeType="MM" spacingUnitScale="3x:0,0,0,0,0,0" penAlpha="255" minimumSize="0" spacingUnit="MM" maxScaleDenominator="1e+08" scaleBasedVisibility="0" showAxis="1" backgroundAlpha="255" opacity="1" diagramOrientation="Up" minScaleDenominator="0" spacing="5" backgroundColor="#ffffff" lineSizeScale="3x:0,0,0,0,0,0" direction="0" penColor="#000000" labelPlacementMethod="XHeight">
+      <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+      <attribute field="" color="#000000" label=""/>
       <axisSymbol>
-        <symbol name="" type="line" force_rhr="0" alpha="1" clip_to_extent="1">
-          <layer enabled="1" class="SimpleLine" locked="0" pass="0">
+        <symbol clip_to_extent="1" alpha="1" type="line" name="" force_rhr="0">
+          <layer locked="0" class="SimpleLine" enabled="1" pass="0">
             <prop k="align_dash_pattern" v="0"/>
             <prop k="capstyle" v="square"/>
             <prop k="customdash" v="5;2"/>
@@ -180,9 +185,9 @@
             <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option value="" type="QString" name="name"/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option value="collection" type="QString" name="type"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -190,16 +195,16 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings zIndex="0" dist="0" priority="0" linePlacementFlags="18" showAll="1" placement="0" obstacle="0">
+  <DiagramLayerSettings showAll="1" linePlacementFlags="18" priority="0" obstacle="0" zIndex="0" placement="0" dist="0">
     <properties>
       <Option type="Map">
-        <Option value="" name="name" type="QString"/>
+        <Option value="" type="QString" name="name"/>
         <Option name="properties"/>
-        <Option value="collection" name="type" type="QString"/>
+        <Option value="collection" type="QString" name="type"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
-  <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+  <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
@@ -257,55 +262,55 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias name="" index="0" field="KKOD"/>
-    <alias name="" index="1" field="KATEGORI"/>
-    <alias name="" index="2" field="TEXT"/>
-    <alias name="" index="3" field="TEXTTYP"/>
-    <alias name="" index="4" field="TRIKT"/>
-    <alias name="" index="5" field="TJUST"/>
-    <alias name="" index="6" field="TSPARR"/>
+    <alias index="0" field="KKOD" name=""/>
+    <alias index="1" field="KATEGORI" name=""/>
+    <alias index="2" field="TEXT" name=""/>
+    <alias index="3" field="TEXTTYP" name=""/>
+    <alias index="4" field="TRIKT" name=""/>
+    <alias index="5" field="TJUST" name=""/>
+    <alias index="6" field="TSPARR" name=""/>
   </aliases>
   <defaults>
-    <default expression="" applyOnUpdate="0" field="KKOD"/>
-    <default expression="" applyOnUpdate="0" field="KATEGORI"/>
-    <default expression="" applyOnUpdate="0" field="TEXT"/>
-    <default expression="" applyOnUpdate="0" field="TEXTTYP"/>
-    <default expression="" applyOnUpdate="0" field="TRIKT"/>
-    <default expression="" applyOnUpdate="0" field="TJUST"/>
-    <default expression="" applyOnUpdate="0" field="TSPARR"/>
+    <default field="KKOD" expression="" applyOnUpdate="0"/>
+    <default field="KATEGORI" expression="" applyOnUpdate="0"/>
+    <default field="TEXT" expression="" applyOnUpdate="0"/>
+    <default field="TEXTTYP" expression="" applyOnUpdate="0"/>
+    <default field="TRIKT" expression="" applyOnUpdate="0"/>
+    <default field="TJUST" expression="" applyOnUpdate="0"/>
+    <default field="TSPARR" expression="" applyOnUpdate="0"/>
   </defaults>
   <constraints>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="KKOD"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="KATEGORI"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="TEXT"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="TEXTTYP"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="TRIKT"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="TJUST"/>
-    <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="TSPARR"/>
+    <constraint field="KKOD" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="KATEGORI" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="TEXT" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="TEXTTYP" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="TRIKT" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="TJUST" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
+    <constraint field="TSPARR" notnull_strength="0" unique_strength="0" constraints="0" exp_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" desc="" field="KKOD"/>
-    <constraint exp="" desc="" field="KATEGORI"/>
-    <constraint exp="" desc="" field="TEXT"/>
-    <constraint exp="" desc="" field="TEXTTYP"/>
-    <constraint exp="" desc="" field="TRIKT"/>
-    <constraint exp="" desc="" field="TJUST"/>
-    <constraint exp="" desc="" field="TSPARR"/>
+    <constraint field="KKOD" exp="" desc=""/>
+    <constraint field="KATEGORI" exp="" desc=""/>
+    <constraint field="TEXT" exp="" desc=""/>
+    <constraint field="TEXTTYP" exp="" desc=""/>
+    <constraint field="TRIKT" exp="" desc=""/>
+    <constraint field="TJUST" exp="" desc=""/>
+    <constraint field="TSPARR" exp="" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
   </attributeactions>
-  <attributetableconfig sortExpression="&quot;KKOD&quot;" actionWidgetStyle="dropDown" sortOrder="0">
+  <attributetableconfig sortOrder="1" sortExpression="&quot;TSPARR&quot;" actionWidgetStyle="dropDown">
     <columns>
-      <column name="KKOD" type="field" hidden="0" width="-1"/>
-      <column name="KATEGORI" type="field" hidden="0" width="209"/>
-      <column name="TEXT" type="field" hidden="0" width="-1"/>
-      <column name="TEXTTYP" type="field" hidden="0" width="-1"/>
-      <column name="TRIKT" type="field" hidden="0" width="-1"/>
-      <column name="TJUST" type="field" hidden="0" width="-1"/>
-      <column name="TSPARR" type="field" hidden="0" width="-1"/>
-      <column type="actions" hidden="1" width="-1"/>
+      <column width="-1" hidden="0" type="field" name="KKOD"/>
+      <column width="209" hidden="0" type="field" name="KATEGORI"/>
+      <column width="-1" hidden="0" type="field" name="TEXT"/>
+      <column width="-1" hidden="0" type="field" name="TEXTTYP"/>
+      <column width="-1" hidden="0" type="field" name="TRIKT"/>
+      <column width="-1" hidden="0" type="field" name="TJUST"/>
+      <column width="-1" hidden="0" type="field" name="TSPARR"/>
+      <column width="-1" hidden="1" type="actions"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -335,13 +340,13 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field name="KATEGORI" editable="1"/>
-    <field name="KKOD" editable="1"/>
-    <field name="TEXT" editable="1"/>
-    <field name="TEXTTYP" editable="1"/>
-    <field name="TJUST" editable="1"/>
-    <field name="TRIKT" editable="1"/>
-    <field name="TSPARR" editable="1"/>
+    <field editable="1" name="KATEGORI"/>
+    <field editable="1" name="KKOD"/>
+    <field editable="1" name="TEXT"/>
+    <field editable="1" name="TEXTTYP"/>
+    <field editable="1" name="TJUST"/>
+    <field editable="1" name="TRIKT"/>
+    <field editable="1" name="TSPARR"/>
   </editable>
   <labelOnTop>
     <field name="KATEGORI" labelOnTop="0"/>
