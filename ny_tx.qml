@@ -82,7 +82,7 @@
             </Option>
             <Option name="Italic" type="Map">
               <Option value="true" name="active" type="bool"/>
-              <Option value="CASE WHEN &quot;KKOD&quot; > 42 THEN 1 END" name="expression" type="QString"/>
+              <Option value="CASE WHEN &quot;KKOD&quot; >= 42 THEN 1 END" name="expression" type="QString"/>
               <Option value="3" name="type" type="int"/>
             </Option>
             <Option name="LabelRotation" type="Map">
@@ -140,7 +140,9 @@
     </settings>
   </labeling>
   <customproperties>
-    <property value="&quot;KKOD&quot;" key="dualview/previewExpressions"/>
+    <property key="dualview/previewExpressions">
+      <value>"KKOD"</value>
+    </property>
     <property value="0" key="embeddedWidgets/count"/>
     <property key="variableNames"/>
     <property key="variableValues"/>
