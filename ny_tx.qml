@@ -82,7 +82,7 @@
             </Option>
             <Option name="Italic" type="Map">
               <Option value="true" name="active" type="bool"/>
-              <Option value="CASE WHEN &quot;KKOD&quot; >= 42 THEN 1 END" name="expression" type="QString"/>
+              <Option value="CASE &#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; &lt;= 28 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 71 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 72 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 73 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 78 THEN 0&#xd;&#xa;&#x9;WHEN &quot;KKOD&quot; = 79 THEN 0&#xd;&#xa;&#x9;ELSE 1&#xd;&#xa;END" name="expression" type="QString"/>
               <Option value="3" name="type" type="int"/>
             </Option>
             <Option name="LabelRotation" type="Map">
