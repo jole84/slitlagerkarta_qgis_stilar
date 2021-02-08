@@ -24,10 +24,11 @@ Stilar till slitlagerkartan för QGIS
 	hl  
 	ql  
 	nl  
-	oh  
-	ml_south/middle/north  
-	ms_south/middle/north  
-	my_south/middle/north  
+	south/middle/north
+	--oh  
+	--ml  
+	--ms  
+	--my  
 
 *terrängkartan
 
