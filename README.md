@@ -16,9 +16,9 @@ Stilar till slitlagerkartan för QGIS
 	kl  
 	jl  
 	slitlager  
-	--slitlager_norr  
-	--slitlager_syd  
 	--vo_traktorväg  
+	--slitlager_norr  
+	--slitlager_syd    
 	*vo  
 	*vl  
 	hl  
