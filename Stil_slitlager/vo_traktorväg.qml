@@ -1,32 +1,32 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyLocal="1" simplifyMaxScale="1" readOnly="0" labelsEnabled="0" simplifyDrawingTol="1" simplifyAlgorithm="0" simplifyDrawingHints="1" version="3.16.1-Hannover" styleCategories="AllStyleCategories" maxScale="-4.6566128730773926e-10" hasScaleBasedVisibilityFlag="0" minScale="100000000">
+<qgis simplifyDrawingHints="1" simplifyMaxScale="1" simplifyLocal="1" version="3.16.3-Hannover" labelsEnabled="0" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="1" minScale="250000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" maxScale="-4.656612873077393e-10" readOnly="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <temporal mode="0" fixedDuration="0" durationField="" endExpression="" accumulate="0" durationUnit="min" startField="" enabled="0" startExpression="" endField="">
+  <temporal mode="0" durationUnit="min" fixedDuration="0" startField="" durationField="" startExpression="" endExpression="" accumulate="0" endField="" enabled="0">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="categorizedSymbol" attr="KATEGORI">
+  <renderer-v2 forceraster="0" symbollevels="0" attr="KATEGORI" type="categorizedSymbol" enableorderby="0">
     <categories>
-      <category render="true" label="Traktorväg" value="Traktorväg" symbol="0"/>
-      <category render="true" label="Cykelväg, parkväg" value="Cykelväg, parkväg" symbol="1"/>
-      <category render="false" label="Elljusspår" value="Elljusspår" symbol="2"/>
-      <category render="false" label="Gångbro och spång" value="Gångbro och spång" symbol="3"/>
-      <category render="false" label="Gångstig" value="Gångstig" symbol="4"/>
-      <category render="false" label="Linbana" value="Linbana" symbol="5"/>
-      <category render="false" label="Underfart för övrig väg eller led" value="Underfart för övrig väg eller led" symbol="6"/>
-      <category render="false" label="Vandringsled" value="Vandringsled" symbol="7"/>
-      <category render="false" label="Vandringsled, längs väg" value="Vandringsled, längs väg" symbol="8"/>
-      <category render="false" label="" value="" symbol="9"/>
+      <category symbol="0" label="Traktorväg" render="true" value="Traktorväg"/>
+      <category symbol="1" label="Cykelväg, parkväg" render="true" value="Cykelväg, parkväg"/>
+      <category symbol="2" label="Elljusspår" render="false" value="Elljusspår"/>
+      <category symbol="3" label="Gångbro och spång" render="false" value="Gångbro och spång"/>
+      <category symbol="4" label="Gångstig" render="false" value="Gångstig"/>
+      <category symbol="5" label="Linbana" render="false" value="Linbana"/>
+      <category symbol="6" label="Underfart för övrig väg eller led" render="false" value="Underfart för övrig väg eller led"/>
+      <category symbol="7" label="Vandringsled" render="false" value="Vandringsled"/>
+      <category symbol="8" label="Vandringsled, längs väg" render="false" value="Vandringsled, längs väg"/>
+      <category symbol="9" label="" render="false" value=""/>
     </categories>
     <symbols>
-      <symbol name="0" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="0" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="70;60" k="customdash"/>
@@ -50,15 +50,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="1" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="1" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -82,15 +82,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="2" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="2" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -114,15 +114,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="3" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="3" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -146,15 +146,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="4" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="4" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -178,15 +178,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="5" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="5" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -210,15 +210,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="6" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="6" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -242,15 +242,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="7" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="7" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -274,15 +274,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="8" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="8" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -306,15 +306,15 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="9" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="9" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -338,17 +338,17 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </symbols>
     <source-symbol>
-      <symbol name="0" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+      <symbol alpha="1" clip_to_extent="1" type="line" name="0" force_rhr="0">
+        <layer class="SimpleLine" pass="0" locked="0" enabled="1">
           <prop v="0" k="align_dash_pattern"/>
           <prop v="square" k="capstyle"/>
           <prop v="5;2" k="customdash"/>
@@ -372,9 +372,9 @@
           <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" name="name" type="QString"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -393,12 +393,12 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory spacingUnitScale="3x:0,0,0,0,0,0" diagramOrientation="Up" showAxis="1" height="15" scaleDependency="Area" penAlpha="255" penColor="#000000" labelPlacementMethod="XHeight" spacingUnit="MM" sizeType="MM" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" lineSizeType="MM" barWidth="5" rotationOffset="270" width="15" penWidth="0" spacing="5" maxScaleDenominator="1e+08" scaleBasedVisibility="0" minimumSize="0" backgroundColor="#ffffff" direction="0" backgroundAlpha="255" minScaleDenominator="-4.65661e-10" enabled="0" sizeScale="3x:0,0,0,0,0,0">
-      <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+    <DiagramCategory penColor="#000000" enabled="0" lineSizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" spacing="5" rotationOffset="270" lineSizeType="MM" showAxis="1" penAlpha="255" backgroundAlpha="255" scaleBasedVisibility="0" maxScaleDenominator="1e+08" penWidth="0" width="15" opacity="1" minimumSize="0" height="15" barWidth="5" spacingUnit="MM" sizeScale="3x:0,0,0,0,0,0" spacingUnitScale="3x:0,0,0,0,0,0" scaleDependency="Area" minScaleDenominator="-4.65661e-10" sizeType="MM" diagramOrientation="Up" backgroundColor="#ffffff" direction="0">
+      <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
       <attribute color="#000000" label="" field=""/>
       <axisSymbol>
-        <symbol name="" force_rhr="0" type="line" clip_to_extent="1" alpha="1">
-          <layer pass="0" enabled="1" class="SimpleLine" locked="0">
+        <symbol alpha="1" clip_to_extent="1" type="line" name="" force_rhr="0">
+          <layer class="SimpleLine" pass="0" locked="0" enabled="1">
             <prop v="0" k="align_dash_pattern"/>
             <prop v="square" k="capstyle"/>
             <prop v="5;2" k="customdash"/>
@@ -422,9 +422,9 @@
             <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -432,12 +432,12 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings obstacle="0" placement="2" showAll="1" priority="0" zIndex="0" dist="0" linePlacementFlags="18">
+  <DiagramLayerSettings priority="0" placement="2" obstacle="0" showAll="1" zIndex="0" dist="0" linePlacementFlags="18">
     <properties>
       <Option type="Map">
-        <Option value="" name="name" type="QString"/>
+        <Option type="QString" name="name" value=""/>
         <Option name="properties"/>
-        <Option value="collection" name="type" type="QString"/>
+        <Option type="QString" name="type" value="collection"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -464,29 +464,29 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" name="" field="KKOD"/>
-    <alias index="1" name="" field="KATEGORI"/>
+    <alias index="0" field="KKOD" name=""/>
+    <alias index="1" field="KATEGORI" name=""/>
   </aliases>
   <defaults>
-    <default expression="" field="KKOD" applyOnUpdate="0"/>
-    <default expression="" field="KATEGORI" applyOnUpdate="0"/>
+    <default expression="" applyOnUpdate="0" field="KKOD"/>
+    <default expression="" applyOnUpdate="0" field="KATEGORI"/>
   </defaults>
   <constraints>
     <constraint constraints="0" unique_strength="0" notnull_strength="0" field="KKOD" exp_strength="0"/>
     <constraint constraints="0" unique_strength="0" notnull_strength="0" field="KATEGORI" exp_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" field="KKOD" desc=""/>
-    <constraint exp="" field="KATEGORI" desc=""/>
+    <constraint exp="" desc="" field="KKOD"/>
+    <constraint exp="" desc="" field="KATEGORI"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;KATEGORI&quot;" sortOrder="0">
+  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="&quot;KATEGORI&quot;">
     <columns>
-      <column hidden="0" name="KKOD" width="-1" type="field"/>
-      <column hidden="0" name="KATEGORI" width="-1" type="field"/>
+      <column hidden="0" width="-1" type="field" name="KKOD"/>
+      <column hidden="0" width="-1" type="field" name="KATEGORI"/>
       <column hidden="1" width="-1" type="actions"/>
     </columns>
   </attributetableconfig>
@@ -517,12 +517,12 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field name="KATEGORI" editable="1"/>
-    <field name="KKOD" editable="1"/>
+    <field editable="1" name="KATEGORI"/>
+    <field editable="1" name="KKOD"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="KATEGORI"/>
-    <field labelOnTop="0" name="KKOD"/>
+    <field name="KATEGORI" labelOnTop="0"/>
+    <field name="KKOD" labelOnTop="0"/>
   </labelOnTop>
   <dataDefinedFieldProperties/>
   <widgets/>
