@@ -48,10 +48,11 @@ Minimum zoom 8
 Maximum zoom 13  
 40x40  
 
-####ATK-mätplats hastighet
-	1. Buffer (ATK-mätplats)
-	2. Extract by location (Hastighet)
-	3. NNjoin ATK+Extracted(location)
+	####ATK-mätplats hastighet
+	
+	1. Buffer (ATK-mätplats)  
+	2. Extract by location (Hastighet)  
+	3. NNjoin ATK+Extracted(location)  
 
 
 
