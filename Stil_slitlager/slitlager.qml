@@ -29,7 +29,7 @@
           <prop v="MM" k="dash_pattern_offset_unit"/>
           <prop v="0" k="draw_inside_polygon"/>
           <prop v="bevel" k="joinstyle"/>
-          <prop v="255,57,3,255" k="line_color"/>
+          <prop v="255,35,3,255" k="line_color"/>
           <prop v="solid" k="line_style"/>
           <prop v="25" k="line_width"/>
           <prop v="MapUnit" k="line_width_unit"/>
