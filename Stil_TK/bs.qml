@@ -1,1181 +1,1181 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyDrawingHints="0" labelsEnabled="0" version="3.14.15-Pi" simplifyDrawingTol="1" minScale="100000" simplifyAlgorithm="0" simplifyLocal="1" hasScaleBasedVisibilityFlag="1" readOnly="0" maxScale="0" styleCategories="AllStyleCategories" simplifyMaxScale="1">
+<qgis styleCategories="AllStyleCategories" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="1" simplifyDrawingTol="1" version="3.16.3-Hannover" maxScale="0" simplifyAlgorithm="0" simplifyLocal="1" simplifyMaxScale="1" minScale="100000" readOnly="0" labelsEnabled="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <temporal startField="" endField="" enabled="0" startExpression="" endExpression="" durationField="" durationUnit="min" mode="0" fixedDuration="0" accumulate="0">
+  <temporal endField="" durationField="" startField="" startExpression="" fixedDuration="0" durationUnit="min" accumulate="0" enabled="0" mode="0" endExpression="">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <renderer-v2 type="categorizedSymbol" symbollevels="0" forceraster="0" attr="KATEGORI" enableorderby="0">
+  <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="categorizedSymbol" attr="KATEGORI">
     <categories>
-      <category label="Badplats" render="true" value="Badplats" symbol="0"/>
-      <category label="Begravningsplats" render="false" value="Begravningsplats" symbol="1"/>
-      <category label="Brädgård" render="false" value="Brädgård" symbol="2"/>
-      <category label="Campingplats" render="true" value="Campingplats" symbol="3"/>
-      <category label="Cistern och silo" render="false" value="Cistern och silo" symbol="4"/>
-      <category label="Dammbyggnad" render="false" value="Dammbyggnad" symbol="5"/>
-      <category label="Dammbyggnad, mindre" render="false" value="Dammbyggnad, mindre" symbol="6"/>
-      <category label="Fotbollsplan" render="true" value="Fotbollsplan" symbol="7"/>
-      <category label="Fyr" render="true" value="Fyr" symbol="8"/>
-      <category label="Gård" render="true" value="Gård" symbol="9"/>
-      <category label="Gästhamn" render="true" value="Gästhamn" symbol="10"/>
-      <category label="Herrgård" render="true" value="Herrgård" symbol="11"/>
-      <category label="Hus, storleksklass 1" render="true" value="Hus, storleksklass 1" symbol="12"/>
-      <category label="Hus, storleksklass 2" render="true" value="Hus, storleksklass 2" symbol="13"/>
-      <category label="Hus, storleksklass 3" render="true" value="Hus, storleksklass 3" symbol="14"/>
-      <category label="Hus, storleksklass 4" render="true" value="Hus, storleksklass 4" symbol="15"/>
-      <category label="Idrottsplats" render="true" value="Idrottsplats" symbol="16"/>
-      <category label="Klockstapel" render="false" value="Klockstapel" symbol="17"/>
-      <category label="Kyrka" render="true" value="Kyrka" symbol="18"/>
-      <category label="Kyrka, mindre" render="true" value="Kyrka, mindre" symbol="19"/>
-      <category label="Mast" render="true" value="Mast" symbol="20"/>
-      <category label="Mindre skjutbana" render="false" value="Mindre skjutbana" symbol="21"/>
-      <category label="Punkt, storleksklass 1, ej specificerad" render="false" value="Punkt, storleksklass 1, ej specificerad" symbol="22"/>
-      <category label="Punkt, storleksklass 2, ej specificerad" render="false" value="Punkt, storleksklass 2, ej specificerad" symbol="23"/>
-      <category label="Skjutbana" render="false" value="Skjutbana" symbol="24"/>
-      <category label="Skorsten" render="true" value="Skorsten" symbol="25"/>
-      <category label="Slott" render="true" value="Slott" symbol="26"/>
-      <category label="Slussport" render="false" value="Slussport" symbol="27"/>
-      <category label="Såg, 'flagga' höger" render="false" value="Såg, 'flagga' höger" symbol="28"/>
-      <category label="Såg, 'flagga' vänster" render="false" value="Såg, 'flagga' vänster" symbol="29"/>
-      <category label="Torn" render="true" value="Torn" symbol="30"/>
-      <category label="Travbana" render="true" value="Travbana" symbol="31"/>
-      <category label="Vindkraftverk" render="true" value="Vindkraftverk" symbol="32"/>
-      <category label="Vindskydd" render="true" value="Vindskydd" symbol="33"/>
-      <category label="" render="false" value="" symbol="34"/>
+      <category label="Badplats" render="true" symbol="0" value="Badplats"/>
+      <category label="Begravningsplats" render="false" symbol="1" value="Begravningsplats"/>
+      <category label="Brädgård" render="false" symbol="2" value="Brädgård"/>
+      <category label="Campingplats" render="true" symbol="3" value="Campingplats"/>
+      <category label="Cistern och silo" render="false" symbol="4" value="Cistern och silo"/>
+      <category label="Dammbyggnad" render="false" symbol="5" value="Dammbyggnad"/>
+      <category label="Dammbyggnad, mindre" render="false" symbol="6" value="Dammbyggnad, mindre"/>
+      <category label="Fotbollsplan" render="true" symbol="7" value="Fotbollsplan"/>
+      <category label="Fyr" render="true" symbol="8" value="Fyr"/>
+      <category label="Gård" render="true" symbol="9" value="Gård"/>
+      <category label="Gästhamn" render="true" symbol="10" value="Gästhamn"/>
+      <category label="Herrgård" render="true" symbol="11" value="Herrgård"/>
+      <category label="Hus, storleksklass 1" render="true" symbol="12" value="Hus, storleksklass 1"/>
+      <category label="Hus, storleksklass 2" render="true" symbol="13" value="Hus, storleksklass 2"/>
+      <category label="Hus, storleksklass 3" render="true" symbol="14" value="Hus, storleksklass 3"/>
+      <category label="Hus, storleksklass 4" render="true" symbol="15" value="Hus, storleksklass 4"/>
+      <category label="Idrottsplats" render="true" symbol="16" value="Idrottsplats"/>
+      <category label="Klockstapel" render="false" symbol="17" value="Klockstapel"/>
+      <category label="Kyrka" render="true" symbol="18" value="Kyrka"/>
+      <category label="Kyrka, mindre" render="true" symbol="19" value="Kyrka, mindre"/>
+      <category label="Mast" render="true" symbol="20" value="Mast"/>
+      <category label="Mindre skjutbana" render="false" symbol="21" value="Mindre skjutbana"/>
+      <category label="Punkt, storleksklass 1, ej specificerad" render="false" symbol="22" value="Punkt, storleksklass 1, ej specificerad"/>
+      <category label="Punkt, storleksklass 2, ej specificerad" render="false" symbol="23" value="Punkt, storleksklass 2, ej specificerad"/>
+      <category label="Skjutbana" render="false" symbol="24" value="Skjutbana"/>
+      <category label="Skorsten" render="true" symbol="25" value="Skorsten"/>
+      <category label="Slott" render="true" symbol="26" value="Slott"/>
+      <category label="Slussport" render="false" symbol="27" value="Slussport"/>
+      <category label="Såg, 'flagga' höger" render="false" symbol="28" value="Såg, 'flagga' höger"/>
+      <category label="Såg, 'flagga' vänster" render="false" symbol="29" value="Såg, 'flagga' vänster"/>
+      <category label="Torn" render="true" symbol="30" value="Torn"/>
+      <category label="Travbana" render="true" symbol="31" value="Travbana"/>
+      <category label="Vindkraftverk" render="true" symbol="32" value="Vindkraftverk"/>
+      <category label="Vindskydd" render="true" symbol="33" value="Vindskydd"/>
+      <category label="" render="false" symbol="34" value=""/>
     </categories>
     <symbols>
-      <symbol force_rhr="0" type="marker" name="0" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="a" k="chr"/>
-          <prop v="196,73,130,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="80" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="0" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="a"/>
+          <prop k="color" v="196,73,130,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="1" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="64,235,81,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="1" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="64,235,81,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="10" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="b" k="chr"/>
-          <prop v="196,73,130,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="80" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="10" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="b"/>
+          <prop k="color" v="196,73,130,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="11" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="K" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="130" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="11" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="K"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-9.23076923076923883"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="120"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="12" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="P" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="40" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="12" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="P"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="40"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360-&quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360-&quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="13" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="O" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,12.39999999999999147" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="80" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="2" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="13" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="O"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,12.39999999999999147"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="14" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="N" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="100" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="14" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="N"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-24.19999999999996732"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="100"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="15" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="P" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="50" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="15" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="P"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="16" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="E" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,-66.44067796610158894" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="280" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="16" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="E"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-66.44067796610158894"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="280"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="17" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="166,108,223,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="17" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="166,108,223,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="18" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="R" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="-16.39999999999997371,-15.19999999999999929" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="130" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="18" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="R"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="-16.39999999999997371,-15.19999999999999929"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="130"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360-&quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360-&quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="19" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="S" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="130" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="19" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="S"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="100"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360 -  &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360 -  &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="2" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="128,112,219,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="2" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="128,112,219,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="20" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="[" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="130" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="20" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="["/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="21" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="75,236,26,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="21" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="75,236,26,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="22" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="223,115,186,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="22" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="223,115,186,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="23" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="208,43,37,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="23" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="208,43,37,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="24" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="130,204,25,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="24" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="130,204,25,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="25" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="203,203,203,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="83,83,83,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="20" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MapUnit" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="80" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="25" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="203,203,203,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="83,83,83,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="15"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MapUnit"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="60"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="26" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="L" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MapUnit" k="outline_width_unit"/>
-          <prop v="160" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="26" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="L"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="-0.60000000000000009,-24.53333300000000605"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MapUnit"/>
+          <prop k="size" v="150"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360 -  &quot;SRIKT&quot; "/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360 -  &quot;SRIKT&quot; " type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="27" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="217,61,217,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="27" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="217,61,217,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="28" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="74,77,232,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="28" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="74,77,232,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="29" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="220,13,41,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="29" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="220,13,41,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="3" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="_" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="80" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="3" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="_"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="30" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="\" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="180" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="30" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="\"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="100"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="31" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="F" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,-150" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="700" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="31" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="F"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-150"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="700"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="32" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="Z" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="200" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="32" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="Z"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,9.99999999999999822"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="150"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="33" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="U" k="chr"/>
-          <prop v="235,121,166,255" k="color"/>
-          <prop v="GSD Symbols" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="160" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="2" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="33" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="U"/>
+          <prop k="color" v="235,121,166,255"/>
+          <prop k="font" v="GSD Symbols"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="9.59999999999999964,-7.40000000000000213"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="80"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="34" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="167,218,14,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="34" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="167,218,14,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="4" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="218,173,49,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="4" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="218,173,49,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="5" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="101,185,221,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="5" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="101,185,221,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="6" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="49,216,93,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="6" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="49,216,93,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="7" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="G" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,-24.19999999999996376" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="150" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="7" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="G"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-24.39999999999999858"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="150"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="8" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="k" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,-11.80000000000000604" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MapUnit" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="150" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="8" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="k"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,-10.2266666666666719"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="130"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="marker" name="9" alpha="1" clip_to_extent="1">
-        <layer class="FontMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="J" k="chr"/>
-          <prop v="0,0,0,255" k="color"/>
-          <prop v="GSDSymbolsTerrängkartan" k="font"/>
-          <prop v="" k="font_style"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="70" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MapUnit" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="9" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="FontMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="J"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="70"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="360- &quot;SRIKT&quot;" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </symbols>
     <source-symbol>
-      <symbol force_rhr="0" type="marker" name="0" alpha="1" clip_to_extent="1">
-        <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
-          <prop v="0" k="angle"/>
-          <prop v="255,158,23,255" k="color"/>
-          <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="circle" k="name"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0" k="outline_width"/>
-          <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="diameter" k="scale_method"/>
-          <prop v="2" k="size"/>
-          <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-          <prop v="MM" k="size_unit"/>
-          <prop v="1" k="vertical_anchor_point"/>
+      <symbol alpha="1" name="0" clip_to_extent="1" force_rhr="0" type="marker">
+        <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="255,158,23,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="diameter"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -1185,7 +1185,7 @@
     <sizescale/>
   </renderer-v2>
   <customproperties>
-    <property value="0" key="embeddedWidgets/count"/>
+    <property key="embeddedWidgets/count" value="0"/>
     <property key="variableNames"/>
     <property key="variableValues"/>
   </customproperties>
@@ -1193,33 +1193,38 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-    <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" penWidth="0" maxScaleDenominator="1e+08" penColor="#000000" sizeType="MM" barWidth="5" labelPlacementMethod="XHeight" spacingUnitScale="3x:0,0,0,0,0,0" height="15" width="15" sizeScale="3x:0,0,0,0,0,0" showAxis="1" spacingUnit="MM" lineSizeType="MM" minScaleDenominator="0" opacity="1" enabled="0" diagramOrientation="Up" rotationOffset="270" scaleDependency="Area" scaleBasedVisibility="0" direction="0" penAlpha="255" spacing="5" backgroundColor="#ffffff" backgroundAlpha="255" minimumSize="0">
+    <DiagramCategory maxScaleDenominator="1e+08" scaleBasedVisibility="0" enabled="0" sizeScale="3x:0,0,0,0,0,0" showAxis="1" lineSizeScale="3x:0,0,0,0,0,0" sizeType="MM" scaleDependency="Area" opacity="1" lineSizeType="MM" penWidth="0" barWidth="5" rotationOffset="270" penColor="#000000" spacing="5" spacingUnitScale="3x:0,0,0,0,0,0" width="15" spacingUnit="MM" minimumSize="0" backgroundAlpha="255" backgroundColor="#ffffff" labelPlacementMethod="XHeight" height="15" minScaleDenominator="0" penAlpha="255" direction="0" diagramOrientation="Up">
       <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
-      <attribute label="" color="#000000" field=""/>
+      <attribute color="#000000" label="" field=""/>
       <axisSymbol>
-        <symbol force_rhr="0" type="line" name="" alpha="1" clip_to_extent="1">
-          <layer class="SimpleLine" enabled="1" locked="0" pass="0">
-            <prop v="square" k="capstyle"/>
-            <prop v="5;2" k="customdash"/>
-            <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-            <prop v="MM" k="customdash_unit"/>
-            <prop v="0" k="draw_inside_polygon"/>
-            <prop v="bevel" k="joinstyle"/>
-            <prop v="35,35,35,255" k="line_color"/>
-            <prop v="solid" k="line_style"/>
-            <prop v="0.26" k="line_width"/>
-            <prop v="MM" k="line_width_unit"/>
-            <prop v="0" k="offset"/>
-            <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-            <prop v="MM" k="offset_unit"/>
-            <prop v="0" k="ring_filter"/>
-            <prop v="0" k="use_custom_dash"/>
-            <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+        <symbol alpha="1" name="" clip_to_extent="1" force_rhr="0" type="line">
+          <layer pass="0" class="SimpleLine" enabled="1" locked="0">
+            <prop k="align_dash_pattern" v="0"/>
+            <prop k="capstyle" v="square"/>
+            <prop k="customdash" v="5;2"/>
+            <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+            <prop k="customdash_unit" v="MM"/>
+            <prop k="dash_pattern_offset" v="0"/>
+            <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+            <prop k="dash_pattern_offset_unit" v="MM"/>
+            <prop k="draw_inside_polygon" v="0"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="line_color" v="35,35,35,255"/>
+            <prop k="line_style" v="solid"/>
+            <prop k="line_width" v="0.26"/>
+            <prop k="line_width_unit" v="MM"/>
+            <prop k="offset" v="0"/>
+            <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="ring_filter" v="0"/>
+            <prop k="tweak_dash_pattern_on_corners" v="0"/>
+            <prop k="use_custom_dash" v="0"/>
+            <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" name="name" value=""/>
+                <Option name="name" value="" type="QString"/>
                 <Option name="properties"/>
-                <Option type="QString" name="type" value="collection"/>
+                <Option name="type" value="collection" type="QString"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -1227,37 +1232,37 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings zIndex="0" placement="0" dist="0" priority="0" obstacle="0" showAll="1" linePlacementFlags="18">
+  <DiagramLayerSettings dist="0" obstacle="0" priority="0" placement="0" zIndex="0" linePlacementFlags="18" showAll="1">
     <properties>
       <Option type="Map">
-        <Option type="QString" name="name" value=""/>
+        <Option name="name" value="" type="QString"/>
         <Option name="properties"/>
-        <Option type="QString" name="type" value="collection"/>
+        <Option name="type" value="collection" type="QString"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
-  <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+  <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
+  <legend type="default-vector"/>
   <referencedLayers/>
-  <referencingLayers/>
   <fieldConfiguration>
-    <field name="KKOD">
+    <field name="KKOD" configurationFlags="None">
       <editWidget type="Range">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="KATEGORI">
+    <field name="KATEGORI" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="SRIKT">
+    <field name="SRIKT" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
@@ -1266,37 +1271,35 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" name="" field="KKOD"/>
-    <alias index="1" name="" field="KATEGORI"/>
-    <alias index="2" name="" field="SRIKT"/>
+    <alias name="" field="KKOD" index="0"/>
+    <alias name="" field="KATEGORI" index="1"/>
+    <alias name="" field="SRIKT" index="2"/>
   </aliases>
-  <excludeAttributesWMS/>
-  <excludeAttributesWFS/>
   <defaults>
-    <default applyOnUpdate="0" field="KKOD" expression=""/>
-    <default applyOnUpdate="0" field="KATEGORI" expression=""/>
-    <default applyOnUpdate="0" field="SRIKT" expression=""/>
+    <default field="KKOD" applyOnUpdate="0" expression=""/>
+    <default field="KATEGORI" applyOnUpdate="0" expression=""/>
+    <default field="SRIKT" applyOnUpdate="0" expression=""/>
   </defaults>
   <constraints>
-    <constraint unique_strength="0" constraints="0" exp_strength="0" notnull_strength="0" field="KKOD"/>
-    <constraint unique_strength="0" constraints="0" exp_strength="0" notnull_strength="0" field="KATEGORI"/>
-    <constraint unique_strength="0" constraints="0" exp_strength="0" notnull_strength="0" field="SRIKT"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="KKOD" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="KATEGORI" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="SRIKT" constraints="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" field="KKOD" desc=""/>
-    <constraint exp="" field="KATEGORI" desc=""/>
-    <constraint exp="" field="SRIKT" desc=""/>
+    <constraint field="KKOD" exp="" desc=""/>
+    <constraint field="KATEGORI" exp="" desc=""/>
+    <constraint field="SRIKT" exp="" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
-    <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+    <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+  <attributetableconfig sortOrder="0" sortExpression="&quot;KATEGORI&quot;" actionWidgetStyle="dropDown">
     <columns>
-      <column type="field" name="KKOD" width="-1" hidden="0"/>
-      <column type="field" name="KATEGORI" width="-1" hidden="0"/>
-      <column type="field" name="SRIKT" width="-1" hidden="0"/>
-      <column type="actions" width="-1" hidden="1"/>
+      <column name="KKOD" width="-1" type="field" hidden="0"/>
+      <column name="KATEGORI" width="227" type="field" hidden="0"/>
+      <column name="SRIKT" width="-1" type="field" hidden="0"/>
+      <column width="-1" type="actions" hidden="1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -1333,9 +1336,9 @@ def my_form_open(dialog, layer, feature):
     <field name="SRIKT" editable="1"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="KATEGORI"/>
-    <field labelOnTop="0" name="KKOD"/>
-    <field labelOnTop="0" name="SRIKT"/>
+    <field name="KATEGORI" labelOnTop="0"/>
+    <field name="KKOD" labelOnTop="0"/>
+    <field name="SRIKT" labelOnTop="0"/>
   </labelOnTop>
   <dataDefinedFieldProperties/>
   <widgets/>
