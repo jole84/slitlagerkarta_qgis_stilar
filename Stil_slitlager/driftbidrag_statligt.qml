@@ -205,7 +205,7 @@
         <substitutions/>
       </text-style>
       <text-format plussign="0" wrapChar="" formatNumbers="0" addDirectionSymbol="0" decimals="3" rightDirectionSymbol=">" reverseDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" placeDirectionSymbol="0" autoWrapLength="0" multilineAlign="0"/>
-      <placement labelOffsetMapUnitScale="3x:0,0,0,0,0,0" overrunDistance="100" maxCurvedCharAngleIn="25" distMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" offsetType="0" distUnits="MapUnit" layerType="LineGeometry" placementFlags="10" dist="25" centroidWhole="0" overrunDistanceUnit="MapUnit" lineAnchorPercent="0.5" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" preserveRotation="1" geometryGeneratorType="PointGeometry" repeatDistanceUnits="MapUnit" rotationAngle="0" quadOffset="4" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" polygonPlacementFlags="2" priority="5" maxCurvedCharAngleOut="-25" offsetUnits="MM" yOffset="0" repeatDistance="100" geometryGeneratorEnabled="0" placement="3" lineAnchorType="0" fitInPolygonOnly="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" geometryGenerator=""/>
+      <placement labelOffsetMapUnitScale="3x:0,0,0,0,0,0" overrunDistance="300" maxCurvedCharAngleIn="60" distMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" offsetType="0" distUnits="MapUnit" layerType="LineGeometry" placementFlags="10" dist="0" centroidWhole="0" overrunDistanceUnit="MapUnit" lineAnchorPercent="0.5" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" preserveRotation="1" geometryGeneratorType="PointGeometry" repeatDistanceUnits="MapUnit" rotationAngle="0" quadOffset="4" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" polygonPlacementFlags="2" priority="5" maxCurvedCharAngleOut="-90" offsetUnits="MM" yOffset="0" repeatDistance="1000" geometryGeneratorEnabled="0" placement="3" lineAnchorType="0" fitInPolygonOnly="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" geometryGenerator=""/>
       <rendering obstacleType="1" fontLimitPixelSize="1" mergeLines="0" fontMaxPixelSize="10000" drawLabels="1" zIndex="0" maxNumLabels="2000" limitNumLabels="0" obstacleFactor="1" fontMinPixelSize="3" scaleMax="0" displayAll="0" labelPerPart="0" obstacle="1" upsidedownLabels="0" scaleVisibility="0" minFeatureSize="0" scaleMin="0"/>
       <dd_properties>
         <Option type="Map">
@@ -239,7 +239,11 @@
       </callout>
     </settings>
   </labeling>
-  <customproperties/>
+  <customproperties>
+    <property key="dualview/previewExpressions">
+      <value>"RLID"</value>
+    </property>
+  </customproperties>
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
