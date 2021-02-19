@@ -1,31 +1,32 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis styleCategories="AllStyleCategories" simplifyDrawingHints="0" simplifyLocal="1" minScale="100000" readOnly="0" simplifyMaxScale="1" simplifyAlgorithm="0" labelsEnabled="0" simplifyDrawingTol="1" version="3.16.3-Hannover" maxScale="0" hasScaleBasedVisibilityFlag="1">
+<qgis version="3.16.3-Hannover" simplifyLocal="1" simplifyDrawingTol="1" labelsEnabled="0" hasScaleBasedVisibilityFlag="1" simplifyDrawingHints="0" simplifyAlgorithm="0" minScale="100000" styleCategories="AllStyleCategories" simplifyMaxScale="1" maxScale="0" readOnly="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <temporal fixedDuration="0" mode="0" startField="" durationField="" endField="" enabled="0" accumulate="0" durationUnit="min" startExpression="" endExpression="">
+  <temporal endExpression="" fixedDuration="0" startField="" durationUnit="min" enabled="0" endField="" mode="0" accumulate="0" durationField="" startExpression="">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <renderer-v2 attr="KATEGORI" type="categorizedSymbol" forceraster="0" enableorderby="0" symbollevels="0">
+  <renderer-v2 symbollevels="0" attr="KATEGORI" type="categorizedSymbol" forceraster="0" enableorderby="0">
     <categories>
-      <category value="Bebyggelselämning" label="Bebyggelselämning" render="true" symbol="0"/>
-      <category value="Byggnadsminne, upplysningssymbol" label="Byggnadsminne, upplysningssymbol" render="true" symbol="1"/>
-      <category value="Fornlämning, mindre" label="Fornlämning, mindre" render="true" symbol="2"/>
-      <category value="Fornlämning, upplysningssymbol" label="Fornlämning, upplysningssymbol" render="true" symbol="3"/>
-      <category value="Gruvhål" label="Gruvhål" render="true" symbol="4"/>
-      <category value="Milstolpe" label="Milstolpe" render="true" symbol="5"/>
-      <category value="Minnessten, upplysningssymbol" label="Minnessten, upplysningssymbol" render="true" symbol="6"/>
-      <category value="Ruin" label="Ruin" render="true" symbol="7"/>
-      <category value="" label="" render="false" symbol="8"/>
+      <category symbol="0" value="Bebyggelselämning" label="Bebyggelselämning" render="true"/>
+      <category symbol="1" value="Byggnadsminne, upplysningssymbol" label="Byggnadsminne, upplysningssymbol" render="true"/>
+      <category symbol="2" value="Fornlämning" label="Fornlämning" render="true"/>
+      <category symbol="3" value="Fornlämning, mindre" label="Fornlämning, mindre" render="true"/>
+      <category symbol="4" value="Fornlämning, upplysningssymbol" label="Fornlämning, upplysningssymbol" render="true"/>
+      <category symbol="5" value="Gruvhål" label="Gruvhål" render="true"/>
+      <category symbol="6" value="Milstolpe" label="Milstolpe" render="true"/>
+      <category symbol="7" value="Minnessten, upplysningssymbol" label="Minnessten, upplysningssymbol" render="true"/>
+      <category symbol="8" value="Ruin" label="Ruin" render="true"/>
+      <category symbol="9" value="" label="" render="false"/>
     </categories>
     <symbols>
-      <symbol alpha="1" force_rhr="0" type="marker" name="0" clip_to_extent="1">
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="0" alpha="1" clip_to_extent="1">
+        <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="color" v="255,255,255,255"/>
           <prop k="horizontal_anchor_point" v="1"/>
@@ -46,15 +47,15 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="1" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="1" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="{"/>
           <prop k="color" v="0,0,0,255"/>
@@ -75,21 +76,21 @@
           <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="false"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="2" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="2" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="B"/>
           <prop k="color" v="0,0,0,255"/>
@@ -110,21 +111,56 @@
           <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="3" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="3" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
+          <prop k="angle" v="0"/>
+          <prop k="chr" v="B"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="font" v="GSDSymbolsTerrängkartan"/>
+          <prop k="font_style" v=""/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,17.59999999999998366"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MapUnit"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="size" v="35"/>
+          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="size_unit" v="MapUnit"/>
+          <prop k="vertical_anchor_point" v="2"/>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option type="QString" name="name" value=""/>
+              <Option type="Map" name="properties">
+                <Option type="Map" name="angle">
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
+                </Option>
+              </Option>
+              <Option type="QString" name="type" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol type="marker" force_rhr="0" name="4" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="y"/>
           <prop k="color" v="0,0,0,255"/>
@@ -145,21 +181,21 @@
           <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="false"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="4" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="5" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="D"/>
           <prop k="color" v="0,0,0,255"/>
@@ -180,21 +216,21 @@
           <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="5" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="6" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="|"/>
           <prop k="color" v="0,0,0,255"/>
@@ -215,21 +251,21 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="360-&quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="360-&quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="6" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="7" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="z"/>
           <prop k="color" v="0,0,0,255"/>
@@ -250,21 +286,21 @@
           <prop k="vertical_anchor_point" v="2"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="false"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="7" clip_to_extent="1">
-        <layer locked="0" class="FontMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="8" alpha="1" clip_to_extent="1">
+        <layer class="FontMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="chr" v="d"/>
           <prop k="color" v="0,0,0,255"/>
@@ -285,21 +321,21 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="angle">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="360- &quot;SRIKT&quot;" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="360- &quot;SRIKT&quot;"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="8" clip_to_extent="1">
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="9" alpha="1" clip_to_extent="1">
+        <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="color" v="217,125,185,255"/>
           <prop k="horizontal_anchor_point" v="1"/>
@@ -320,17 +356,17 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </symbols>
     <source-symbol>
-      <symbol alpha="1" force_rhr="0" type="marker" name="0" clip_to_extent="1">
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+      <symbol type="marker" force_rhr="0" name="0" alpha="1" clip_to_extent="1">
+        <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
           <prop k="angle" v="0"/>
           <prop k="color" v="232,113,141,255"/>
           <prop k="horizontal_anchor_point" v="1"/>
@@ -351,9 +387,9 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option value="collection" type="QString" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -363,9 +399,7 @@
     <sizescale/>
   </renderer-v2>
   <customproperties>
-    <property key="dualview/previewExpressions">
-      <value>"KKOD"</value>
-    </property>
+    <property value="&quot;KKOD&quot;" key="dualview/previewExpressions"/>
     <property value="0" key="embeddedWidgets/count"/>
     <property key="variableNames"/>
     <property key="variableValues"/>
@@ -374,12 +408,12 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory labelPlacementMethod="XHeight" lineSizeScale="3x:0,0,0,0,0,0" spacing="5" spacingUnit="MM" penAlpha="255" penColor="#000000" diagramOrientation="Up" direction="0" backgroundAlpha="255" barWidth="5" showAxis="1" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" minScaleDenominator="0" scaleBasedVisibility="0" height="15" enabled="0" backgroundColor="#ffffff" minimumSize="0" spacingUnitScale="3x:0,0,0,0,0,0" sizeType="MM" width="15" rotationOffset="270" penWidth="0" scaleDependency="Area" opacity="1" maxScaleDenominator="1e+08">
-      <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
-      <attribute field="" color="#000000" label=""/>
+    <DiagramCategory opacity="1" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="0" scaleBasedVisibility="0" scaleDependency="Area" spacingUnit="MM" width="15" labelPlacementMethod="XHeight" barWidth="5" sizeType="MM" lineSizeType="MM" spacingUnitScale="3x:0,0,0,0,0,0" diagramOrientation="Up" penAlpha="255" direction="0" sizeScale="3x:0,0,0,0,0,0" maxScaleDenominator="1e+08" backgroundColor="#ffffff" penWidth="0" backgroundAlpha="255" enabled="0" penColor="#000000" showAxis="1" height="15" spacing="5" rotationOffset="270" minimumSize="0">
+      <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+      <attribute field="" label="" color="#000000"/>
       <axisSymbol>
-        <symbol alpha="1" force_rhr="0" type="line" name="" clip_to_extent="1">
-          <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+        <symbol type="line" force_rhr="0" name="" alpha="1" clip_to_extent="1">
+          <layer class="SimpleLine" locked="0" pass="0" enabled="1">
             <prop k="align_dash_pattern" v="0"/>
             <prop k="capstyle" v="square"/>
             <prop k="customdash" v="5;2"/>
@@ -403,9 +437,9 @@
             <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" type="QString" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option value="collection" type="QString" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -413,12 +447,12 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings placement="0" priority="0" zIndex="0" linePlacementFlags="18" obstacle="0" showAll="1" dist="0">
+  <DiagramLayerSettings linePlacementFlags="18" priority="0" zIndex="0" showAll="1" dist="0" placement="0" obstacle="0">
     <properties>
       <Option type="Map">
-        <Option value="" type="QString" name="name"/>
+        <Option type="QString" name="name" value=""/>
         <Option name="properties"/>
-        <Option value="collection" type="QString" name="type"/>
+        <Option type="QString" name="type" value="collection"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -429,21 +463,21 @@
   <legend type="default-vector"/>
   <referencedLayers/>
   <fieldConfiguration>
-    <field name="KKOD" configurationFlags="None">
+    <field configurationFlags="None" name="KKOD">
       <editWidget type="Range">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="KATEGORI" configurationFlags="None">
+    <field configurationFlags="None" name="KATEGORI">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="SRIKT" configurationFlags="None">
+    <field configurationFlags="None" name="SRIKT">
       <editWidget type="TextEdit">
         <config>
           <Option/>
@@ -452,9 +486,9 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias field="KKOD" index="0" name=""/>
-    <alias field="KATEGORI" index="1" name=""/>
-    <alias field="SRIKT" index="2" name=""/>
+    <alias name="" index="0" field="KKOD"/>
+    <alias name="" index="1" field="KATEGORI"/>
+    <alias name="" index="2" field="SRIKT"/>
   </aliases>
   <defaults>
     <default expression="" field="KKOD" applyOnUpdate="0"/>
@@ -462,14 +496,14 @@
     <default expression="" field="SRIKT" applyOnUpdate="0"/>
   </defaults>
   <constraints>
-    <constraint exp_strength="0" notnull_strength="0" field="KKOD" constraints="0" unique_strength="0"/>
-    <constraint exp_strength="0" notnull_strength="0" field="KATEGORI" constraints="0" unique_strength="0"/>
-    <constraint exp_strength="0" notnull_strength="0" field="SRIKT" constraints="0" unique_strength="0"/>
+    <constraint field="KKOD" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
+    <constraint field="KATEGORI" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
+    <constraint field="SRIKT" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint field="KKOD" exp="" desc=""/>
-    <constraint field="KATEGORI" exp="" desc=""/>
-    <constraint field="SRIKT" exp="" desc=""/>
+    <constraint exp="" desc="" field="KKOD"/>
+    <constraint exp="" desc="" field="KATEGORI"/>
+    <constraint exp="" desc="" field="SRIKT"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
@@ -477,10 +511,10 @@
   </attributeactions>
   <attributetableconfig sortExpression="&quot;KATEGORI&quot;" actionWidgetStyle="dropDown" sortOrder="0">
     <columns>
-      <column width="-1" hidden="0" type="field" name="KKOD"/>
-      <column width="174" hidden="0" type="field" name="KATEGORI"/>
-      <column width="-1" hidden="0" type="field" name="SRIKT"/>
-      <column width="-1" hidden="1" type="actions"/>
+      <column width="-1" type="field" name="KKOD" hidden="0"/>
+      <column width="174" type="field" name="KATEGORI" hidden="0"/>
+      <column width="-1" type="field" name="SRIKT" hidden="0"/>
+      <column width="-1" type="actions" hidden="1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -512,9 +546,9 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field editable="1" name="KATEGORI"/>
-    <field editable="1" name="KKOD"/>
-    <field editable="1" name="SRIKT"/>
+    <field name="KATEGORI" editable="1"/>
+    <field name="KKOD" editable="1"/>
+    <field name="SRIKT" editable="1"/>
   </editable>
   <labelOnTop>
     <field name="KATEGORI" labelOnTop="0"/>
