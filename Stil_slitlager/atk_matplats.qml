@@ -1,25 +1,25 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyDrawingHints="0" simplifyMaxScale="1" simplifyLocal="1" version="3.16.3-Hannover" labelsEnabled="1" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="1" minScale="250000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" maxScale="0" readOnly="0">
+<qgis hasScaleBasedVisibilityFlag="1" simplifyDrawingHints="0" simplifyAlgorithm="0" readOnly="0" styleCategories="AllStyleCategories" simplifyLocal="1" simplifyMaxScale="1" version="3.16.3-Hannover" minScale="250000" labelsEnabled="1" simplifyDrawingTol="1" maxScale="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <temporal mode="1" durationUnit="min" fixedDuration="0" startField="driftstart" durationField="" startExpression="" endExpression="" accumulate="0" endField="" enabled="0">
+  <temporal enabled="0" startField="DRIFTSTART" endExpression="" durationField="" mode="1" accumulate="0" endField="" startExpression="" durationUnit="min" fixedDuration="0">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+  <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
     <symbols>
-      <symbol alpha="1" clip_to_extent="1" type="marker" name="0" force_rhr="0">
-        <layer class="SvgMarker" pass="0" locked="0" enabled="1">
+      <symbol name="0" force_rhr="0" clip_to_extent="1" type="marker" alpha="1">
+        <layer enabled="1" locked="0" class="SvgMarker" pass="0">
           <prop v="0" k="angle"/>
           <prop v="183,72,75,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="D:/git/slitlagerkarta_qgis_stilar/Stil_stratvag/e24-1.svg" k="name"/>
+          <prop v="base64:PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnDQogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iDQogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIg0KICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIg0KICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHZpZXdCb3g9IjAgMCA0NTQuODggNDU0Ljg4Ig0KICAgaGVpZ2h0PSI0NTQuODgiDQogICB3aWR0aD0iNDU0Ljg4Ig0KICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSINCiAgIGlkPSJzdmcyIg0KICAgdmVyc2lvbj0iMS4xIj48bWV0YWRhdGENCiAgICAgaWQ9Im1ldGFkYXRhOCI+PHJkZjpSREY+PGNjOldvcmsNCiAgICAgICAgIHJkZjphYm91dD0iIj48ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD48ZGM6dHlwZQ0KICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcw0KICAgICBpZD0iZGVmczYiIC8+PGcNCiAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4zMzMzMzMzLDAsMCwtMS4zMzMzMzMzLDAsNDU0Ljg4KSINCiAgICAgaWQ9ImcxMCI+PGcNCiAgICAgICB0cmFuc2Zvcm09InNjYWxlKDAuMSkiDQogICAgICAgaWQ9ImcxMiI+PHBhdGgNCiAgICAgICAgIGlkPSJwYXRoMTQiDQogICAgICAgICBzdHlsZT0iZmlsbDojMTU1MTk2O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgZD0iTSA1LDUgSCAzNDA2LjU3IFYgMzQwNi41OCBIIDUgViA1IiAvPjxwYXRoDQogICAgICAgICBpZD0icGF0aDE2Ig0KICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzE1NTE5NjtzdHJva2Utd2lkdGg6MTA7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSINCiAgICAgICAgIGQ9Ik0gNSw1IEggMzQwNi41NyBWIDM0MDYuNTggSCA1IFoiIC8+PHBhdGgNCiAgICAgICAgIGlkPSJwYXRoMTgiDQogICAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgZD0iTSAyMzEuNzcsNSBIIDMxNzkuOCBjIDYwLjE0LDAgMTE3LjgzLDIzLjg5ODQgMTYwLjM2LDY2LjQxOCA0Mi41Miw0Mi41MzUgNjYuNDEsMTAwLjIxNSA2Ni40MSwxNjAuMzUyIFYgMzE3OS44IGMgMCwxMjUuMjUgLTEwMS41MywyMjYuNzggLTIyNi43NywyMjYuNzggSCAyMzEuNzcgYyAtNjAuMTQ1LDAgLTExNy44MjUsLTIzLjg5IC0xNjAuMzU1OSwtNjYuNDIgQyAyOC44ODY3LDMyOTcuNjMgNSwzMjM5Ljk1IDUsMzE3OS44IFYgMjMxLjc3IEMgNSwxMDYuNTMxIDEwNi41MjcsNSAyMzEuNzcsNSIgLz48cGF0aA0KICAgICAgICAgaWQ9InBhdGgyMCINCiAgICAgICAgIHN0eWxlPSJmaWxsOiMxNTUxOTY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICBkPSJNIDIzMS43NywxMTguMzkxIEggMzE3OS44IGMgNjIuNjIsMCAxMTMuMzgsNTAuNzYxIDExMy4zOCwxMTMuMzc5IFYgMzE3OS44IGMgMCw2Mi42MyAtNTAuNzYsMTEzLjQgLTExMy4zOCwxMTMuNCBIIDIzMS43NyBjIC0zMC4wNzEsMCAtNTguOTE1LC0xMS45NSAtODAuMTc2LC0zMy4yMiAtMjEuMjYyLC0yMS4yNyAtMzMuMjExLC01MC4xIC0zMy4yMTEsLTgwLjE4IFYgMjMxLjc3IGMgMCwtMzAuMDU5IDExLjk0OSwtNTguOTA3IDMzLjIxMSwtODAuMTc2IDIxLjI2MSwtMjEuMjYyIDUwLjEwNSwtMzMuMjAzIDgwLjE3NiwtMzMuMjAzIiAvPjxwYXRoDQogICAgICAgICBpZD0icGF0aDIyIg0KICAgICAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgIGQ9Ik0gMTkxMi40OCw0MDEuNjkxIFYgMTQ1MS41MiBsIDE3MS4yMSw5Ny40NyBWIDQwMS42OTEgaCAtMTcxLjIxIiAvPjxwYXRoDQogICAgICAgICBpZD0icGF0aDI0Ig0KICAgICAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgIGQ9Ik0gNjMxLjI2NiwxMTA1LjgzIDk2Ny45OCwxNDI0Ljk1IDgzNi44NjMsMTY1NS4yMyAzOTAuNTgyLDE1MjguNTUgNjMxLjI2NiwxMTA1LjgzIiAvPjxwYXRoDQogICAgICAgICBpZD0icGF0aDI2Ig0KICAgICAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgIGQ9Im0gMjk1OC42NSwyMzE3LjAxIGMgMzQuMzQsLTYwLjMxIDEzLjI4LC0xMzcuMDMgLTQ3LjAzLC0xNzEuMzcgTCAxMzE2LjAzLDEyMzcuMTggYyAtNjAuMzEsLTM0LjM0IC0xMzcuMDQsLTEzLjI4IC0xNzEuMzcsNDcuMDMgTCA4MDYuMDA4LDE4NzkgYyAtMTYuNDkyLDI4Ljk2IC0yMC44MDEsNjMuMjkgLTExLjk4NSw5NS40MyA4LjgyNSwzMi4xMyAzMC4wNDcsNTkuNDUgNTkuMDA4LDc1Ljk0IGwgMTU5NS41OTksOTA4LjQ2IGMgNjAuMywzNC4zNCAxMzcuMDMsMTMuMjggMTcxLjM3LC00Ny4wMiBsIDMzOC42NSwtNTk0LjgiIC8+PC9nPjwvZz48L3N2Zz4=" k="name"/>
           <prop v="100,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MapUnit" k="offset_unit"/>
@@ -34,15 +34,15 @@
           <prop v="1" k="vertical_anchor_point"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="angle">
-                  <Option type="bool" name="active" value="true"/>
-                  <Option type="QString" name="expression" value="&quot;VINKEL&quot;+180"/>
-                  <Option type="int" name="type" value="3"/>
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="angle" type="Map">
+                  <Option name="active" value="true" type="bool"/>
+                  <Option name="expression" value="&quot;VINKEL&quot;+180" type="QString"/>
+                  <Option name="type" value="3" type="int"/>
                 </Option>
               </Option>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -53,12 +53,12 @@
   </renderer-v2>
   <labeling type="simple">
     <settings calloutType="simple">
-      <text-style fontLetterSpacing="0" fontKerning="1" fontUnderline="0" fontStrikeout="0" namedStyle="Regular" textOpacity="1" fontWeight="50" blendMode="0" isExpression="0" textOrientation="horizontal" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontSizeUnit="MapUnit" allowHtml="0" useSubstitutions="0" textColor="0,0,0,255" fontItalic="0" capitalization="0" fieldName="join_hthast" fontFamily="TratexSvart" multilineHeight="1" previewBkgrdColor="255,255,255,255" fontSize="100" fontWordSpacing="0">
-        <text-buffer bufferSizeUnits="MM" bufferColor="255,255,255,255" bufferNoFill="1" bufferBlendMode="0" bufferSize="1" bufferDraw="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferOpacity="1" bufferJoinStyle="128"/>
-        <text-mask maskOpacity="1" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskType="0" maskSize="1.5" maskSizeUnits="MM" maskEnabled="0" maskedSymbolLayers="" maskJoinStyle="128"/>
-        <background shapeBorderWidthUnit="MapUnit" shapeOffsetX="0" shapeSizeY="0" shapeRadiiY="0" shapeOpacity="1" shapeSVGFile="" shapeRadiiX="0" shapeSizeUnit="MM" shapeSizeType="0" shapeBlendMode="0" shapeJoinStyle="64" shapeDraw="1" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeBorderColor="231,49,55,255" shapeFillColor="255,211,0,255" shapeBorderWidth="20" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeRotationType="0" shapeOffsetUnit="MM" shapeSizeX="0" shapeOffsetY="0" shapeRadiiUnit="MM" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeType="3">
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="markerSymbol" force_rhr="0">
-            <layer class="SimpleMarker" pass="0" locked="0" enabled="1">
+      <text-style textOrientation="horizontal" isExpression="0" fontWeight="50" fontFamily="TratexSvart" namedStyle="Regular" fontItalic="0" fieldName="HTHAST" blendMode="0" fontUnderline="0" fontKerning="1" multilineHeight="1" fontStrikeout="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontLetterSpacing="0" previewBkgrdColor="255,255,255,255" textColor="0,0,0,255" textOpacity="1" fontSize="100" fontWordSpacing="0" fontSizeUnit="MapUnit" allowHtml="0" useSubstitutions="0" capitalization="0">
+        <text-buffer bufferDraw="0" bufferNoFill="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSize="1" bufferJoinStyle="128" bufferOpacity="1" bufferSizeUnits="MM" bufferBlendMode="0" bufferColor="255,255,255,255"/>
+        <text-mask maskSize="1.5" maskOpacity="1" maskJoinStyle="128" maskEnabled="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskSizeUnits="MM" maskType="0" maskedSymbolLayers=""/>
+        <background shapeRadiiX="0" shapeOffsetUnit="MM" shapeRotation="0" shapeBorderWidthUnit="MapUnit" shapeJoinStyle="64" shapeOpacity="1" shapeRadiiUnit="MM" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSizeType="0" shapeRadiiY="0" shapeBlendMode="0" shapeBorderColor="231,49,55,255" shapeOffsetY="0" shapeBorderWidth="20" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeSVGFile="" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="1" shapeOffsetX="0" shapeType="3" shapeFillColor="255,211,0,255" shapeRotationType="0" shapeSizeX="0" shapeSizeUnit="MM" shapeSizeY="0">
+          <symbol name="markerSymbol" force_rhr="0" clip_to_extent="1" type="marker" alpha="1">
+            <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
               <prop v="0" k="angle"/>
               <prop v="114,155,111,255" k="color"/>
               <prop v="1" k="horizontal_anchor_point"/>
@@ -79,81 +79,81 @@
               <prop v="1" k="vertical_anchor_point"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </background>
-        <shadow shadowOffsetGlobal="1" shadowRadiusUnit="MM" shadowOffsetDist="1" shadowRadius="1.5" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetAngle="135" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowDraw="0" shadowUnder="0" shadowOpacity="0.7" shadowColor="0,0,0,255" shadowOffsetUnit="MM" shadowRadiusAlphaOnly="0" shadowScale="100"/>
+        <shadow shadowColor="0,0,0,255" shadowOffsetUnit="MM" shadowOffsetAngle="135" shadowOffsetGlobal="1" shadowOffsetDist="1" shadowRadiusUnit="MM" shadowDraw="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOpacity="0.7" shadowRadius="1.5" shadowScale="100" shadowBlendMode="6" shadowUnder="0" shadowRadiusAlphaOnly="0"/>
         <dd_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </dd_properties>
         <substitutions/>
       </text-style>
-      <text-format autoWrapLength="0" multilineAlign="3" decimals="3" addDirectionSymbol="0" formatNumbers="0" reverseDirectionSymbol="0" rightDirectionSymbol=">" plussign="0" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" wrapChar="" placeDirectionSymbol="0"/>
-      <placement geometryGeneratorType="PointGeometry" offsetUnits="MapUnit" overrunDistanceUnit="MM" centroidWhole="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="1" xOffset="0" distUnits="MM" quadOffset="3" maxCurvedCharAngleIn="25" overrunDistance="0" polygonPlacementFlags="2" placementFlags="10" lineAnchorPercent="0.5" preserveRotation="1" geometryGenerator="" repeatDistanceUnits="MM" fitInPolygonOnly="0" rotationAngle="0" repeatDistance="0" centroidInside="0" dist="0" yOffset="0" distMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorEnabled="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" offsetType="0" priority="5" layerType="PointGeometry" maxCurvedCharAngleOut="-25" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" lineAnchorType="0"/>
-      <rendering maxNumLabels="2000" obstacleType="1" scaleMax="0" scaleMin="0" drawLabels="1" labelPerPart="0" zIndex="0" displayAll="1" fontLimitPixelSize="0" fontMaxPixelSize="10000" upsidedownLabels="2" minFeatureSize="0" limitNumLabels="0" mergeLines="0" scaleVisibility="0" obstacleFactor="1" obstacle="1" fontMinPixelSize="3"/>
+      <text-format leftDirectionSymbol="&lt;" reverseDirectionSymbol="0" decimals="3" placeDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" rightDirectionSymbol=">" wrapChar="" autoWrapLength="0" multilineAlign="3" addDirectionSymbol="0" formatNumbers="0" plussign="0"/>
+      <placement overrunDistanceUnit="MM" distUnits="MM" layerType="PointGeometry" repeatDistance="0" placement="1" priority="5" repeatDistanceUnits="MM" fitInPolygonOnly="0" distMapUnitScale="3x:0,0,0,0,0,0" polygonPlacementFlags="2" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" lineAnchorType="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" offsetUnits="MapUnit" preserveRotation="1" placementFlags="10" dist="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" yOffset="0" overrunDistance="0" centroidWhole="0" geometryGeneratorEnabled="0" lineAnchorPercent="0.5" quadOffset="3" offsetType="0" maxCurvedCharAngleIn="25" maxCurvedCharAngleOut="-25" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" geometryGenerator="" centroidInside="0" rotationAngle="0" xOffset="0"/>
+      <rendering fontMinPixelSize="3" mergeLines="0" fontLimitPixelSize="0" obstacle="1" scaleVisibility="0" drawLabels="1" fontMaxPixelSize="10000" minFeatureSize="0" obstacleType="1" labelPerPart="0" limitNumLabels="0" scaleMax="0" maxNumLabels="2000" upsidedownLabels="2" displayAll="1" zIndex="0" scaleMin="0" obstacleFactor="1"/>
       <dd_properties>
         <Option type="Map">
-          <Option type="QString" name="name" value=""/>
-          <Option type="Map" name="properties">
-            <Option type="Map" name="LabelRotation">
-              <Option type="bool" name="active" value="true"/>
-              <Option type="QString" name="expression" value="&quot;VINKEL&quot;+180"/>
-              <Option type="int" name="type" value="3"/>
+          <Option name="name" value="" type="QString"/>
+          <Option name="properties" type="Map">
+            <Option name="LabelRotation" type="Map">
+              <Option name="active" value="true" type="bool"/>
+              <Option name="expression" value="&quot;VINKEL&quot;+180" type="QString"/>
+              <Option name="type" value="3" type="int"/>
             </Option>
           </Option>
-          <Option type="QString" name="type" value="collection"/>
+          <Option name="type" value="collection" type="QString"/>
         </Option>
       </dd_properties>
       <callout type="simple">
         <Option type="Map">
-          <Option type="QString" name="anchorPoint" value="pole_of_inaccessibility"/>
-          <Option type="Map" name="ddProperties">
-            <Option type="QString" name="name" value=""/>
+          <Option name="anchorPoint" value="pole_of_inaccessibility" type="QString"/>
+          <Option name="ddProperties" type="Map">
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
-          <Option type="bool" name="drawToAllParts" value="false"/>
-          <Option type="QString" name="enabled" value="0"/>
-          <Option type="QString" name="labelAnchorPoint" value="point_on_exterior"/>
-          <Option type="QString" name="lineSymbol" value="&lt;symbol alpha=&quot;1&quot; clip_to_extent=&quot;1&quot; type=&quot;line&quot; name=&quot;symbol&quot; force_rhr=&quot;0&quot;>&lt;layer class=&quot;SimpleLine&quot; pass=&quot;0&quot; locked=&quot;0&quot; enabled=&quot;1&quot;>&lt;prop v=&quot;0&quot; k=&quot;align_dash_pattern&quot;/>&lt;prop v=&quot;square&quot; k=&quot;capstyle&quot;/>&lt;prop v=&quot;5;2&quot; k=&quot;customdash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;customdash_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;customdash_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;dash_pattern_offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;dash_pattern_offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;draw_inside_polygon&quot;/>&lt;prop v=&quot;bevel&quot; k=&quot;joinstyle&quot;/>&lt;prop v=&quot;60,60,60,255&quot; k=&quot;line_color&quot;/>&lt;prop v=&quot;solid&quot; k=&quot;line_style&quot;/>&lt;prop v=&quot;0.3&quot; k=&quot;line_width&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;line_width_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;ring_filter&quot;/>&lt;prop v=&quot;0&quot; k=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;prop v=&quot;0&quot; k=&quot;use_custom_dash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;width_map_unit_scale&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>"/>
-          <Option type="double" name="minLength" value="0"/>
-          <Option type="QString" name="minLengthMapUnitScale" value="3x:0,0,0,0,0,0"/>
-          <Option type="QString" name="minLengthUnit" value="MM"/>
-          <Option type="double" name="offsetFromAnchor" value="0"/>
-          <Option type="QString" name="offsetFromAnchorMapUnitScale" value="3x:0,0,0,0,0,0"/>
-          <Option type="QString" name="offsetFromAnchorUnit" value="MM"/>
-          <Option type="double" name="offsetFromLabel" value="0"/>
-          <Option type="QString" name="offsetFromLabelMapUnitScale" value="3x:0,0,0,0,0,0"/>
-          <Option type="QString" name="offsetFromLabelUnit" value="MM"/>
+          <Option name="drawToAllParts" value="false" type="bool"/>
+          <Option name="enabled" value="0" type="QString"/>
+          <Option name="labelAnchorPoint" value="point_on_exterior" type="QString"/>
+          <Option name="lineSymbol" value="&lt;symbol name=&quot;symbol&quot; force_rhr=&quot;0&quot; clip_to_extent=&quot;1&quot; type=&quot;line&quot; alpha=&quot;1&quot;>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; class=&quot;SimpleLine&quot; pass=&quot;0&quot;>&lt;prop v=&quot;0&quot; k=&quot;align_dash_pattern&quot;/>&lt;prop v=&quot;square&quot; k=&quot;capstyle&quot;/>&lt;prop v=&quot;5;2&quot; k=&quot;customdash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;customdash_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;customdash_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;dash_pattern_offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;dash_pattern_offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;draw_inside_polygon&quot;/>&lt;prop v=&quot;bevel&quot; k=&quot;joinstyle&quot;/>&lt;prop v=&quot;60,60,60,255&quot; k=&quot;line_color&quot;/>&lt;prop v=&quot;solid&quot; k=&quot;line_style&quot;/>&lt;prop v=&quot;0.3&quot; k=&quot;line_width&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;line_width_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;ring_filter&quot;/>&lt;prop v=&quot;0&quot; k=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;prop v=&quot;0&quot; k=&quot;use_custom_dash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;width_map_unit_scale&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;name&quot; value=&quot;&quot; type=&quot;QString&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option name=&quot;type&quot; value=&quot;collection&quot; type=&quot;QString&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>" type="QString"/>
+          <Option name="minLength" value="0" type="double"/>
+          <Option name="minLengthMapUnitScale" value="3x:0,0,0,0,0,0" type="QString"/>
+          <Option name="minLengthUnit" value="MM" type="QString"/>
+          <Option name="offsetFromAnchor" value="0" type="double"/>
+          <Option name="offsetFromAnchorMapUnitScale" value="3x:0,0,0,0,0,0" type="QString"/>
+          <Option name="offsetFromAnchorUnit" value="MM" type="QString"/>
+          <Option name="offsetFromLabel" value="0" type="double"/>
+          <Option name="offsetFromLabelMapUnitScale" value="3x:0,0,0,0,0,0" type="QString"/>
+          <Option name="offsetFromLabelUnit" value="MM" type="QString"/>
         </Option>
       </callout>
     </settings>
   </labeling>
   <customproperties>
-    <property key="dualview/previewExpressions" value="&quot;ID&quot;"/>
-    <property key="embeddedWidgets/count" value="0"/>
+    <property value="&quot;ID&quot;" key="dualview/previewExpressions"/>
+    <property value="0" key="embeddedWidgets/count"/>
     <property key="variableNames"/>
     <property key="variableValues"/>
   </customproperties>
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
-  <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory penColor="#000000" enabled="0" lineSizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" spacing="5" rotationOffset="270" lineSizeType="MM" showAxis="1" penAlpha="255" backgroundAlpha="255" scaleBasedVisibility="0" maxScaleDenominator="1e+08" penWidth="0" width="15" opacity="1" minimumSize="0" height="15" barWidth="5" spacingUnit="MM" sizeScale="3x:0,0,0,0,0,0" spacingUnitScale="3x:0,0,0,0,0,0" scaleDependency="Area" minScaleDenominator="0" sizeType="MM" diagramOrientation="Up" backgroundColor="#ffffff" direction="0">
+  <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+    <DiagramCategory barWidth="5" minScaleDenominator="0" backgroundAlpha="255" direction="0" scaleDependency="Area" height="15" penColor="#000000" lineSizeType="MM" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" spacing="5" penAlpha="255" rotationOffset="270" spacingUnitScale="3x:0,0,0,0,0,0" diagramOrientation="Up" minimumSize="0" penWidth="0" labelPlacementMethod="XHeight" sizeType="MM" sizeScale="3x:0,0,0,0,0,0" maxScaleDenominator="1e+08" width="15" backgroundColor="#ffffff" showAxis="1" spacingUnit="MM" scaleBasedVisibility="0" enabled="0">
       <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
-      <attribute color="#000000" label="" field=""/>
+      <attribute label="" field="" color="#000000"/>
       <axisSymbol>
-        <symbol alpha="1" clip_to_extent="1" type="line" name="" force_rhr="0">
-          <layer class="SimpleLine" pass="0" locked="0" enabled="1">
+        <symbol name="" force_rhr="0" clip_to_extent="1" type="line" alpha="1">
+          <layer enabled="1" locked="0" class="SimpleLine" pass="0">
             <prop v="0" k="align_dash_pattern"/>
             <prop v="square" k="capstyle"/>
             <prop v="5;2" k="customdash"/>
@@ -177,9 +177,9 @@
             <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" name="name" value=""/>
+                <Option name="name" value="" type="QString"/>
                 <Option name="properties"/>
-                <Option type="QString" name="type" value="collection"/>
+                <Option name="type" value="collection" type="QString"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -187,12 +187,12 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings priority="0" placement="0" obstacle="0" showAll="1" zIndex="0" dist="0" linePlacementFlags="18">
+  <DiagramLayerSettings zIndex="0" showAll="1" priority="0" obstacle="0" placement="0" linePlacementFlags="18" dist="0">
     <properties>
       <Option type="Map">
-        <Option type="QString" name="name" value=""/>
+        <Option name="name" value="" type="QString"/>
         <Option name="properties"/>
-        <Option type="QString" name="type" value="collection"/>
+        <Option name="type" value="collection" type="QString"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -203,400 +203,176 @@
   <legend type="default-vector"/>
   <referencedLayers/>
   <fieldConfiguration>
-    <field name="fid" configurationFlags="None">
+    <field name="ID" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="pk_0" configurationFlags="None">
+    <field name="NAMN" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="pk" configurationFlags="None">
+    <field name="E_KORDNAAT" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="id" configurationFlags="None">
+    <field name="N_KORDNAAT" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="namn" configurationFlags="None">
+    <field name="VINKEL" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="e_kordnaat" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="n_kordnaat" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="vinkel" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="driftstart" configurationFlags="None">
+    <field name="DRIFTSTART" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="nedontraad" configurationFlags="None">
+    <field name="NEDONTRAAD" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="rlid" configurationFlags="None">
+    <field name="RLID" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="avst" configurationFlags="None">
+    <field name="AVST" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="fran_datum" configurationFlags="None">
+    <field name="FRAN_DATUM" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="till_datum" configurationFlags="None">
+    <field name="TILL_DATUM" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="riktning" configurationFlags="None">
+    <field name="RIKTNING" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_pk" configurationFlags="None">
+    <field name="ID_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_hthast" configurationFlags="None">
+    <field name="NAMN_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_havhast1" configurationFlags="None">
+    <field name="E_KORDNAAT_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_havgie1" configurationFlags="None">
+    <field name="N_KORDNAAT_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_fordtyp11" configurationFlags="None">
+    <field name="VINKEL_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_fordtyp12" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_fordtyp13" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_totalvikt1" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stdat11" configurationFlags="None">
+    <field name="DRIFTSTART_2" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_sldat11" configurationFlags="None">
+    <field name="NEDONTRAAD_2" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_dagsl11" configurationFlags="None">
+    <field name="RLID_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_stdag11" configurationFlags="None">
+    <field name="AVST_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_sldag11" configurationFlags="None">
+    <field name="FRAN_DATUM_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_sttim111" configurationFlags="None">
+    <field name="TILL_DATUM_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_stmin111" configurationFlags="None">
+    <field name="RIKTNING_2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="join_sltim111" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_slmin111" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sttim112" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stmin112" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sltim112" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_slmin112" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stdat12" configurationFlags="None">
-      <editWidget type="DateTime">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sldat12" configurationFlags="None">
-      <editWidget type="DateTime">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_dagsl12" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stdag12" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sldag12" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sttim121" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stmin121" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sltim121" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_slmin121" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sttim122" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_stmin122" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_sltim122" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_slmin122" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_rlid" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_startavst" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_slutavst" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_shape_len" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_fran_datum" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_till_datum" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="join_riktning" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="distance" configurationFlags="None">
-      <editWidget type="TextEdit">
+    <field name="HTHAST" configurationFlags="None">
+      <editWidget type="Range">
         <config>
           <Option/>
         </config>
@@ -604,305 +380,145 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" field="fid" name=""/>
-    <alias index="1" field="pk_0" name=""/>
-    <alias index="2" field="pk" name=""/>
-    <alias index="3" field="id" name=""/>
-    <alias index="4" field="namn" name=""/>
-    <alias index="5" field="e_kordnaat" name=""/>
-    <alias index="6" field="n_kordnaat" name=""/>
-    <alias index="7" field="vinkel" name=""/>
-    <alias index="8" field="driftstart" name=""/>
-    <alias index="9" field="nedontraad" name=""/>
-    <alias index="10" field="rlid" name=""/>
-    <alias index="11" field="avst" name=""/>
-    <alias index="12" field="fran_datum" name=""/>
-    <alias index="13" field="till_datum" name=""/>
-    <alias index="14" field="riktning" name=""/>
-    <alias index="15" field="join_pk" name=""/>
-    <alias index="16" field="join_hthast" name=""/>
-    <alias index="17" field="join_havhast1" name=""/>
-    <alias index="18" field="join_havgie1" name=""/>
-    <alias index="19" field="join_fordtyp11" name=""/>
-    <alias index="20" field="join_fordtyp12" name=""/>
-    <alias index="21" field="join_fordtyp13" name=""/>
-    <alias index="22" field="join_totalvikt1" name=""/>
-    <alias index="23" field="join_stdat11" name=""/>
-    <alias index="24" field="join_sldat11" name=""/>
-    <alias index="25" field="join_dagsl11" name=""/>
-    <alias index="26" field="join_stdag11" name=""/>
-    <alias index="27" field="join_sldag11" name=""/>
-    <alias index="28" field="join_sttim111" name=""/>
-    <alias index="29" field="join_stmin111" name=""/>
-    <alias index="30" field="join_sltim111" name=""/>
-    <alias index="31" field="join_slmin111" name=""/>
-    <alias index="32" field="join_sttim112" name=""/>
-    <alias index="33" field="join_stmin112" name=""/>
-    <alias index="34" field="join_sltim112" name=""/>
-    <alias index="35" field="join_slmin112" name=""/>
-    <alias index="36" field="join_stdat12" name=""/>
-    <alias index="37" field="join_sldat12" name=""/>
-    <alias index="38" field="join_dagsl12" name=""/>
-    <alias index="39" field="join_stdag12" name=""/>
-    <alias index="40" field="join_sldag12" name=""/>
-    <alias index="41" field="join_sttim121" name=""/>
-    <alias index="42" field="join_stmin121" name=""/>
-    <alias index="43" field="join_sltim121" name=""/>
-    <alias index="44" field="join_slmin121" name=""/>
-    <alias index="45" field="join_sttim122" name=""/>
-    <alias index="46" field="join_stmin122" name=""/>
-    <alias index="47" field="join_sltim122" name=""/>
-    <alias index="48" field="join_slmin122" name=""/>
-    <alias index="49" field="join_rlid" name=""/>
-    <alias index="50" field="join_startavst" name=""/>
-    <alias index="51" field="join_slutavst" name=""/>
-    <alias index="52" field="join_shape_len" name=""/>
-    <alias index="53" field="join_fran_datum" name=""/>
-    <alias index="54" field="join_till_datum" name=""/>
-    <alias index="55" field="join_riktning" name=""/>
-    <alias index="56" field="distance" name=""/>
+    <alias index="0" name="" field="ID"/>
+    <alias index="1" name="" field="NAMN"/>
+    <alias index="2" name="" field="E_KORDNAAT"/>
+    <alias index="3" name="" field="N_KORDNAAT"/>
+    <alias index="4" name="" field="VINKEL"/>
+    <alias index="5" name="" field="DRIFTSTART"/>
+    <alias index="6" name="" field="NEDONTRAAD"/>
+    <alias index="7" name="" field="RLID"/>
+    <alias index="8" name="" field="AVST"/>
+    <alias index="9" name="" field="FRAN_DATUM"/>
+    <alias index="10" name="" field="TILL_DATUM"/>
+    <alias index="11" name="" field="RIKTNING"/>
+    <alias index="12" name="" field="ID_2"/>
+    <alias index="13" name="" field="NAMN_2"/>
+    <alias index="14" name="" field="E_KORDNAAT_2"/>
+    <alias index="15" name="" field="N_KORDNAAT_2"/>
+    <alias index="16" name="" field="VINKEL_2"/>
+    <alias index="17" name="" field="DRIFTSTART_2"/>
+    <alias index="18" name="" field="NEDONTRAAD_2"/>
+    <alias index="19" name="" field="RLID_2"/>
+    <alias index="20" name="" field="AVST_2"/>
+    <alias index="21" name="" field="FRAN_DATUM_2"/>
+    <alias index="22" name="" field="TILL_DATUM_2"/>
+    <alias index="23" name="" field="RIKTNING_2"/>
+    <alias index="24" name="" field="HTHAST"/>
   </aliases>
   <defaults>
-    <default expression="" applyOnUpdate="0" field="fid"/>
-    <default expression="" applyOnUpdate="0" field="pk_0"/>
-    <default expression="" applyOnUpdate="0" field="pk"/>
-    <default expression="" applyOnUpdate="0" field="id"/>
-    <default expression="" applyOnUpdate="0" field="namn"/>
-    <default expression="" applyOnUpdate="0" field="e_kordnaat"/>
-    <default expression="" applyOnUpdate="0" field="n_kordnaat"/>
-    <default expression="" applyOnUpdate="0" field="vinkel"/>
-    <default expression="" applyOnUpdate="0" field="driftstart"/>
-    <default expression="" applyOnUpdate="0" field="nedontraad"/>
-    <default expression="" applyOnUpdate="0" field="rlid"/>
-    <default expression="" applyOnUpdate="0" field="avst"/>
-    <default expression="" applyOnUpdate="0" field="fran_datum"/>
-    <default expression="" applyOnUpdate="0" field="till_datum"/>
-    <default expression="" applyOnUpdate="0" field="riktning"/>
-    <default expression="" applyOnUpdate="0" field="join_pk"/>
-    <default expression="" applyOnUpdate="0" field="join_hthast"/>
-    <default expression="" applyOnUpdate="0" field="join_havhast1"/>
-    <default expression="" applyOnUpdate="0" field="join_havgie1"/>
-    <default expression="" applyOnUpdate="0" field="join_fordtyp11"/>
-    <default expression="" applyOnUpdate="0" field="join_fordtyp12"/>
-    <default expression="" applyOnUpdate="0" field="join_fordtyp13"/>
-    <default expression="" applyOnUpdate="0" field="join_totalvikt1"/>
-    <default expression="" applyOnUpdate="0" field="join_stdat11"/>
-    <default expression="" applyOnUpdate="0" field="join_sldat11"/>
-    <default expression="" applyOnUpdate="0" field="join_dagsl11"/>
-    <default expression="" applyOnUpdate="0" field="join_stdag11"/>
-    <default expression="" applyOnUpdate="0" field="join_sldag11"/>
-    <default expression="" applyOnUpdate="0" field="join_sttim111"/>
-    <default expression="" applyOnUpdate="0" field="join_stmin111"/>
-    <default expression="" applyOnUpdate="0" field="join_sltim111"/>
-    <default expression="" applyOnUpdate="0" field="join_slmin111"/>
-    <default expression="" applyOnUpdate="0" field="join_sttim112"/>
-    <default expression="" applyOnUpdate="0" field="join_stmin112"/>
-    <default expression="" applyOnUpdate="0" field="join_sltim112"/>
-    <default expression="" applyOnUpdate="0" field="join_slmin112"/>
-    <default expression="" applyOnUpdate="0" field="join_stdat12"/>
-    <default expression="" applyOnUpdate="0" field="join_sldat12"/>
-    <default expression="" applyOnUpdate="0" field="join_dagsl12"/>
-    <default expression="" applyOnUpdate="0" field="join_stdag12"/>
-    <default expression="" applyOnUpdate="0" field="join_sldag12"/>
-    <default expression="" applyOnUpdate="0" field="join_sttim121"/>
-    <default expression="" applyOnUpdate="0" field="join_stmin121"/>
-    <default expression="" applyOnUpdate="0" field="join_sltim121"/>
-    <default expression="" applyOnUpdate="0" field="join_slmin121"/>
-    <default expression="" applyOnUpdate="0" field="join_sttim122"/>
-    <default expression="" applyOnUpdate="0" field="join_stmin122"/>
-    <default expression="" applyOnUpdate="0" field="join_sltim122"/>
-    <default expression="" applyOnUpdate="0" field="join_slmin122"/>
-    <default expression="" applyOnUpdate="0" field="join_rlid"/>
-    <default expression="" applyOnUpdate="0" field="join_startavst"/>
-    <default expression="" applyOnUpdate="0" field="join_slutavst"/>
-    <default expression="" applyOnUpdate="0" field="join_shape_len"/>
-    <default expression="" applyOnUpdate="0" field="join_fran_datum"/>
-    <default expression="" applyOnUpdate="0" field="join_till_datum"/>
-    <default expression="" applyOnUpdate="0" field="join_riktning"/>
-    <default expression="" applyOnUpdate="0" field="distance"/>
+    <default applyOnUpdate="0" expression="" field="ID"/>
+    <default applyOnUpdate="0" expression="" field="NAMN"/>
+    <default applyOnUpdate="0" expression="" field="E_KORDNAAT"/>
+    <default applyOnUpdate="0" expression="" field="N_KORDNAAT"/>
+    <default applyOnUpdate="0" expression="" field="VINKEL"/>
+    <default applyOnUpdate="0" expression="" field="DRIFTSTART"/>
+    <default applyOnUpdate="0" expression="" field="NEDONTRAAD"/>
+    <default applyOnUpdate="0" expression="" field="RLID"/>
+    <default applyOnUpdate="0" expression="" field="AVST"/>
+    <default applyOnUpdate="0" expression="" field="FRAN_DATUM"/>
+    <default applyOnUpdate="0" expression="" field="TILL_DATUM"/>
+    <default applyOnUpdate="0" expression="" field="RIKTNING"/>
+    <default applyOnUpdate="0" expression="" field="ID_2"/>
+    <default applyOnUpdate="0" expression="" field="NAMN_2"/>
+    <default applyOnUpdate="0" expression="" field="E_KORDNAAT_2"/>
+    <default applyOnUpdate="0" expression="" field="N_KORDNAAT_2"/>
+    <default applyOnUpdate="0" expression="" field="VINKEL_2"/>
+    <default applyOnUpdate="0" expression="" field="DRIFTSTART_2"/>
+    <default applyOnUpdate="0" expression="" field="NEDONTRAAD_2"/>
+    <default applyOnUpdate="0" expression="" field="RLID_2"/>
+    <default applyOnUpdate="0" expression="" field="AVST_2"/>
+    <default applyOnUpdate="0" expression="" field="FRAN_DATUM_2"/>
+    <default applyOnUpdate="0" expression="" field="TILL_DATUM_2"/>
+    <default applyOnUpdate="0" expression="" field="RIKTNING_2"/>
+    <default applyOnUpdate="0" expression="" field="HTHAST"/>
   </defaults>
   <constraints>
-    <constraint constraints="3" unique_strength="1" notnull_strength="1" field="fid" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="pk_0" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="pk" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="id" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="namn" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="e_kordnaat" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="n_kordnaat" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="vinkel" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="driftstart" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="nedontraad" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="rlid" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="avst" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="fran_datum" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="till_datum" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="riktning" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_pk" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_hthast" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_havhast1" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_havgie1" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_fordtyp11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_fordtyp12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_fordtyp13" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_totalvikt1" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stdat11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sldat11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_dagsl11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stdag11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sldag11" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sttim111" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stmin111" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sltim111" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_slmin111" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sttim112" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stmin112" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sltim112" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_slmin112" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stdat12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sldat12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_dagsl12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stdag12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sldag12" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sttim121" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stmin121" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sltim121" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_slmin121" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sttim122" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_stmin122" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_sltim122" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_slmin122" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_rlid" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_startavst" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_slutavst" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_shape_len" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_fran_datum" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_till_datum" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="join_riktning" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="distance" exp_strength="0"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="ID"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="NAMN"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="E_KORDNAAT"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="N_KORDNAAT"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="VINKEL"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="DRIFTSTART"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="NEDONTRAAD"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="RLID"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="AVST"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="FRAN_DATUM"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="TILL_DATUM"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="RIKTNING"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="ID_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="NAMN_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="E_KORDNAAT_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="N_KORDNAAT_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="VINKEL_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="DRIFTSTART_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="NEDONTRAAD_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="RLID_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="AVST_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="FRAN_DATUM_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="TILL_DATUM_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="RIKTNING_2"/>
+    <constraint exp_strength="0" notnull_strength="0" unique_strength="0" constraints="0" field="HTHAST"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" desc="" field="fid"/>
-    <constraint exp="" desc="" field="pk_0"/>
-    <constraint exp="" desc="" field="pk"/>
-    <constraint exp="" desc="" field="id"/>
-    <constraint exp="" desc="" field="namn"/>
-    <constraint exp="" desc="" field="e_kordnaat"/>
-    <constraint exp="" desc="" field="n_kordnaat"/>
-    <constraint exp="" desc="" field="vinkel"/>
-    <constraint exp="" desc="" field="driftstart"/>
-    <constraint exp="" desc="" field="nedontraad"/>
-    <constraint exp="" desc="" field="rlid"/>
-    <constraint exp="" desc="" field="avst"/>
-    <constraint exp="" desc="" field="fran_datum"/>
-    <constraint exp="" desc="" field="till_datum"/>
-    <constraint exp="" desc="" field="riktning"/>
-    <constraint exp="" desc="" field="join_pk"/>
-    <constraint exp="" desc="" field="join_hthast"/>
-    <constraint exp="" desc="" field="join_havhast1"/>
-    <constraint exp="" desc="" field="join_havgie1"/>
-    <constraint exp="" desc="" field="join_fordtyp11"/>
-    <constraint exp="" desc="" field="join_fordtyp12"/>
-    <constraint exp="" desc="" field="join_fordtyp13"/>
-    <constraint exp="" desc="" field="join_totalvikt1"/>
-    <constraint exp="" desc="" field="join_stdat11"/>
-    <constraint exp="" desc="" field="join_sldat11"/>
-    <constraint exp="" desc="" field="join_dagsl11"/>
-    <constraint exp="" desc="" field="join_stdag11"/>
-    <constraint exp="" desc="" field="join_sldag11"/>
-    <constraint exp="" desc="" field="join_sttim111"/>
-    <constraint exp="" desc="" field="join_stmin111"/>
-    <constraint exp="" desc="" field="join_sltim111"/>
-    <constraint exp="" desc="" field="join_slmin111"/>
-    <constraint exp="" desc="" field="join_sttim112"/>
-    <constraint exp="" desc="" field="join_stmin112"/>
-    <constraint exp="" desc="" field="join_sltim112"/>
-    <constraint exp="" desc="" field="join_slmin112"/>
-    <constraint exp="" desc="" field="join_stdat12"/>
-    <constraint exp="" desc="" field="join_sldat12"/>
-    <constraint exp="" desc="" field="join_dagsl12"/>
-    <constraint exp="" desc="" field="join_stdag12"/>
-    <constraint exp="" desc="" field="join_sldag12"/>
-    <constraint exp="" desc="" field="join_sttim121"/>
-    <constraint exp="" desc="" field="join_stmin121"/>
-    <constraint exp="" desc="" field="join_sltim121"/>
-    <constraint exp="" desc="" field="join_slmin121"/>
-    <constraint exp="" desc="" field="join_sttim122"/>
-    <constraint exp="" desc="" field="join_stmin122"/>
-    <constraint exp="" desc="" field="join_sltim122"/>
-    <constraint exp="" desc="" field="join_slmin122"/>
-    <constraint exp="" desc="" field="join_rlid"/>
-    <constraint exp="" desc="" field="join_startavst"/>
-    <constraint exp="" desc="" field="join_slutavst"/>
-    <constraint exp="" desc="" field="join_shape_len"/>
-    <constraint exp="" desc="" field="join_fran_datum"/>
-    <constraint exp="" desc="" field="join_till_datum"/>
-    <constraint exp="" desc="" field="join_riktning"/>
-    <constraint exp="" desc="" field="distance"/>
+    <constraint exp="" desc="" field="ID"/>
+    <constraint exp="" desc="" field="NAMN"/>
+    <constraint exp="" desc="" field="E_KORDNAAT"/>
+    <constraint exp="" desc="" field="N_KORDNAAT"/>
+    <constraint exp="" desc="" field="VINKEL"/>
+    <constraint exp="" desc="" field="DRIFTSTART"/>
+    <constraint exp="" desc="" field="NEDONTRAAD"/>
+    <constraint exp="" desc="" field="RLID"/>
+    <constraint exp="" desc="" field="AVST"/>
+    <constraint exp="" desc="" field="FRAN_DATUM"/>
+    <constraint exp="" desc="" field="TILL_DATUM"/>
+    <constraint exp="" desc="" field="RIKTNING"/>
+    <constraint exp="" desc="" field="ID_2"/>
+    <constraint exp="" desc="" field="NAMN_2"/>
+    <constraint exp="" desc="" field="E_KORDNAAT_2"/>
+    <constraint exp="" desc="" field="N_KORDNAAT_2"/>
+    <constraint exp="" desc="" field="VINKEL_2"/>
+    <constraint exp="" desc="" field="DRIFTSTART_2"/>
+    <constraint exp="" desc="" field="NEDONTRAAD_2"/>
+    <constraint exp="" desc="" field="RLID_2"/>
+    <constraint exp="" desc="" field="AVST_2"/>
+    <constraint exp="" desc="" field="FRAN_DATUM_2"/>
+    <constraint exp="" desc="" field="TILL_DATUM_2"/>
+    <constraint exp="" desc="" field="RIKTNING_2"/>
+    <constraint exp="" desc="" field="HTHAST"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
-    <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+    <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
   </attributeactions>
-  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+  <attributetableconfig sortOrder="0" actionWidgetStyle="dropDown" sortExpression="">
     <columns>
       <column hidden="1" width="-1" type="actions"/>
-      <column hidden="0" width="-1" type="field" name="distance"/>
-      <column hidden="0" width="-1" type="field" name="fid"/>
-      <column hidden="0" width="-1" type="field" name="pk_0"/>
-      <column hidden="0" width="-1" type="field" name="pk"/>
-      <column hidden="0" width="-1" type="field" name="id"/>
-      <column hidden="0" width="-1" type="field" name="namn"/>
-      <column hidden="0" width="-1" type="field" name="e_kordnaat"/>
-      <column hidden="0" width="-1" type="field" name="n_kordnaat"/>
-      <column hidden="0" width="-1" type="field" name="vinkel"/>
-      <column hidden="0" width="-1" type="field" name="driftstart"/>
-      <column hidden="0" width="-1" type="field" name="nedontraad"/>
-      <column hidden="0" width="-1" type="field" name="rlid"/>
-      <column hidden="0" width="-1" type="field" name="avst"/>
-      <column hidden="0" width="-1" type="field" name="fran_datum"/>
-      <column hidden="0" width="-1" type="field" name="till_datum"/>
-      <column hidden="0" width="-1" type="field" name="riktning"/>
-      <column hidden="0" width="-1" type="field" name="join_pk"/>
-      <column hidden="0" width="-1" type="field" name="join_hthast"/>
-      <column hidden="0" width="-1" type="field" name="join_havhast1"/>
-      <column hidden="0" width="-1" type="field" name="join_havgie1"/>
-      <column hidden="0" width="-1" type="field" name="join_fordtyp11"/>
-      <column hidden="0" width="-1" type="field" name="join_fordtyp12"/>
-      <column hidden="0" width="-1" type="field" name="join_fordtyp13"/>
-      <column hidden="0" width="-1" type="field" name="join_totalvikt1"/>
-      <column hidden="0" width="-1" type="field" name="join_stdat11"/>
-      <column hidden="0" width="-1" type="field" name="join_sldat11"/>
-      <column hidden="0" width="-1" type="field" name="join_dagsl11"/>
-      <column hidden="0" width="-1" type="field" name="join_stdag11"/>
-      <column hidden="0" width="-1" type="field" name="join_sldag11"/>
-      <column hidden="0" width="-1" type="field" name="join_sttim111"/>
-      <column hidden="0" width="-1" type="field" name="join_stmin111"/>
-      <column hidden="0" width="-1" type="field" name="join_sltim111"/>
-      <column hidden="0" width="-1" type="field" name="join_slmin111"/>
-      <column hidden="0" width="-1" type="field" name="join_sttim112"/>
-      <column hidden="0" width="-1" type="field" name="join_stmin112"/>
-      <column hidden="0" width="-1" type="field" name="join_sltim112"/>
-      <column hidden="0" width="-1" type="field" name="join_slmin112"/>
-      <column hidden="0" width="-1" type="field" name="join_stdat12"/>
-      <column hidden="0" width="-1" type="field" name="join_sldat12"/>
-      <column hidden="0" width="-1" type="field" name="join_dagsl12"/>
-      <column hidden="0" width="-1" type="field" name="join_stdag12"/>
-      <column hidden="0" width="-1" type="field" name="join_sldag12"/>
-      <column hidden="0" width="-1" type="field" name="join_sttim121"/>
-      <column hidden="0" width="-1" type="field" name="join_stmin121"/>
-      <column hidden="0" width="-1" type="field" name="join_sltim121"/>
-      <column hidden="0" width="-1" type="field" name="join_slmin121"/>
-      <column hidden="0" width="-1" type="field" name="join_sttim122"/>
-      <column hidden="0" width="-1" type="field" name="join_stmin122"/>
-      <column hidden="0" width="-1" type="field" name="join_sltim122"/>
-      <column hidden="0" width="-1" type="field" name="join_slmin122"/>
-      <column hidden="0" width="-1" type="field" name="join_rlid"/>
-      <column hidden="0" width="-1" type="field" name="join_startavst"/>
-      <column hidden="0" width="-1" type="field" name="join_slutavst"/>
-      <column hidden="0" width="-1" type="field" name="join_shape_len"/>
-      <column hidden="0" width="-1" type="field" name="join_fran_datum"/>
-      <column hidden="0" width="-1" type="field" name="join_till_datum"/>
-      <column hidden="0" width="-1" type="field" name="join_riktning"/>
+      <column name="ID" hidden="0" width="-1" type="field"/>
+      <column name="NAMN" hidden="0" width="-1" type="field"/>
+      <column name="E_KORDNAAT" hidden="0" width="-1" type="field"/>
+      <column name="N_KORDNAAT" hidden="0" width="-1" type="field"/>
+      <column name="VINKEL" hidden="0" width="-1" type="field"/>
+      <column name="DRIFTSTART" hidden="0" width="-1" type="field"/>
+      <column name="NEDONTRAAD" hidden="0" width="-1" type="field"/>
+      <column name="RLID" hidden="0" width="-1" type="field"/>
+      <column name="AVST" hidden="0" width="-1" type="field"/>
+      <column name="FRAN_DATUM" hidden="0" width="-1" type="field"/>
+      <column name="TILL_DATUM" hidden="0" width="-1" type="field"/>
+      <column name="RIKTNING" hidden="0" width="-1" type="field"/>
+      <column name="ID_2" hidden="0" width="-1" type="field"/>
+      <column name="NAMN_2" hidden="0" width="-1" type="field"/>
+      <column name="E_KORDNAAT_2" hidden="0" width="-1" type="field"/>
+      <column name="N_KORDNAAT_2" hidden="0" width="-1" type="field"/>
+      <column name="VINKEL_2" hidden="0" width="-1" type="field"/>
+      <column name="DRIFTSTART_2" hidden="0" width="-1" type="field"/>
+      <column name="NEDONTRAAD_2" hidden="0" width="-1" type="field"/>
+      <column name="RLID_2" hidden="0" width="-1" type="field"/>
+      <column name="AVST_2" hidden="0" width="-1" type="field"/>
+      <column name="FRAN_DATUM_2" hidden="0" width="-1" type="field"/>
+      <column name="TILL_DATUM_2" hidden="0" width="-1" type="field"/>
+      <column name="RIKTNING_2" hidden="0" width="-1" type="field"/>
+      <column name="HTHAST" hidden="0" width="-1" type="field"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -934,129 +550,155 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field editable="1" name="AVST"/>
-    <field editable="1" name="DRIFTSTART"/>
-    <field editable="1" name="E_KORDNAAT"/>
-    <field editable="1" name="FRAN_DATUM"/>
-    <field editable="1" name="ID"/>
-    <field editable="1" name="NAMN"/>
-    <field editable="1" name="NEDONTRAAD"/>
-    <field editable="1" name="N_KORDNAAT"/>
-    <field editable="1" name="RIKTNING"/>
-    <field editable="1" name="RLID"/>
-    <field editable="1" name="TILL_DATUM"/>
-    <field editable="1" name="VINKEL"/>
-    <field editable="1" name="avst"/>
-    <field editable="1" name="distance"/>
-    <field editable="1" name="driftstart"/>
-    <field editable="1" name="e_kordnaat"/>
-    <field editable="1" name="fid"/>
-    <field editable="1" name="fran_datum"/>
-    <field editable="1" name="id"/>
-    <field editable="1" name="join_DAGSL11"/>
-    <field editable="1" name="join_DAGSL12"/>
-    <field editable="1" name="join_FORDTYP11"/>
-    <field editable="1" name="join_FORDTYP12"/>
-    <field editable="1" name="join_FORDTYP13"/>
-    <field editable="1" name="join_FRAN_DATUM"/>
-    <field editable="1" name="join_HAVGIE1"/>
-    <field editable="1" name="join_HAVHAST1"/>
-    <field editable="1" name="join_HTHAST"/>
-    <field editable="1" name="join_RIKTNING"/>
-    <field editable="1" name="join_RLID"/>
-    <field editable="1" name="join_SHAPE_LEN"/>
-    <field editable="1" name="join_SLDAG11"/>
-    <field editable="1" name="join_SLDAG12"/>
-    <field editable="1" name="join_SLDAT11"/>
-    <field editable="1" name="join_SLDAT12"/>
-    <field editable="1" name="join_SLMIN111"/>
-    <field editable="1" name="join_SLMIN112"/>
-    <field editable="1" name="join_SLMIN121"/>
-    <field editable="1" name="join_SLMIN122"/>
-    <field editable="1" name="join_SLTIM111"/>
-    <field editable="1" name="join_SLTIM112"/>
-    <field editable="1" name="join_SLTIM121"/>
-    <field editable="1" name="join_SLTIM122"/>
-    <field editable="1" name="join_SLUTAVST"/>
-    <field editable="1" name="join_STARTAVST"/>
-    <field editable="1" name="join_STDAG11"/>
-    <field editable="1" name="join_STDAG12"/>
-    <field editable="1" name="join_STDAT11"/>
-    <field editable="1" name="join_STDAT12"/>
-    <field editable="1" name="join_STMIN111"/>
-    <field editable="1" name="join_STMIN112"/>
-    <field editable="1" name="join_STMIN121"/>
-    <field editable="1" name="join_STMIN122"/>
-    <field editable="1" name="join_STTIM111"/>
-    <field editable="1" name="join_STTIM112"/>
-    <field editable="1" name="join_STTIM121"/>
-    <field editable="1" name="join_STTIM122"/>
-    <field editable="1" name="join_TILL_DATUM"/>
-    <field editable="1" name="join_TOTALVIKT1"/>
-    <field editable="1" name="join_dagsl11"/>
-    <field editable="1" name="join_dagsl12"/>
-    <field editable="1" name="join_fordtyp11"/>
-    <field editable="1" name="join_fordtyp12"/>
-    <field editable="1" name="join_fordtyp13"/>
-    <field editable="1" name="join_fran_datum"/>
-    <field editable="1" name="join_havgie1"/>
-    <field editable="1" name="join_havhast1"/>
-    <field editable="1" name="join_hthast"/>
-    <field editable="1" name="join_pk"/>
-    <field editable="1" name="join_riktning"/>
-    <field editable="1" name="join_rlid"/>
-    <field editable="1" name="join_shape_len"/>
-    <field editable="1" name="join_sldag11"/>
-    <field editable="1" name="join_sldag12"/>
-    <field editable="1" name="join_sldat11"/>
-    <field editable="1" name="join_sldat12"/>
-    <field editable="1" name="join_slmin111"/>
-    <field editable="1" name="join_slmin112"/>
-    <field editable="1" name="join_slmin121"/>
-    <field editable="1" name="join_slmin122"/>
-    <field editable="1" name="join_sltim111"/>
-    <field editable="1" name="join_sltim112"/>
-    <field editable="1" name="join_sltim121"/>
-    <field editable="1" name="join_sltim122"/>
-    <field editable="1" name="join_slutavst"/>
-    <field editable="1" name="join_startavst"/>
-    <field editable="1" name="join_stdag11"/>
-    <field editable="1" name="join_stdag12"/>
-    <field editable="1" name="join_stdat11"/>
-    <field editable="1" name="join_stdat12"/>
-    <field editable="1" name="join_stmin111"/>
-    <field editable="1" name="join_stmin112"/>
-    <field editable="1" name="join_stmin121"/>
-    <field editable="1" name="join_stmin122"/>
-    <field editable="1" name="join_sttim111"/>
-    <field editable="1" name="join_sttim112"/>
-    <field editable="1" name="join_sttim121"/>
-    <field editable="1" name="join_sttim122"/>
-    <field editable="1" name="join_till_datum"/>
-    <field editable="1" name="join_totalvikt1"/>
-    <field editable="1" name="n_kordnaat"/>
-    <field editable="1" name="namn"/>
-    <field editable="1" name="nedontraad"/>
-    <field editable="1" name="pk"/>
-    <field editable="1" name="pk_0"/>
-    <field editable="1" name="riktning"/>
-    <field editable="1" name="rlid"/>
-    <field editable="1" name="till_datum"/>
-    <field editable="1" name="vinkel"/>
+    <field name="AVST" editable="1"/>
+    <field name="AVST_2" editable="1"/>
+    <field name="DRIFTSTART" editable="1"/>
+    <field name="DRIFTSTART_2" editable="1"/>
+    <field name="E_KORDNAAT" editable="1"/>
+    <field name="E_KORDNAAT_2" editable="1"/>
+    <field name="FRAN_DATUM" editable="1"/>
+    <field name="FRAN_DATUM_2" editable="1"/>
+    <field name="HTHAST" editable="1"/>
+    <field name="ID" editable="1"/>
+    <field name="ID_2" editable="1"/>
+    <field name="NAMN" editable="1"/>
+    <field name="NAMN_2" editable="1"/>
+    <field name="NEDONTRAAD" editable="1"/>
+    <field name="NEDONTRAAD_2" editable="1"/>
+    <field name="N_KORDNAAT" editable="1"/>
+    <field name="N_KORDNAAT_2" editable="1"/>
+    <field name="RIKTNING" editable="1"/>
+    <field name="RIKTNING_2" editable="1"/>
+    <field name="RLID" editable="1"/>
+    <field name="RLID_2" editable="1"/>
+    <field name="TILL_DATUM" editable="1"/>
+    <field name="TILL_DATUM_2" editable="1"/>
+    <field name="VINKEL" editable="1"/>
+    <field name="VINKEL_2" editable="1"/>
+    <field name="avst" editable="1"/>
+    <field name="distance" editable="1"/>
+    <field name="driftstart" editable="1"/>
+    <field name="e_kordnaat" editable="1"/>
+    <field name="fid" editable="1"/>
+    <field name="fran_datum" editable="1"/>
+    <field name="id" editable="1"/>
+    <field name="join_DAGSL11" editable="1"/>
+    <field name="join_DAGSL12" editable="1"/>
+    <field name="join_FORDTYP11" editable="1"/>
+    <field name="join_FORDTYP12" editable="1"/>
+    <field name="join_FORDTYP13" editable="1"/>
+    <field name="join_FRAN_DATUM" editable="1"/>
+    <field name="join_HAVGIE1" editable="1"/>
+    <field name="join_HAVHAST1" editable="1"/>
+    <field name="join_HTHAST" editable="1"/>
+    <field name="join_RIKTNING" editable="1"/>
+    <field name="join_RLID" editable="1"/>
+    <field name="join_SHAPE_LEN" editable="1"/>
+    <field name="join_SLDAG11" editable="1"/>
+    <field name="join_SLDAG12" editable="1"/>
+    <field name="join_SLDAT11" editable="1"/>
+    <field name="join_SLDAT12" editable="1"/>
+    <field name="join_SLMIN111" editable="1"/>
+    <field name="join_SLMIN112" editable="1"/>
+    <field name="join_SLMIN121" editable="1"/>
+    <field name="join_SLMIN122" editable="1"/>
+    <field name="join_SLTIM111" editable="1"/>
+    <field name="join_SLTIM112" editable="1"/>
+    <field name="join_SLTIM121" editable="1"/>
+    <field name="join_SLTIM122" editable="1"/>
+    <field name="join_SLUTAVST" editable="1"/>
+    <field name="join_STARTAVST" editable="1"/>
+    <field name="join_STDAG11" editable="1"/>
+    <field name="join_STDAG12" editable="1"/>
+    <field name="join_STDAT11" editable="1"/>
+    <field name="join_STDAT12" editable="1"/>
+    <field name="join_STMIN111" editable="1"/>
+    <field name="join_STMIN112" editable="1"/>
+    <field name="join_STMIN121" editable="1"/>
+    <field name="join_STMIN122" editable="1"/>
+    <field name="join_STTIM111" editable="1"/>
+    <field name="join_STTIM112" editable="1"/>
+    <field name="join_STTIM121" editable="1"/>
+    <field name="join_STTIM122" editable="1"/>
+    <field name="join_TILL_DATUM" editable="1"/>
+    <field name="join_TOTALVIKT1" editable="1"/>
+    <field name="join_dagsl11" editable="1"/>
+    <field name="join_dagsl12" editable="1"/>
+    <field name="join_fordtyp11" editable="1"/>
+    <field name="join_fordtyp12" editable="1"/>
+    <field name="join_fordtyp13" editable="1"/>
+    <field name="join_fran_datum" editable="1"/>
+    <field name="join_havgie1" editable="1"/>
+    <field name="join_havhast1" editable="1"/>
+    <field name="join_hthast" editable="1"/>
+    <field name="join_pk" editable="1"/>
+    <field name="join_riktning" editable="1"/>
+    <field name="join_rlid" editable="1"/>
+    <field name="join_shape_len" editable="1"/>
+    <field name="join_sldag11" editable="1"/>
+    <field name="join_sldag12" editable="1"/>
+    <field name="join_sldat11" editable="1"/>
+    <field name="join_sldat12" editable="1"/>
+    <field name="join_slmin111" editable="1"/>
+    <field name="join_slmin112" editable="1"/>
+    <field name="join_slmin121" editable="1"/>
+    <field name="join_slmin122" editable="1"/>
+    <field name="join_sltim111" editable="1"/>
+    <field name="join_sltim112" editable="1"/>
+    <field name="join_sltim121" editable="1"/>
+    <field name="join_sltim122" editable="1"/>
+    <field name="join_slutavst" editable="1"/>
+    <field name="join_startavst" editable="1"/>
+    <field name="join_stdag11" editable="1"/>
+    <field name="join_stdag12" editable="1"/>
+    <field name="join_stdat11" editable="1"/>
+    <field name="join_stdat12" editable="1"/>
+    <field name="join_stmin111" editable="1"/>
+    <field name="join_stmin112" editable="1"/>
+    <field name="join_stmin121" editable="1"/>
+    <field name="join_stmin122" editable="1"/>
+    <field name="join_sttim111" editable="1"/>
+    <field name="join_sttim112" editable="1"/>
+    <field name="join_sttim121" editable="1"/>
+    <field name="join_sttim122" editable="1"/>
+    <field name="join_till_datum" editable="1"/>
+    <field name="join_totalvikt1" editable="1"/>
+    <field name="n_kordnaat" editable="1"/>
+    <field name="namn" editable="1"/>
+    <field name="nedontraad" editable="1"/>
+    <field name="pk" editable="1"/>
+    <field name="pk_0" editable="1"/>
+    <field name="riktning" editable="1"/>
+    <field name="rlid" editable="1"/>
+    <field name="till_datum" editable="1"/>
+    <field name="vinkel" editable="1"/>
   </editable>
   <labelOnTop>
     <field name="AVST" labelOnTop="0"/>
+    <field name="AVST_2" labelOnTop="0"/>
     <field name="DRIFTSTART" labelOnTop="0"/>
+    <field name="DRIFTSTART_2" labelOnTop="0"/>
     <field name="E_KORDNAAT" labelOnTop="0"/>
+    <field name="E_KORDNAAT_2" labelOnTop="0"/>
     <field name="FRAN_DATUM" labelOnTop="0"/>
+    <field name="FRAN_DATUM_2" labelOnTop="0"/>
+    <field name="HTHAST" labelOnTop="0"/>
     <field name="ID" labelOnTop="0"/>
+    <field name="ID_2" labelOnTop="0"/>
     <field name="NAMN" labelOnTop="0"/>
+    <field name="NAMN_2" labelOnTop="0"/>
     <field name="NEDONTRAAD" labelOnTop="0"/>
+    <field name="NEDONTRAAD_2" labelOnTop="0"/>
     <field name="N_KORDNAAT" labelOnTop="0"/>
+    <field name="N_KORDNAAT_2" labelOnTop="0"/>
     <field name="RIKTNING" labelOnTop="0"/>
+    <field name="RIKTNING_2" labelOnTop="0"/>
     <field name="RLID" labelOnTop="0"/>
+    <field name="RLID_2" labelOnTop="0"/>
     <field name="TILL_DATUM" labelOnTop="0"/>
+    <field name="TILL_DATUM_2" labelOnTop="0"/>
     <field name="VINKEL" labelOnTop="0"/>
+    <field name="VINKEL_2" labelOnTop="0"/>
     <field name="avst" labelOnTop="0"/>
     <field name="distance" labelOnTop="0"/>
     <field name="driftstart" labelOnTop="0"/>
@@ -1157,7 +799,7 @@ def my_form_open(dialog, layer, feature):
   </labelOnTop>
   <dataDefinedFieldProperties/>
   <widgets/>
-  <previewExpression>"id"</previewExpression>
+  <previewExpression>"ID"</previewExpression>
   <mapTip></mapTip>
   <layerGeometryType>0</layerGeometryType>
 </qgis>

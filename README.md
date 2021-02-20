@@ -50,9 +50,9 @@ Maximum zoom 13
 
 	####ATK-mätplats hastighet
 	
-	1. Buffer (ATK-mätplats)  
-	2. Extract by location (Hastighet)  
-	3. NNjoin ATK+Extracted(location)  
+	1. Buffer, 6m (ATK-mätplats)    
+	2. Join attributes by location, largest overlap (buffer+hastighet)  
+	3. Join attributes by location (ATK+joined layer)
 
 
 
