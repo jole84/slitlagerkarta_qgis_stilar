@@ -32,9 +32,7 @@ EPSG:3857
 
 *terrängkartan
 
-### QMetaTiles Render:
-
-#### Stratvag:
+#### Render settings stratväg:
 	512  
 	PNG  
 	Minimum zoom 9  
@@ -42,7 +40,7 @@ EPSG:3857
 	40x40  
 	70%  
 
-#### Terrängkartan:
+#### Render settings terrängkartan/slitlager:
 	512  
 	JPG  
 	Minimum zoom 8  
