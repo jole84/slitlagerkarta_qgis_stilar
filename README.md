@@ -50,14 +50,14 @@ EPSG:3857
 	40x40  
 	70%  
 
-####ATK-mätplats hastighet
+#### ATK-mätplats hastighet
 	1. Buffer, 6m (ATK-mätplats)    
 	2. Join attributes by location, largest overlap (buffer+hastighet)  
 	3. Join attributes by location (ATK+joined layer)
 
 
 
-####TJUST						
+#### TJUST						
 	LM	QGIS					
 	1	2					
 	2	1					
