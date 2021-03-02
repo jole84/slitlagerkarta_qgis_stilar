@@ -342,7 +342,7 @@
             <Option name="font_style" type="QString" value=""/>
             <Option name="horizontal_anchor_point" type="QString" value="1"/>
             <Option name="joinstyle" type="QString" value="miter"/>
-            <Option name="offset" type="QString" value="0,11.59999999999999964"/>
+            <Option name="offset" type="QString" value="-14,12"/>
             <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="offset_unit" type="QString" value="MapUnit"/>
             <Option name="outline_color" type="QString" value="255,255,255,255"/>
@@ -361,7 +361,7 @@
           <prop v="" k="font_style"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="miter" k="joinstyle"/>
-          <prop v="0,11.59999999999999964" k="offset"/>
+          <prop v="-14,12" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MapUnit" k="offset_unit"/>
           <prop v="255,255,255,255" k="outline_color"/>
