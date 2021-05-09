@@ -4,9 +4,9 @@ Stilar för slitlagerkartan till QGIS
 
 EPSG:3857
 
-### Lagerordning
-	ATK-mätplats
+### Lagerordning 
 	tx  
+	ATK  
 	vs  
 	fs  
 	bs  
@@ -16,21 +16,39 @@ EPSG:3857
 	kl  
 	jl  
 	slitlager  
-	--vo_traktorväg  
-	--slitlager_norr  
-	--slitlager_syd    
+	vo_traktorväg      
 	*vo  
 	*vl  
 	hl  
 	ql  
 	nl  
-	south/middle/north
-	--oh  
-	--ml  
-	--ms  
-	--my  
+	oh  
+	ml  
+	ms  
+	my  
+	*terrängkartan  
 
-*terrängkartan
+### Lagerordning VK nedtonad  
+	tx  
+	ATK  
+	P_ficka  
+	Rastplats  
+	Höjdhinder  
+	vs  
+	fs  
+	bs  
+	by  
+	bl  
+	kl  
+	jl  
+	Strateg_tyngretrans  
+	vo_traktorväg  
+	slitlager  
+	hl  
+	ql  
+	nl  
+	ml  
+	my  
 
 #### Render settings stratväg:
 	512  
@@ -49,20 +67,18 @@ EPSG:3857
 	70%  
 
 #### ATK-mätplats hastighet
-	1. Buffer, 6m (ATK-mätplats)    
+	1. Buffer, 6m (ATK)    
 	2. Join attributes by location, largest overlap (buffer+hastighet)  
 	3. Join attributes by location (ATK+joined layer)
 
-
-
 #### TJUST						
-	LM	QGIS					
-	1	2					
-	2	1					
-	3	0					
-	4	5					
-	5	4					
-	6	3					
-	7	8					
-	8	7					
-	9	6					
+	LM	QGIS  
+	1	2  
+	2	1  
+	3	0  
+	4	5  
+	5	4  
+	6	3  
+	7	8  
+	8	7  
+	9	6  
