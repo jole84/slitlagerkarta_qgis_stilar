@@ -4,7 +4,7 @@ Stilar för slitlagerkartan till QGIS
 
 EPSG:3857
 
-### Lagerordning 
+### Lagerordning TK
 	tx  
 	ATK  
 	vs  
@@ -15,8 +15,8 @@ EPSG:3857
 	bl  
 	kl  
 	jl  
+	vo_traktorväg  
 	slitlager  
-	vo_traktorväg      
 	*vo  
 	*vl  
 	hl  
