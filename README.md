@@ -5,6 +5,7 @@ Stilar för slitlagerkartan till QGIS
 EPSG:3857
 
 ### Lagerordning TK
+	tet
 	tx  
 	ATK  
 	vs  
