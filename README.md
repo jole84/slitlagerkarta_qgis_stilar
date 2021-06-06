@@ -57,7 +57,7 @@ EPSG:3857
 	Minimum zoom 9  
 	Maximum zoom 12  
 	40x40  
-	70%  
+	80%  
 
 #### Render settings terrängkartan/slitlager:
 	512  
@@ -65,7 +65,7 @@ EPSG:3857
 	Minimum zoom 8  
 	Maximum zoom 13  
 	40x40  
-	70%  
+	80%  
 
 #### ATK-mätplats hastighet
 	1. Buffer, 6m (ATK)    
