@@ -1,5 +1,5 @@
 # Simple script to create kml file from slippy map tiles. 
-# Place in tiles fulder and run "python3 makekml.py > doc.kml"
+# Place in tiles folder and run "python3 makekml.py > doc.kml"
 
 
 import os, math
@@ -32,12 +32,12 @@ for f in folders:
         y = int(p[:-4])
         x2 = x + 1
         y2 = y + 1
-        ne = num2deg(x2,y,z)
-        sv = num2deg(x,y2,z)
-        n = ne[0]
-        e = ne[1]
-        v = sv[1]
-        s = sv[0]
+        nv = num2deg(x,y,z)
+        se = num2deg(x2,y2,z)
+        n = nv[0]
+        v = nv[1]
+        e = se[1]
+        s = se[0]
 
         print("\n<GroundOverlay>")
         print("<name>" + str(x) + "/" + str(y) + ".jpg" + "</name>")
