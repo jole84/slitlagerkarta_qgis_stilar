@@ -12,8 +12,8 @@ def num2deg(xtile, ytile, zoom):
   return (lat_deg, lon_deg)
 
 # Settings:
-zoom = 13     #selects zoom level
-filename = "Gotaland" #selects name
+zoom = 12     #select zoom level
+filename = "Gotaland" #select name
 
 folders = os.listdir(str(zoom)+"/")
 
@@ -25,7 +25,6 @@ print("<open>1</open>")
 
 for f in folders:
     files = os.listdir(str(zoom)+"/" + str(f))
-#    print(f)
     for p in files:
         z = int(zoom)
         x = int(f)
