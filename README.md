@@ -51,14 +51,6 @@ EPSG:3857
 	ml  
 	my  
 
-#### Render settings stratväg:
-	512  
-	PNG  
-	Minimum zoom 9  
-	Maximum zoom 12  
-	40x40  
-	80%  
-
 #### Render settings terrängkartan/slitlager:
 	512  
 	JPG  
