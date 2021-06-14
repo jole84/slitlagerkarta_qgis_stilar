@@ -41,7 +41,7 @@ for folder in folders:
         print("\n<GroundOverlay>")
         print("<name>" + str(x) + "/" + str(y) + ".jpg</name>")
         print("<Icon>")
-        print("<href>"+(str(zoom)) + "/" + str(x) + "/" + str(y) + ".jpg</href>")
+        print("<href>" + str(zoom) + "/" + str(x) + "/" + str(y) + ".jpg</href>")
         print("</Icon>")
         print("<LatLonBox>")
         print("<north>" + str(n) + "</north>")
