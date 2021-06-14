@@ -1,8 +1,7 @@
 # Simple script to create kml file from slippy map tiles. 
-# Place in tiles folder and run "python3 makekml.py > doc.kml"
+# Place in tiles folder and run "python3 makekml.py"
 
-
-import os, math
+import os, math, sys
 
 def num2deg(xtile, ytile, zoom):
   n = 2.0 ** zoom
@@ -11,11 +10,10 @@ def num2deg(xtile, ytile, zoom):
   lat_deg = math.degrees(lat_rad)
   return (lat_deg, lon_deg)
 
-# Settings:
-zoom = 13     #select zoom level
-filename = "Gotaland" #select name
+zoom = int(input("Select zoom level: "))
+filename = input("Enter title: ")
 
-folders = os.listdir(str(zoom))
+sys.stdout = open('doc.kml','w')
 
 print('<?xml version="1.0" encoding="UTF-8"?>')
 print('<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">')
@@ -23,20 +21,20 @@ print("<Folder>")
 print("<name>"+filename+"</name>")
 print("<open>1</open>")
 
+folders = os.listdir(str(zoom))
 for folder in folders:
     files = os.listdir(str(zoom) + "/" + str(folder))
     for file in files:
-        z = int(zoom)
         x = int(folder)
         y = int(file[:-4])
         x2 = x + 1
         y2 = y + 1
-        nv = num2deg(x,y,z)
-        se = num2deg(x2,y2,z)
-        n = nv[0]
-        v = nv[1]
-        s = se[0]
-        e = se[1]
+        northwest = num2deg(x,y,zoom)
+        southeast = num2deg(x2,y2,zoom)
+        north = northwest[0]
+        west = northwest[1]
+        south = southeast[0]
+        east = southeast[1]
 
         print("\n<GroundOverlay>")
         print("<name>" + str(x) + "/" + str(y) + ".jpg</name>")
@@ -44,12 +42,14 @@ for folder in folders:
         print("<href>" + str(zoom) + "/" + str(x) + "/" + str(y) + ".jpg</href>")
         print("</Icon>")
         print("<LatLonBox>")
-        print("<north>" + str(n) + "</north>")
-        print("<south>" + str(s) + "</south>")
-        print("<east>" + str(e) + "</east>")
-        print("<west>" + str(v) + "</west>")
+        print("<north>" + str(north) + "</north>")
+        print("<south>" + str(south) + "</south>")
+        print("<east>" + str(east) + "</east>")
+        print("<west>" + str(west) + "</west>")
         print("</LatLonBox>")
         print("</GroundOverlay>")
 
 print("</Folder>")
 print("</kml>")
+
+sys.stdout.close()
