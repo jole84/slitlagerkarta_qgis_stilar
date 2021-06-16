@@ -19,7 +19,7 @@ print('<?xml version="1.0" encoding="UTF-8"?>')
 print('<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">')
 print("<Folder>")
 print("<name>"+filename+"</name>")
-print("<open>1</open>")
+print("<open>0</open>")
 
 folders = os.listdir(str(zoom))
 for folder in folders:
