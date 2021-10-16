@@ -55,9 +55,9 @@ EPSG:3857
 	Driftbidrag statligt/Vägdelsnr
 	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
 	Slitlager/Slitlagertyp
-	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
-	Vägtrafiknät/Nättyp
 	Vägbredd/Bredd
+	Vägtrafiknät/Nättyp
+	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
 
 #### Beställning Trafikverket Stratväg:
 	Höjdhinder upp till 4,5 m
