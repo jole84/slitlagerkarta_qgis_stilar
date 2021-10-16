@@ -51,6 +51,19 @@ EPSG:3857
 	ml  
 	my  
 
+#### Beställning Trafikverket homogeniserade:
+	Driftbidrag statligt/Vägdelsnr
+	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
+	Slitlager/Slitlagertyp
+	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
+	Vägtrafiknät/Nättyp
+	Vägbredd/Bredd
+
+#### Beställning Trafikverket Stratväg:
+	Höjdhinder upp till 4,5 m
+	Rastplats
+	Parkeringsficka
+
 #### Render settings terrängkartan/slitlager:
 	512  
 	JPG  
