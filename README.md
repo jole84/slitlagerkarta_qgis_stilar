@@ -73,9 +73,10 @@ EPSG:3857
 	80%  
 
 #### ATK-mätplats hastighet
-	1. Buffer, 6m (ATK)    
-	2. Join attributes by location, largest overlap (buffer+hastighet)  
-	3. Join attributes by location (ATK+joined layer)
+	1. Reproject layer (EPSG:3857, ATK + ISA)  
+	1. Buffer, 6m (ATK)  
+	2. Join attributes by location, largest overlap one-to-one (buffer + ISA)  
+	3. Join attributes by location, largest overlap one-to-one (ATK + joined layer)
 
 #### TJUST						
 	LM	QGIS  
