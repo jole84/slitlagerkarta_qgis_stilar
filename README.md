@@ -35,14 +35,14 @@ EPSG:3857
 	P_ficka  
 	Rastplats  
 	Höjdhinder  
-	vs  
+	vs (från TK)  
 	fs  
 	bs  
 	by  
 	bl  
 	kl  
 	jl  
-	vo_traktorväg  
+	vo_traktorväg (från TK)  
 	slitlager  
 	hl  
 	ql  
