@@ -5,7 +5,7 @@ Stilar för slitlagerkartan till QGIS
 EPSG:3857
 
 ### Lagerordning TK
-	tet
+	tet (S.gpx)
 	tx  
 	ATK  
 	vs  
@@ -42,7 +42,6 @@ EPSG:3857
 	bl  
 	kl  
 	jl  
-	Strateg_tyngretrans  
 	vo_traktorväg  
 	slitlager  
 	hl  
