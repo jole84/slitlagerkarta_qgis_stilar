@@ -35,7 +35,7 @@ EPSG:3857
 	P_ficka  
 	Rastplats  
 	Höjdhinder  
-	vs (från TK)  
+	vs 
 	fs  
 	bs  
 	by  
@@ -72,11 +72,10 @@ EPSG:3857
 	80%  
 
 #### ATK-mätplats hastighet
-	1. Reproject layer (EPSG:3857, ATK + ISA)  
-	2. Create spatial index (alla)  
-	3. Buffer, 6m (ATK)  
-	4. Join attributes by location, largest overlap one-to-one (buffer + ISA)  
-	5. Join attributes by location, largest overlap one-to-one (ATK + joined layer)
+	1. Reproject layer (EPSG:3857, ATK + ISA)    
+	2. Buffer, 6m (ATK)  
+	3. Join attributes by location, largest overlap one-to-one (buffer + ISA)  
+	4. Join attributes by location, largest overlap one-to-one (ATK + joined layer)
 
 #### TJUST						
 	LM	QGIS  
