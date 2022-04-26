@@ -16,8 +16,8 @@ EPSG:3857
 	bl  
 	kl  
 	jl  
-	vo_traktorväg  
 	slitlager  
+	vo_traktorväg  
 	*vo  
 	*vl  
 	hl  
@@ -42,8 +42,8 @@ EPSG:3857
 	bl  
 	kl  
 	jl  
-	vo_traktorväg (från TK)  
 	slitlager  
+	vo_traktorväg (från TK)  
 	hl  
 	ql  
 	nl  
