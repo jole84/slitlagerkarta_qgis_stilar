@@ -64,10 +64,10 @@ EPSG:3857
 	Parkeringsficka
 
 #### Render settings terrängkartan/slitlager:
-	512  
+	256(512)  
 	JPG  
 	Minimum zoom 8  
-	Maximum zoom 13  
+	Maximum zoom 14(13)  
 	40x40  
 	80%  
 
@@ -90,5 +90,5 @@ EPSG:3857
 	9	6  
 
 #### Remove black tiles
-	find . -name "*.jpg" -type 'f' -size -4724c -delete
+	find . -name "*.jpg" -type 'f' -size -1652c -delete (-4724c)
 	find . -type d -empty -delete
