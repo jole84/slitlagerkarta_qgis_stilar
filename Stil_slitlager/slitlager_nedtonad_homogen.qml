@@ -250,7 +250,7 @@
               <Option name="properties" type="Map">
                 <Option name="outlineWidth" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="CASE &#xa;WHEN &quot;Bredd_156&quot; &lt;= 7 THEN &quot;Bredd_156&quot; * 13&#xa;ELSE 30&#xa;&#xa;END"/>
+                  <Option name="expression" type="QString" value="CASE &#xa;WHEN &quot;Bredd_156&quot; &lt;= 6 THEN &quot;Bredd_156&quot; * 13&#xa;ELSE 30&#xa;&#xa;END"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
               </Option>
