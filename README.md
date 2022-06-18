@@ -90,5 +90,5 @@ EPSG:3857
 	9	6  
 
 #### Remove black tiles
-	find . -name "*.jpg" -type 'f' -size -1652c -delete (-4724c)
+	find . -name "*.jpg" -type 'f' -size -1652c -delete
 	find . -type d -empty -delete
