@@ -64,11 +64,11 @@ EPSG:3857
 	Parkeringsficka
 
 #### Render settings terrängkartan/slitlager:
-	256(512)  
+	256  
 	JPG  
 	Minimum zoom 8  
-	Maximum zoom 14(13)  
-	40x40  
+	Maximum zoom 14  
+	20x20  
 	80%  
 
 #### ATK-mätplats hastighet
