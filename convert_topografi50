@@ -1,0 +1,37 @@
+#!/bin/bash
+
+layers_list="hydrografi \
+    militartomrade \
+    administrativindelning \
+    kommunikation \
+    naturvard \
+    anlaggningsomrade \
+    kulturhistorisklamning \
+    norrapolcirkeln \
+    byggnadsverk \
+    ledningar \
+    text \
+    hojd \
+    mark"
+
+for LAYER in $layers_list; do
+    LAYERNAME=$LAYER"_sverige"
+    INPUT="$LAYERNAME.gpkg"
+    OUTPUT="$LAYER.gpkg"
+    if [ -f $LAYERNAME.zip ]; then
+        # unzip
+        if [ ! -f $INPUT ]; then
+            unzip $LAYERNAME.zip
+            rm $LAYERNAME.zip
+        fi
+        # convert
+        if [ ! -f $OUTPUT ]; then
+            echo $LAYER
+            ogr2ogr $OUTPUT \
+            -t_srs "EPSG:3857" \
+            -progress \
+            $INPUT
+            rm $INPUT
+        fi
+    fi
+done
