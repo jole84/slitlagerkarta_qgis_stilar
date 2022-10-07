@@ -41,7 +41,7 @@
             <Option value="MM" type="QString" name="dash_pattern_offset_unit"/>
             <Option value="0" type="QString" name="draw_inside_polygon"/>
             <Option value="bevel" type="QString" name="joinstyle"/>
-            <Option value="152,125,183,255" type="QString" name="line_color"/>
+            <Option value="190,178,151,255" type="QString" name="line_color"/>
             <Option value="solid" type="QString" name="line_style"/>
             <Option value="0.6" type="QString" name="line_width"/>
             <Option value="MM" type="QString" name="line_width_unit"/>
@@ -69,7 +69,7 @@
           <prop v="MM" k="dash_pattern_offset_unit"/>
           <prop v="0" k="draw_inside_polygon"/>
           <prop v="bevel" k="joinstyle"/>
-          <prop v="152,125,183,255" k="line_color"/>
+          <prop v="190,178,151,255" k="line_color"/>
           <prop v="solid" k="line_style"/>
           <prop v="0.6" k="line_width"/>
           <prop v="MM" k="line_width_unit"/>
@@ -108,24 +108,24 @@
         <layer pass="0" locked="0" class="SimpleFill" enabled="1">
           <Option type="Map">
             <Option value="3x:0,0,0,0,0,0" type="QString" name="border_width_map_unit_scale"/>
-            <Option value="152,125,183,255" type="QString" name="color"/>
+            <Option value="190,178,151,255" type="QString" name="color"/>
             <Option value="bevel" type="QString" name="joinstyle"/>
             <Option value="0,0" type="QString" name="offset"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
             <Option value="MM" type="QString" name="offset_unit"/>
-            <Option value="109,89,131,255" type="QString" name="outline_color"/>
+            <Option value="136,127,108,255" type="QString" name="outline_color"/>
             <Option value="solid" type="QString" name="outline_style"/>
             <Option value="0.2" type="QString" name="outline_width"/>
             <Option value="MM" type="QString" name="outline_width_unit"/>
             <Option value="solid" type="QString" name="style"/>
           </Option>
           <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-          <prop v="152,125,183,255" k="color"/>
+          <prop v="190,178,151,255" k="color"/>
           <prop v="bevel" k="joinstyle"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="109,89,131,255" k="outline_color"/>
+          <prop v="136,127,108,255" k="outline_color"/>
           <prop v="solid" k="outline_style"/>
           <prop v="0.2" k="outline_width"/>
           <prop v="MM" k="outline_width_unit"/>
@@ -153,14 +153,14 @@
           <Option type="Map">
             <Option value="0" type="QString" name="angle"/>
             <Option value="square" type="QString" name="cap_style"/>
-            <Option value="152,125,183,255" type="QString" name="color"/>
+            <Option value="190,178,151,255" type="QString" name="color"/>
             <Option value="1" type="QString" name="horizontal_anchor_point"/>
             <Option value="bevel" type="QString" name="joinstyle"/>
             <Option value="diamond" type="QString" name="name"/>
             <Option value="0,0" type="QString" name="offset"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
             <Option value="MM" type="QString" name="offset_unit"/>
-            <Option value="109,89,131,255" type="QString" name="outline_color"/>
+            <Option value="136,127,108,255" type="QString" name="outline_color"/>
             <Option value="solid" type="QString" name="outline_style"/>
             <Option value="0.2" type="QString" name="outline_width"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="outline_width_map_unit_scale"/>
@@ -173,14 +173,14 @@
           </Option>
           <prop v="0" k="angle"/>
           <prop v="square" k="cap_style"/>
-          <prop v="152,125,183,255" k="color"/>
+          <prop v="190,178,151,255" k="color"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="bevel" k="joinstyle"/>
           <prop v="diamond" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="109,89,131,255" k="outline_color"/>
+          <prop v="136,127,108,255" k="outline_color"/>
           <prop v="solid" k="outline_style"/>
           <prop v="0.2" k="outline_width"/>
           <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
@@ -203,7 +203,7 @@
   </elevation>
   <renderer-v2 forceraster="0" enableorderby="0" referencescale="-1" symbollevels="0" type="categorizedSymbol" attr="objekttypnr">
     <categories>
-      <category value="2854" render="true" symbol="0" type="string" label="Flygplatsområde"/>
+      <category value="1741" render="true" symbol="0" type="string" label="Transformatorområde"/>
     </categories>
     <symbols>
       <symbol clip_to_extent="1" frame_rate="10" force_rhr="0" type="fill" name="0" alpha="1" is_animated="0">
@@ -217,26 +217,26 @@
         <layer pass="0" locked="0" class="SimpleFill" enabled="1">
           <Option type="Map">
             <Option value="3x:0,0,0,0,0,0" type="QString" name="border_width_map_unit_scale"/>
-            <Option value="156,218,49,0" type="QString" name="color"/>
+            <Option value="75,216,106,0" type="QString" name="color"/>
             <Option value="bevel" type="QString" name="joinstyle"/>
             <Option value="0,0" type="QString" name="offset"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
             <Option value="MM" type="QString" name="offset_unit"/>
             <Option value="78,78,78,255" type="QString" name="outline_color"/>
             <Option value="solid" type="QString" name="outline_style"/>
-            <Option value="0.1764" type="QString" name="outline_width"/>
+            <Option value="0.2117" type="QString" name="outline_width"/>
             <Option value="MM" type="QString" name="outline_width_unit"/>
             <Option value="solid" type="QString" name="style"/>
           </Option>
           <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-          <prop v="156,218,49,0" k="color"/>
+          <prop v="75,216,106,0" k="color"/>
           <prop v="bevel" k="joinstyle"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
           <prop v="78,78,78,255" k="outline_color"/>
           <prop v="solid" k="outline_style"/>
-          <prop v="0.1764" k="outline_width"/>
+          <prop v="0.2117" k="outline_width"/>
           <prop v="MM" k="outline_width_unit"/>
           <prop v="solid" k="style"/>
           <data_defined_properties>
@@ -261,7 +261,7 @@
         <layer pass="0" locked="0" class="SimpleFill" enabled="1">
           <Option type="Map">
             <Option value="3x:0,0,0,0,0,0" type="QString" name="border_width_map_unit_scale"/>
-            <Option value="125,139,143,255" type="QString" name="color"/>
+            <Option value="141,90,153,255" type="QString" name="color"/>
             <Option value="bevel" type="QString" name="joinstyle"/>
             <Option value="0,0" type="QString" name="offset"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
@@ -273,7 +273,7 @@
             <Option value="solid" type="QString" name="style"/>
           </Option>
           <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-          <prop v="125,139,143,255" k="color"/>
+          <prop v="141,90,153,255" k="color"/>
           <prop v="bevel" k="joinstyle"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -447,20 +447,6 @@
         </config>
       </editWidget>
     </field>
-    <field name="iata" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field name="icao" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
   </fieldConfiguration>
   <aliases>
     <alias field="fid" name="" index="0"/>
@@ -468,8 +454,6 @@
     <alias field="skapad" name="" index="2"/>
     <alias field="objekttypnr" name="" index="3"/>
     <alias field="objekttyp" name="" index="4"/>
-    <alias field="iata" name="" index="5"/>
-    <alias field="icao" name="" index="6"/>
   </aliases>
   <defaults>
     <default field="fid" applyOnUpdate="0" expression=""/>
@@ -477,8 +461,6 @@
     <default field="skapad" applyOnUpdate="0" expression=""/>
     <default field="objekttypnr" applyOnUpdate="0" expression=""/>
     <default field="objekttyp" applyOnUpdate="0" expression=""/>
-    <default field="iata" applyOnUpdate="0" expression=""/>
-    <default field="icao" applyOnUpdate="0" expression=""/>
   </defaults>
   <constraints>
     <constraint constraints="3" field="fid" exp_strength="0" unique_strength="1" notnull_strength="1"/>
@@ -486,8 +468,6 @@
     <constraint constraints="0" field="skapad" exp_strength="0" unique_strength="0" notnull_strength="0"/>
     <constraint constraints="0" field="objekttypnr" exp_strength="0" unique_strength="0" notnull_strength="0"/>
     <constraint constraints="0" field="objekttyp" exp_strength="0" unique_strength="0" notnull_strength="0"/>
-    <constraint constraints="0" field="iata" exp_strength="0" unique_strength="0" notnull_strength="0"/>
-    <constraint constraints="0" field="icao" exp_strength="0" unique_strength="0" notnull_strength="0"/>
   </constraints>
   <constraintExpressions>
     <constraint field="fid" desc="" exp=""/>
@@ -495,8 +475,6 @@
     <constraint field="skapad" desc="" exp=""/>
     <constraint field="objekttypnr" desc="" exp=""/>
     <constraint field="objekttyp" desc="" exp=""/>
-    <constraint field="iata" desc="" exp=""/>
-    <constraint field="icao" desc="" exp=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
@@ -509,8 +487,6 @@
       <column type="field" name="skapad" width="-1" hidden="0"/>
       <column type="field" name="objekttypnr" width="-1" hidden="0"/>
       <column type="field" name="objekttyp" width="-1" hidden="0"/>
-      <column type="field" name="iata" width="-1" hidden="0"/>
-      <column type="field" name="icao" width="-1" hidden="0"/>
       <column type="actions" width="-1" hidden="1"/>
     </columns>
   </attributetableconfig>
@@ -544,8 +520,6 @@ def my_form_open(dialog, layer, feature):
   <editorlayout>generatedlayout</editorlayout>
   <editable>
     <field editable="1" name="fid"/>
-    <field editable="1" name="iata"/>
-    <field editable="1" name="icao"/>
     <field editable="1" name="objektidentitet"/>
     <field editable="1" name="objekttyp"/>
     <field editable="1" name="objekttypnr"/>
@@ -553,8 +527,6 @@ def my_form_open(dialog, layer, feature):
   </editable>
   <labelOnTop>
     <field labelOnTop="0" name="fid"/>
-    <field labelOnTop="0" name="iata"/>
-    <field labelOnTop="0" name="icao"/>
     <field labelOnTop="0" name="objektidentitet"/>
     <field labelOnTop="0" name="objekttyp"/>
     <field labelOnTop="0" name="objekttypnr"/>
@@ -562,8 +534,6 @@ def my_form_open(dialog, layer, feature):
   </labelOnTop>
   <reuseLastValue>
     <field name="fid" reuseLastValue="0"/>
-    <field name="iata" reuseLastValue="0"/>
-    <field name="icao" reuseLastValue="0"/>
     <field name="objektidentitet" reuseLastValue="0"/>
     <field name="objekttyp" reuseLastValue="0"/>
     <field name="objekttypnr" reuseLastValue="0"/>
