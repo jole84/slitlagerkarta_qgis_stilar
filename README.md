@@ -4,6 +4,42 @@ Stilar för slitlagerkartan till QGIS
 
 EPSG:3857
 
+### Lagerordning topografi 50 slitlager
+	tet (S.gpx)
+	ATK
+	textpunkt
+	textlinje
+	transormatorområdespunkt
+	kulturhistorisktlämning, punkt
+	hydroanläggningspunkt
+	anläggningsområdespunkt
+	byggnadsanläggningspunkt
+	byggnadspunkt
+	vägpunkt
+	administrativ gräns
+	byggnadsanläggningslinje
+	anläggningsområde
+	ledningslinje
+	transormatorområde
+	rälstrafik
+	militärt_område
+	slitlager
+	övrig väg, traktorväg
+	skyddadnatur
+	vägnummer?
+	byggnad
+	hydroanläggningslinje
+	färjeled
+	hydrolinje
+	höjdkurvstext
+	kulturhistorisktlämning, linje
+	start och landningsbana
+	höjdlinje
+	flygplatsområde
+	markkantlinje
+	sankmark
+	mark
+
 ### Lagerordning TK
 	tet (S.gpx)
 	tx  
@@ -92,3 +128,18 @@ EPSG:3857
 #### Remove black tiles
 	find . -name "*.jpg" -type 'f' -size -1652c -delete
 	find . -type d -empty -delete
+
+#### Set layer style by expression:
+	'/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/' + substr( @INPUT, 0, -37 ) + '.qml'
+
+#### Text size
+	array(125,
+	150,
+	175,
+	200,
+	225,
+	250,
+	300,
+	350,
+	400,
+	500)[textstorleksklass-1]
