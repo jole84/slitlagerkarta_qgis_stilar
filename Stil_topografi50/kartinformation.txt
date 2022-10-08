@@ -27,6 +27,7 @@ ledningslinje
 transormatorområde
 rälstrafik över mark
 rälstrafik under mark
+militärt_område_utom_kasernområde
 slitlager
 övrig väg, traktorväg
 skyddad natur
