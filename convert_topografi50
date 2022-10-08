@@ -31,7 +31,6 @@ for LAYER in $layers_list; do
             -t_srs "EPSG:3857" \
             -progress \
             $INPUT
-            rm $INPUT
         fi
     fi
 done

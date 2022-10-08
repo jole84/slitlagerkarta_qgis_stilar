@@ -1,0 +1,44 @@
+array(125,
+150,
+175,
+200,
+225,
+250,
+300,
+350,
+400,
+500)[textstorleksklass-1]
+
+tet (S.gpx)
+ATK
+textpunkt
+textlinje
+transormatorområdespunkt
+kulturhistorisktlämning, punkt
+hydroanläggningspunkt
+anläggningspunkt
+byggnadsanläggningspunkt
+byggnadspunkt
+vägpunkt
+administrativ gräns
+byggnadsanläggningslinje
+anläggningsområde
+ledningslinje
+transormatorområde
+rälstrafik över mark
+rälstrafik under mark
+slitlager
+övrig väg, traktorväg
+skyddad natur
+byggnad
+hydroanläggningslinje
+färjeled
+hydrolinje
+höjdkurvstext
+kulturhistorisktlämning, linje
+höjdlinje
+start och landningsbana
+flygplatsområde
+markkantlinje
+sankmark
+mark
