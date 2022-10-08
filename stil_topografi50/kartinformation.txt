@@ -47,4 +47,4 @@ mark
 
 style by expression:
 
-'/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/' + substr( @INPUT, 0, -37 ) + '.qml'
+'/home/johan/git/slitlagerkarta_qgis_stilar/Stil_topografi50/' + substr( @INPUT, 0, -37 ) + '.qml'
