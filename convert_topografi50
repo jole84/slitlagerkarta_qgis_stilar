@@ -19,6 +19,7 @@ for LAYER in $layers_list; do
     INPUT="$LAYERNAME.gpkg"
     OUTPUT="$LAYER.gpkg"
     if [ -f $LAYERNAME.zip ]; then
+        echo $LAYER
         # unzip
         if [ ! -f $INPUT ]; then
             unzip $LAYERNAME.zip
@@ -26,11 +27,11 @@ for LAYER in $layers_list; do
         fi
         # convert
         if [ ! -f $OUTPUT ]; then
-            echo $LAYER
             ogr2ogr $OUTPUT \
             -t_srs "EPSG:3857" \
             -progress \
             $INPUT
+            rm $INPUT
         fi
     fi
 done

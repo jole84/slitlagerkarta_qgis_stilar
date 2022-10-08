@@ -16,7 +16,7 @@ textlinje
 transormatorområdespunkt
 kulturhistorisktlämning, punkt
 hydroanläggningspunkt
-anläggningspunkt
+anläggningsområdespunkt
 byggnadsanläggningspunkt
 byggnadspunkt
 vägpunkt
@@ -30,6 +30,7 @@ rälstrafik under mark
 slitlager
 övrig väg, traktorväg
 skyddad natur
+vägnummer
 byggnad
 hydroanläggningslinje
 färjeled
