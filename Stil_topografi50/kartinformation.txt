@@ -27,11 +27,11 @@ ledningslinje
 transormatorområde
 rälstrafik över mark
 rälstrafik under mark
-militärt_område_utom_kasernområde
+militärt_område
 slitlager
 övrig väg, traktorväg
 skyddad natur
-vägnummer
+vägnummer?
 byggnad
 hydroanläggningslinje
 färjeled
@@ -44,3 +44,7 @@ flygplatsområde
 markkantlinje
 sankmark
 mark
+
+style by expression:
+
+'/home/johan/git/slitlagerkarta_qgis_stilar/Stil_topografi50/' + substr( @INPUT, 0, -37 ) + '.qml'
