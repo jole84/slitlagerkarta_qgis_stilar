@@ -10,6 +10,7 @@ if [ ! -f $OUTPUT ]; then
     -t_srs "EPSG:3857" \
     -progress \
     -append \
+    -skipfailures \
     -nlt linestring \
     -nln "TNE_FT_VAGDATA" \
     -dialect "SQLite" \
@@ -26,6 +27,7 @@ if [ ! -f $OUTPUT ]; then
     -t_srs "EPSG:3857" \
     -progress \
     -append \
+    -skipfailures \
     -nlt linestring \
     -nln "ovrig_vag" \
     -dialect "SQLite" \
