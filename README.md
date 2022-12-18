@@ -76,7 +76,7 @@ EPSG:3857
 #### Render settings terrängkartan/slitlager:
 	256  
 	JPG  
-	Minimum zoom 8  
+	Minimum zoom 6  
 	Maximum zoom 14  
 	20x20  
 	80%  

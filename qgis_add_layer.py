@@ -35,7 +35,10 @@ layers_to_add = [
     ["flygplatsomrade", "/home/johan/Karta/topografi50/anlaggningsomrade.gpkg"],
     ["markkantlinje", "/home/johan/Karta/topografi50/mark.gpkg"],
     ["sankmark", "/home/johan/Karta/topografi50/mark.gpkg"],
-    ["mark", "/home/johan/Karta/topografi50/mark.gpkg"]
+    ["mark", "/home/johan/Karta/topografi50/mark.gpkg"],
+    ["Svealand", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"],
+    ["Norrland", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"],
+    ["Götaland", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"]
 ]
 
 layers_to_add.reverse()
