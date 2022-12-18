@@ -41,10 +41,9 @@ layers_to_add = [
 layers_to_add.reverse()
 
 for layer in layers_to_add:
-    path_to_layer = layer[1]
     layer_name = layer[0]
-    path_to_gpkg_layer = path_to_layer + "|layername=" + layer_name
-    vlayer = QgsVectorLayer(path_to_gpkg_layer, layer_name, "ogr")
+    path_to_layer = layer[1] + "|layername=" + layer_name
+    vlayer = QgsVectorLayer(path_to_layer, layer_name, "ogr")
     style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name)
     if not vlayer.isValid():
         print("Layer {} failed to load!".format(layer_name))
