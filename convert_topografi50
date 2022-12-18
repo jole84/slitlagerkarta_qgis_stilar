@@ -1,5 +1,8 @@
 #!/bin/bash
 
+shopt -s expand_aliases
+source ~/.bash_aliases
+
 unzip "*.zip"
 
 for FILE in *_sverige.gpkg

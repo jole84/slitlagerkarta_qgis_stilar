@@ -5,65 +5,39 @@ Stilar för slitlagerkartan till QGIS
 EPSG:3857
 
 ### Lagerordning topografi 50 slitlager
-	tet (S.gpx)
+	TET
 	ATK
 	textpunkt
 	textlinje
-	transormatorområdespunkt
-	kulturhistorisktlämning, punkt
-	hydroanläggningspunkt
-	anläggningsområdespunkt
-	byggnadsanläggningspunkt
+	transformatoromradespunkt
+	kultur_lamning_punkt
+	hydroanlaggningspunkt
+	anlaggningsomradespunkt
+	byggnadsanlaggningspunkt
 	byggnadspunkt
-	vägpunkt
-	administrativ gräns
-	byggnadsanläggningslinje
-	anläggningsområde
+	vagpunkt
+	administrativ_grans
+	byggnadsanlaggningslinje
+	anlaggningsomrade
 	ledningslinje
-	transormatorområde
-	rälstrafik
-	militärt_område
-	slitlager
-	övrig väg, traktorväg
+	transformatoromrade
+	ralstrafik
+	militart_omrade
+	TNE_FT_VAGDATA
+	ovrig_vag
 	skyddadnatur
-	vägnummer?
 	byggnad
-	hydroanläggningslinje
-	färjeled
+	hydroanlaggningslinje
+	farjeled
 	hydrolinje
-	höjdkurvstext
-	kulturhistorisktlämning, linje
-	start och landningsbana
-	höjdlinje
-	flygplatsområde
+	hojdkurvstext
+	kultur_lamning_linje
+	start_landningsbana
+	hojdlinje
+	flygplatsomrade
 	markkantlinje
 	sankmark
 	mark
-
-### Lagerordning TK
-	tet (S.gpx)
-	tx  
-	ATK  
-	vs  
-	fs  
-	bs  
-	ss  
-	by  
-	bl  
-	kl  
-	jl  
-	slitlager  
-	vo_traktorväg  
-	*vo  
-	*vl  
-	hl  
-	ql  
-	nl  
-	oh  
-	ml  
-	ms  
-	my  
-	*terrängkartan  
 
 ### Lagerordning VK nedtonad  
 	tx  
