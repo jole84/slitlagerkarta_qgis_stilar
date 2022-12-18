@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis labelsEnabled="0" version="3.28.1-Firenze" simplifyAlgorithm="0" symbologyReferenceScale="-1" minScale="500000" hasScaleBasedVisibilityFlag="1" simplifyDrawingTol="1" readOnly="0" simplifyDrawingHints="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0">
+<qgis labelsEnabled="0" version="3.28.1-Firenze" simplifyAlgorithm="0" symbologyReferenceScale="-1" minScale="100000" hasScaleBasedVisibilityFlag="1" simplifyDrawingTol="1" readOnly="0" simplifyDrawingHints="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
