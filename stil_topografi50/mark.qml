@@ -214,7 +214,7 @@
       <category type="string" symbol="8" label="Barr- och blandskog" render="true" value="2645"/>
       <category type="string" symbol="9" label="Lövskog" render="true" value="2646"/>
       <category type="string" symbol="10" label="Fjällbjörkskog" render="true" value="2647"/>
-      <category type="string" symbol="11" label="Ej karterat område" render="true" value="2648"/>
+      <category type="string" symbol="11" label="Ej karterat område" render="false" value="2648"/>
       <category type="string" symbol="12" label="Hav" render="true" value="2631"/>
       <category type="string" symbol="13" label="Sjö" render="true" value="2632"/>
       <category type="string" symbol="14" label="Vattendragsyta" render="true" value="2633"/>

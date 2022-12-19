@@ -1,657 +1,438 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyMaxScale="1" simplifyDrawingHints="1" readOnly="0" symbologyReferenceScale="-1" styleCategories="AllStyleCategories" minScale="100000000" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" maxScale="0" simplifyAlgorithm="0" version="3.26.3-Buenos Aires" labelsEnabled="0">
+<qgis labelsEnabled="0" simplifyDrawingHints="1" minScale="1000000" simplifyAlgorithm="0" styleCategories="AllStyleCategories" readOnly="0" version="3.28.2-Firenze" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="1" maxScale="0" simplifyMaxScale="1" symbologyReferenceScale="-1" simplifyLocal="1">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
     <Private>0</Private>
   </flags>
-  <temporal limitMode="0" mode="0" durationField="" accumulate="0" startExpression="" durationUnit="min" fixedDuration="0" endField="" enabled="0" startField="" endExpression="">
+  <temporal endField="" fixedDuration="0" endExpression="" startField="" mode="0" durationUnit="min" accumulate="0" enabled="0" limitMode="0" startExpression="" durationField="">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <elevation zscale="1" extrusionEnabled="0" clamping="Terrain" binding="Centroid" type="IndividualFeatures" showMarkerSymbolInSurfacePlots="0" respectLayerSymbol="1" symbology="Line" zoffset="0" extrusion="0">
+  <elevation extrusion="0" binding="Centroid" extrusionEnabled="0" zscale="1" symbology="Line" respectLayerSymbol="1" showMarkerSymbolInSurfacePlots="0" clamping="Terrain" type="IndividualFeatures" zoffset="0">
     <data-defined-properties>
       <Option type="Map">
-        <Option name="name" type="QString" value=""/>
+        <Option value="" name="name" type="QString"/>
         <Option name="properties"/>
-        <Option name="type" type="QString" value="collection"/>
+        <Option value="collection" name="type" type="QString"/>
       </Option>
     </data-defined-properties>
     <profileLineSymbol>
-      <symbol name="" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="square"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="190,207,80,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.6"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="square" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="190,207,80,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.6" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="square"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="190,207,80,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.6"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileLineSymbol>
     <profileFillSymbol>
-      <symbol name="" frame_rate="10" clip_to_extent="1" type="fill" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="" type="fill">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleFill">
           <Option type="Map">
-            <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="color" type="QString" value="190,207,80,255"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="offset" type="QString" value="0,0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="outline_color" type="QString" value="136,148,57,255"/>
-            <Option name="outline_style" type="QString" value="solid"/>
-            <Option name="outline_width" type="QString" value="0.2"/>
-            <Option name="outline_width_unit" type="QString" value="MM"/>
-            <Option name="style" type="QString" value="solid"/>
+            <Option value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale" type="QString"/>
+            <Option value="190,207,80,255" name="color" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="136,148,57,255" name="outline_color" type="QString"/>
+            <Option value="solid" name="outline_style" type="QString"/>
+            <Option value="0.2" name="outline_width" type="QString"/>
+            <Option value="MM" name="outline_width_unit" type="QString"/>
+            <Option value="solid" name="style" type="QString"/>
           </Option>
-          <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="color" v="190,207,80,255"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="outline_color" v="136,148,57,255"/>
-          <prop k="outline_style" v="solid"/>
-          <prop k="outline_width" v="0.2"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="style" v="solid"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileFillSymbol>
     <profileMarkerSymbol>
-      <symbol name="" frame_rate="10" clip_to_extent="1" type="marker" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="" type="marker">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleMarker">
           <Option type="Map">
-            <Option name="angle" type="QString" value="0"/>
-            <Option name="cap_style" type="QString" value="square"/>
-            <Option name="color" type="QString" value="190,207,80,255"/>
-            <Option name="horizontal_anchor_point" type="QString" value="1"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="name" type="QString" value="diamond"/>
-            <Option name="offset" type="QString" value="0,0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="outline_color" type="QString" value="136,148,57,255"/>
-            <Option name="outline_style" type="QString" value="solid"/>
-            <Option name="outline_width" type="QString" value="0.2"/>
-            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="outline_width_unit" type="QString" value="MM"/>
-            <Option name="scale_method" type="QString" value="diameter"/>
-            <Option name="size" type="QString" value="3"/>
-            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="size_unit" type="QString" value="MM"/>
-            <Option name="vertical_anchor_point" type="QString" value="1"/>
+            <Option value="0" name="angle" type="QString"/>
+            <Option value="square" name="cap_style" type="QString"/>
+            <Option value="190,207,80,255" name="color" type="QString"/>
+            <Option value="1" name="horizontal_anchor_point" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="diamond" name="name" type="QString"/>
+            <Option value="0,0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="136,148,57,255" name="outline_color" type="QString"/>
+            <Option value="solid" name="outline_style" type="QString"/>
+            <Option value="0.2" name="outline_width" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
+            <Option value="MM" name="outline_width_unit" type="QString"/>
+            <Option value="diameter" name="scale_method" type="QString"/>
+            <Option value="3" name="size" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
+            <Option value="MM" name="size_unit" type="QString"/>
+            <Option value="1" name="vertical_anchor_point" type="QString"/>
           </Option>
-          <prop k="angle" v="0"/>
-          <prop k="cap_style" v="square"/>
-          <prop k="color" v="190,207,80,255"/>
-          <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="name" v="diamond"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="outline_color" v="136,148,57,255"/>
-          <prop k="outline_style" v="solid"/>
-          <prop k="outline_width" v="0.2"/>
-          <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="scale_method" v="diameter"/>
-          <prop k="size" v="3"/>
-          <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="size_unit" v="MM"/>
-          <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileMarkerSymbol>
   </elevation>
-  <renderer-v2 forceraster="0" enableorderby="0" symbollevels="0" type="categorizedSymbol" attr="objekttypnr" referencescale="-1">
+  <renderer-v2 enableorderby="0" symbollevels="0" referencescale="-1" attr="objekttypnr" forceraster="0" type="categorizedSymbol">
     <categories>
-      <category type="string" symbol="0" label="Strandlinje, hav" render="true" value="2612"/>
-      <category type="string" symbol="1" label="Strandlinje, sjö" render="true" value="2613"/>
-      <category type="string" symbol="2" label="Strandlinje, vattendragsyta" render="true" value="2614"/>
-      <category type="string" symbol="3" label="Strandlinje, anlagt vatten" render="true" value="2615"/>
-      <category type="string" symbol="4" label="Glaciärgräns" render="true" value="2618"/>
+      <category value="2612" symbol="0" render="true" type="string" label="Strandlinje, hav"/>
+      <category value="2613" symbol="1" render="true" type="string" label="Strandlinje, sjö"/>
+      <category value="2614" symbol="2" render="true" type="string" label="Strandlinje, vattendragsyta"/>
+      <category value="2615" symbol="3" render="true" type="string" label="Strandlinje, anlagt vatten"/>
+      <category value="2618" symbol="4" render="true" type="string" label="Glaciärgräns"/>
     </categories>
     <symbols>
-      <symbol name="0" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="0" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="flat"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="0,166,255,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.1764"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="flat" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,166,255,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.1764" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="flat"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="0,166,255,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.1764"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="1" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="1" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="flat"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="0,166,255,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.1764"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="flat" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,166,255,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.1764" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="flat"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="0,166,255,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.1764"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="2" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="2" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="flat"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="0,166,255,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.1764"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="flat" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,166,255,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.1764" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="flat"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="0,166,255,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.1764"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="3" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="3" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="flat"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="0,166,255,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.1764"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="flat" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,166,255,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.1764" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="flat"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="0,166,255,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.1764"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol name="4" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="4" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="flat"/>
-            <Option name="customdash" type="QString" value="4;3"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="Point"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="0,166,255,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.1058"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="1"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="flat" name="capstyle" type="QString"/>
+            <Option value="4;3" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="Point" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="0,166,255,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.1058" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="1" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="flat"/>
-          <prop k="customdash" v="4;3"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="Point"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="0,166,255,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.1058"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="1"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </symbols>
     <source-symbol>
-      <symbol name="0" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+      <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="0" type="line">
         <data_defined_properties>
           <Option type="Map">
-            <Option name="name" type="QString" value=""/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option name="type" type="QString" value="collection"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
         <layer pass="0" locked="0" enabled="1" class="SimpleLine">
           <Option type="Map">
-            <Option name="align_dash_pattern" type="QString" value="0"/>
-            <Option name="capstyle" type="QString" value="square"/>
-            <Option name="customdash" type="QString" value="5;2"/>
-            <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="customdash_unit" type="QString" value="MM"/>
-            <Option name="dash_pattern_offset" type="QString" value="0"/>
-            <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-            <Option name="draw_inside_polygon" type="QString" value="0"/>
-            <Option name="joinstyle" type="QString" value="bevel"/>
-            <Option name="line_color" type="QString" value="152,125,183,255"/>
-            <Option name="line_style" type="QString" value="solid"/>
-            <Option name="line_width" type="QString" value="0.26"/>
-            <Option name="line_width_unit" type="QString" value="MM"/>
-            <Option name="offset" type="QString" value="0"/>
-            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="offset_unit" type="QString" value="MM"/>
-            <Option name="ring_filter" type="QString" value="0"/>
-            <Option name="trim_distance_end" type="QString" value="0"/>
-            <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-            <Option name="trim_distance_start" type="QString" value="0"/>
-            <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-            <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-            <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-            <Option name="use_custom_dash" type="QString" value="0"/>
-            <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option value="0" name="align_dash_pattern" type="QString"/>
+            <Option value="square" name="capstyle" type="QString"/>
+            <Option value="5;2" name="customdash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+            <Option value="MM" name="customdash_unit" type="QString"/>
+            <Option value="0" name="dash_pattern_offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+            <Option value="0" name="draw_inside_polygon" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="152,125,183,255" name="line_color" type="QString"/>
+            <Option value="solid" name="line_style" type="QString"/>
+            <Option value="0.26" name="line_width" type="QString"/>
+            <Option value="MM" name="line_width_unit" type="QString"/>
+            <Option value="0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0" name="ring_filter" type="QString"/>
+            <Option value="0" name="trim_distance_end" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+            <Option value="0" name="trim_distance_start" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+            <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+            <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+            <Option value="0" name="use_custom_dash" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
           </Option>
-          <prop k="align_dash_pattern" v="0"/>
-          <prop k="capstyle" v="square"/>
-          <prop k="customdash" v="5;2"/>
-          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="customdash_unit" v="MM"/>
-          <prop k="dash_pattern_offset" v="0"/>
-          <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="dash_pattern_offset_unit" v="MM"/>
-          <prop k="draw_inside_polygon" v="0"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="line_color" v="152,125,183,255"/>
-          <prop k="line_style" v="solid"/>
-          <prop k="line_width" v="0.26"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="ring_filter" v="0"/>
-          <prop k="trim_distance_end" v="0"/>
-          <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_end_unit" v="MM"/>
-          <prop k="trim_distance_start" v="0"/>
-          <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-          <prop k="trim_distance_start_unit" v="MM"/>
-          <prop k="tweak_dash_pattern_on_corners" v="0"/>
-          <prop k="use_custom_dash" v="0"/>
-          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -662,8 +443,8 @@
   </renderer-v2>
   <customproperties>
     <Option type="Map">
-      <Option name="dualview/previewExpressions" type="QString" value="&quot;fid&quot;"/>
-      <Option name="embeddedWidgets/count" type="int" value="0"/>
+      <Option value="&quot;fid&quot;" name="dualview/previewExpressions" type="QString"/>
+      <Option value="0" name="embeddedWidgets/count" type="int"/>
       <Option name="variableNames"/>
       <Option name="variableValues"/>
     </Option>
@@ -672,79 +453,53 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory spacingUnitScale="3x:0,0,0,0,0,0" maxScaleDenominator="1e+08" penColor="#000000" width="15" backgroundColor="#ffffff" labelPlacementMethod="XHeight" enabled="0" direction="0" spacingUnit="MM" lineSizeScale="3x:0,0,0,0,0,0" scaleDependency="Area" diagramOrientation="Up" height="15" showAxis="1" rotationOffset="270" minimumSize="0" scaleBasedVisibility="0" spacing="5" lineSizeType="MM" backgroundAlpha="255" sizeScale="3x:0,0,0,0,0,0" barWidth="5" minScaleDenominator="0" sizeType="MM" penAlpha="255" opacity="1" penWidth="0">
-      <fontProperties bold="0" italic="0" underline="0" description="Ubuntu,10,-1,5,50,0,0,0,0,0" style="" strikethrough="0"/>
+    <DiagramCategory backgroundAlpha="255" maxScaleDenominator="1e+08" sizeType="MM" diagramOrientation="Up" scaleBasedVisibility="0" lineSizeScale="3x:0,0,0,0,0,0" direction="0" spacing="5" backgroundColor="#ffffff" penWidth="0" penAlpha="255" height="15" scaleDependency="Area" showAxis="1" barWidth="5" spacingUnit="MM" opacity="1" sizeScale="3x:0,0,0,0,0,0" width="15" labelPlacementMethod="XHeight" penColor="#000000" spacingUnitScale="3x:0,0,0,0,0,0" enabled="0" rotationOffset="270" minimumSize="0" minScaleDenominator="0" lineSizeType="MM">
+      <fontProperties style="" bold="0" description="Ubuntu,10,-1,5,50,0,0,0,0,0" underline="0" strikethrough="0" italic="0"/>
+      <attribute color="#000000" label="" field="" colorOpacity="1"/>
       <axisSymbol>
-        <symbol name="" frame_rate="10" clip_to_extent="1" type="line" is_animated="0" alpha="1" force_rhr="0">
+        <symbol alpha="1" clip_to_extent="1" is_animated="0" force_rhr="0" frame_rate="10" name="" type="line">
           <data_defined_properties>
             <Option type="Map">
-              <Option name="name" type="QString" value=""/>
+              <Option value="" name="name" type="QString"/>
               <Option name="properties"/>
-              <Option name="type" type="QString" value="collection"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
           <layer pass="0" locked="0" enabled="1" class="SimpleLine">
             <Option type="Map">
-              <Option name="align_dash_pattern" type="QString" value="0"/>
-              <Option name="capstyle" type="QString" value="square"/>
-              <Option name="customdash" type="QString" value="5;2"/>
-              <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-              <Option name="customdash_unit" type="QString" value="MM"/>
-              <Option name="dash_pattern_offset" type="QString" value="0"/>
-              <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-              <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
-              <Option name="draw_inside_polygon" type="QString" value="0"/>
-              <Option name="joinstyle" type="QString" value="bevel"/>
-              <Option name="line_color" type="QString" value="35,35,35,255"/>
-              <Option name="line_style" type="QString" value="solid"/>
-              <Option name="line_width" type="QString" value="0.26"/>
-              <Option name="line_width_unit" type="QString" value="MM"/>
-              <Option name="offset" type="QString" value="0"/>
-              <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-              <Option name="offset_unit" type="QString" value="MM"/>
-              <Option name="ring_filter" type="QString" value="0"/>
-              <Option name="trim_distance_end" type="QString" value="0"/>
-              <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-              <Option name="trim_distance_end_unit" type="QString" value="MM"/>
-              <Option name="trim_distance_start" type="QString" value="0"/>
-              <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
-              <Option name="trim_distance_start_unit" type="QString" value="MM"/>
-              <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
-              <Option name="use_custom_dash" type="QString" value="0"/>
-              <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+              <Option value="0" name="align_dash_pattern" type="QString"/>
+              <Option value="square" name="capstyle" type="QString"/>
+              <Option value="5;2" name="customdash" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
+              <Option value="MM" name="customdash_unit" type="QString"/>
+              <Option value="0" name="dash_pattern_offset" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
+              <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
+              <Option value="0" name="draw_inside_polygon" type="QString"/>
+              <Option value="bevel" name="joinstyle" type="QString"/>
+              <Option value="35,35,35,255" name="line_color" type="QString"/>
+              <Option value="solid" name="line_style" type="QString"/>
+              <Option value="0.26" name="line_width" type="QString"/>
+              <Option value="MM" name="line_width_unit" type="QString"/>
+              <Option value="0" name="offset" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+              <Option value="MM" name="offset_unit" type="QString"/>
+              <Option value="0" name="ring_filter" type="QString"/>
+              <Option value="0" name="trim_distance_end" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale" type="QString"/>
+              <Option value="MM" name="trim_distance_end_unit" type="QString"/>
+              <Option value="0" name="trim_distance_start" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale" type="QString"/>
+              <Option value="MM" name="trim_distance_start_unit" type="QString"/>
+              <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
+              <Option value="0" name="use_custom_dash" type="QString"/>
+              <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
             </Option>
-            <prop k="align_dash_pattern" v="0"/>
-            <prop k="capstyle" v="square"/>
-            <prop k="customdash" v="5;2"/>
-            <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-            <prop k="customdash_unit" v="MM"/>
-            <prop k="dash_pattern_offset" v="0"/>
-            <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-            <prop k="dash_pattern_offset_unit" v="MM"/>
-            <prop k="draw_inside_polygon" v="0"/>
-            <prop k="joinstyle" v="bevel"/>
-            <prop k="line_color" v="35,35,35,255"/>
-            <prop k="line_style" v="solid"/>
-            <prop k="line_width" v="0.26"/>
-            <prop k="line_width_unit" v="MM"/>
-            <prop k="offset" v="0"/>
-            <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-            <prop k="offset_unit" v="MM"/>
-            <prop k="ring_filter" v="0"/>
-            <prop k="trim_distance_end" v="0"/>
-            <prop k="trim_distance_end_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-            <prop k="trim_distance_end_unit" v="MM"/>
-            <prop k="trim_distance_start" v="0"/>
-            <prop k="trim_distance_start_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-            <prop k="trim_distance_start_unit" v="MM"/>
-            <prop k="tweak_dash_pattern_on_corners" v="0"/>
-            <prop k="use_custom_dash" v="0"/>
-            <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
             <data_defined_properties>
               <Option type="Map">
-                <Option name="name" type="QString" value=""/>
+                <Option value="" name="name" type="QString"/>
                 <Option name="properties"/>
-                <Option name="type" type="QString" value="collection"/>
+                <Option value="collection" name="type" type="QString"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -752,12 +507,12 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings linePlacementFlags="18" zIndex="0" dist="0" showAll="1" placement="2" priority="0" obstacle="0">
+  <DiagramLayerSettings linePlacementFlags="18" placement="2" zIndex="0" obstacle="0" dist="0" priority="0" showAll="1">
     <properties>
       <Option type="Map">
-        <Option name="name" type="QString" value=""/>
+        <Option value="" name="name" type="QString"/>
         <Option name="properties"/>
-        <Option name="type" type="QString" value="collection"/>
+        <Option value="collection" name="type" type="QString"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -765,38 +520,38 @@
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
-  <legend type="default-vector" showLabelLegend="0"/>
+  <legend showLabelLegend="0" type="default-vector"/>
   <referencedLayers/>
   <fieldConfiguration>
-    <field name="fid" configurationFlags="None">
+    <field configurationFlags="None" name="fid">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="objektidentitet" configurationFlags="None">
+    <field configurationFlags="None" name="objektidentitet">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="skapad" configurationFlags="None">
+    <field configurationFlags="None" name="skapad">
       <editWidget type="DateTime">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="objekttypnr" configurationFlags="None">
+    <field configurationFlags="None" name="objekttypnr">
       <editWidget type="Range">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field name="objekttyp" configurationFlags="None">
+    <field configurationFlags="None" name="objekttyp">
       <editWidget type="TextEdit">
         <config>
           <Option/>
@@ -805,45 +560,45 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias name="" field="fid" index="0"/>
-    <alias name="" field="objektidentitet" index="1"/>
-    <alias name="" field="skapad" index="2"/>
-    <alias name="" field="objekttypnr" index="3"/>
-    <alias name="" field="objekttyp" index="4"/>
+    <alias index="0" name="" field="fid"/>
+    <alias index="1" name="" field="objektidentitet"/>
+    <alias index="2" name="" field="skapad"/>
+    <alias index="3" name="" field="objekttypnr"/>
+    <alias index="4" name="" field="objekttyp"/>
   </aliases>
   <defaults>
-    <default field="fid" applyOnUpdate="0" expression=""/>
-    <default field="objektidentitet" applyOnUpdate="0" expression=""/>
-    <default field="skapad" applyOnUpdate="0" expression=""/>
-    <default field="objekttypnr" applyOnUpdate="0" expression=""/>
-    <default field="objekttyp" applyOnUpdate="0" expression=""/>
+    <default expression="" applyOnUpdate="0" field="fid"/>
+    <default expression="" applyOnUpdate="0" field="objektidentitet"/>
+    <default expression="" applyOnUpdate="0" field="skapad"/>
+    <default expression="" applyOnUpdate="0" field="objekttypnr"/>
+    <default expression="" applyOnUpdate="0" field="objekttyp"/>
   </defaults>
   <constraints>
-    <constraint unique_strength="1" notnull_strength="1" field="fid" exp_strength="0" constraints="3"/>
-    <constraint unique_strength="0" notnull_strength="0" field="objektidentitet" exp_strength="0" constraints="0"/>
-    <constraint unique_strength="0" notnull_strength="0" field="skapad" exp_strength="0" constraints="0"/>
-    <constraint unique_strength="0" notnull_strength="0" field="objekttypnr" exp_strength="0" constraints="0"/>
-    <constraint unique_strength="0" notnull_strength="0" field="objekttyp" exp_strength="0" constraints="0"/>
+    <constraint exp_strength="0" constraints="3" notnull_strength="1" unique_strength="1" field="fid"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="objektidentitet"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="skapad"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="objekttypnr"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="objekttyp"/>
   </constraints>
   <constraintExpressions>
-    <constraint field="fid" desc="" exp=""/>
-    <constraint field="objektidentitet" desc="" exp=""/>
-    <constraint field="skapad" desc="" exp=""/>
-    <constraint field="objekttypnr" desc="" exp=""/>
-    <constraint field="objekttyp" desc="" exp=""/>
+    <constraint desc="" exp="" field="fid"/>
+    <constraint desc="" exp="" field="objektidentitet"/>
+    <constraint desc="" exp="" field="skapad"/>
+    <constraint desc="" exp="" field="objekttypnr"/>
+    <constraint desc="" exp="" field="objekttyp"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig sortOrder="0" sortExpression="&quot;objekttypnr&quot;" actionWidgetStyle="dropDown">
+  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="&quot;objekttypnr&quot;">
     <columns>
-      <column name="fid" type="field" width="-1" hidden="0"/>
-      <column name="objektidentitet" type="field" width="-1" hidden="0"/>
-      <column name="skapad" type="field" width="-1" hidden="0"/>
-      <column name="objekttypnr" type="field" width="-1" hidden="0"/>
-      <column name="objekttyp" type="field" width="-1" hidden="0"/>
-      <column type="actions" width="-1" hidden="1"/>
+      <column width="-1" hidden="0" name="fid" type="field"/>
+      <column width="-1" hidden="0" name="objektidentitet" type="field"/>
+      <column width="-1" hidden="0" name="skapad" type="field"/>
+      <column width="-1" hidden="0" name="objekttypnr" type="field"/>
+      <column width="-1" hidden="0" name="objekttyp" type="field"/>
+      <column width="-1" hidden="1" type="actions"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -875,11 +630,11 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field name="fid" editable="1"/>
-    <field name="objektidentitet" editable="1"/>
-    <field name="objekttyp" editable="1"/>
-    <field name="objekttypnr" editable="1"/>
-    <field name="skapad" editable="1"/>
+    <field editable="1" name="fid"/>
+    <field editable="1" name="objektidentitet"/>
+    <field editable="1" name="objekttyp"/>
+    <field editable="1" name="objekttypnr"/>
+    <field editable="1" name="skapad"/>
   </editable>
   <labelOnTop>
     <field name="fid" labelOnTop="0"/>
@@ -889,11 +644,11 @@ def my_form_open(dialog, layer, feature):
     <field name="skapad" labelOnTop="0"/>
   </labelOnTop>
   <reuseLastValue>
-    <field name="fid" reuseLastValue="0"/>
-    <field name="objektidentitet" reuseLastValue="0"/>
-    <field name="objekttyp" reuseLastValue="0"/>
-    <field name="objekttypnr" reuseLastValue="0"/>
-    <field name="skapad" reuseLastValue="0"/>
+    <field reuseLastValue="0" name="fid"/>
+    <field reuseLastValue="0" name="objektidentitet"/>
+    <field reuseLastValue="0" name="objekttyp"/>
+    <field reuseLastValue="0" name="objekttypnr"/>
+    <field reuseLastValue="0" name="skapad"/>
   </reuseLastValue>
   <dataDefinedFieldProperties/>
   <widgets/>
