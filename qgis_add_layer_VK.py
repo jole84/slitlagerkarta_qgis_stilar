@@ -26,7 +26,6 @@ layers_to_add = [
     ["militart_omrade", "/home/johan/Karta/topografi50/militartomrade.gpkg"],
     ["TNE_FT_VAGDATA", "/home/johan/Karta/NVDB/slitlager.gpkg"],
     ["ovrig_vag", "/home/johan/Karta/NVDB/slitlager.gpkg"],
-    ["skyddadnatur", "/home/johan/Karta/topografi50/naturvard.gpkg"],
     ["byggnad", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
     ["hydroanlaggningslinje", "/home/johan/Karta/topografi50/hydrografi.gpkg"],
     ["farjeled", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
@@ -56,3 +55,7 @@ for layer in layers_to_add:
     else:
         QgsProject.instance().addMapLayer(vlayer)
         vlayer.loadNamedStyle(style_file)
+
+QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Götaland')[0].id()).setItemVisibilityChecked(False)
+QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Svealand')[0].id()).setItemVisibilityChecked(False)
+QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Norrland')[0].id()).setItemVisibilityChecked(False)
