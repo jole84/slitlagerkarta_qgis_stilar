@@ -17,7 +17,6 @@ layers_to_add = [
     ["byggnadsanlaggningspunkt", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
     ["byggnadspunkt", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
     ["vagpunkt", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
-    ["administrativ_grans", "/home/johan/Karta/topografi50/administrativindelning.gpkg"],
     ["byggnadsanlaggningslinje", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
     ["anlaggningsomrade", "/home/johan/Karta/topografi50/anlaggningsomrade.gpkg"],
     ["ledningslinje", "/home/johan/Karta/topografi50/ledningar.gpkg"],
