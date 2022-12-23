@@ -16,7 +16,6 @@ EPSG:3857
 	byggnadsanlaggningspunkt
 	byggnadspunkt
 	vagpunkt
-	administrativ_grans
 	byggnadsanlaggningslinje
 	anlaggningsomrade
 	ledningslinje
@@ -40,25 +39,36 @@ EPSG:3857
 	mark
 
 ### Lagerordning VK nedtonad  
-	tx  
-	ATK  
-	P_ficka  
-	Rastplats  
-	Höjdhinder  
-	vs 
-	fs  
-	bs  
-	by  
-	bl  
-	kl  
-	jl  
-	slitlager  
-	vo_traktorväg (från TK)  
-	hl  
-	ql  
-	nl  
-	ml  
-	my  
+	ATK
+	Stratväg_VIS_DK_O_90_P_ficka
+	Stratväg_VIS_DK_O_32_Rastplats
+	Stratväg_NVDB_DK_O_24_Hojdhinder45dm
+	textpunkt
+	textlinje
+	transformatoromradespunkt
+	kultur_lamning_punkt
+	hydroanlaggningspunkt
+	anlaggningsomradespunkt
+	byggnadsanlaggningspunkt
+	byggnadspunkt
+	vagpunkt
+	byggnadsanlaggningslinje
+	anlaggningsomrade
+	ledningslinje
+	transformatoromrade
+	ralstrafik
+	militart_omrade
+	TNE_FT_VAGDATA
+	ovrig_vag
+	byggnad
+	hydroanlaggningslinje
+	farjeled
+	hydrolinje
+	kultur_lamning_linje
+	start_landningsbana
+	flygplatsomrade
+	markkantlinje
+	mark
 
 #### Beställning Trafikverket homogeniserade:
 	Driftbidrag statligt/Vägdelsnr
