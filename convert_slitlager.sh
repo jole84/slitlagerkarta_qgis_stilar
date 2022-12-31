@@ -9,7 +9,7 @@ KOMMUNIKATION_SVERIGE="$HOME/Karta/topografi50/kommunikation_sverige.gpkg"
 if [ ! -f $OUTPUT ]; then
 # Slitlager
     echo "Skapar slitlager..."
-    ogr2ogr $OUTPUT \
+    $ogr2ogr $OUTPUT \
     -t_srs "EPSG:3857" \
     -progress \
     -append \
@@ -26,7 +26,7 @@ if [ ! -f $OUTPUT ]; then
 
 # övrig väg
     echo "Skapar övrig väg..."
-    ogr2ogr $OUTPUT \
+    $ogr2ogr $OUTPUT \
     -t_srs "EPSG:3857" \
     -progress \
     -append \
