@@ -1,4 +1,7 @@
 #!/bin/bash
+
+ogr2ogr="flatpak run --command=ogr2ogr org.qgis.qgis"
+
 OUTPUT="$HOME/Karta/NVDB/slitlager.gpkg"
 SLITLAGER="$HOME/Karta/NVDB/slitlager.gdb/"
 KOMMUNIKATION_SVERIGE="$HOME/Karta/topografi50/kommunikation_sverige.gpkg"
