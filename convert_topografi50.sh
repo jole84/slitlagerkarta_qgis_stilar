@@ -2,9 +2,6 @@
 
 ogr2ogr="flatpak run --command=ogr2ogr org.qgis.qgis"
 
-shopt -s expand_aliases
-source ~/.bash_aliases
-
 unzip "*.zip"
 
 for FILE in *_sverige.gpkg
