@@ -1,14 +1,12 @@
 #!/bin/bash
 
-ogr2ogr="flatpak run --command=ogr2ogr org.qgis.qgis"
-
 unzip "*.zip"
 
 for FILE in *_sverige.gpkg
 do
     LAYERNAME=$(basename -s _sverige.gpkg $FILE)
     OUTPUT=$LAYERNAME".gpkg"
-    $ogr2ogr $OUTPUT \
+    ogr2ogr $OUTPUT \
         -t_srs "EPSG:3857" \
         -progress \
         -overwrite \
@@ -18,7 +16,7 @@ done
 
 # Trans Euro Trail
 wget https://transeurotrail.org/wp-content/uploads/gpxsync/S.gpx -O $HOME/Karta/DIV/S.gpx
-$ogr2ogr $HOME/Karta/DIV/TET.gpkg \
+ogr2ogr $HOME/Karta/DIV/TET.gpkg \
     -t_srs "EPSG:3857" \
     -progress \
     -overwrite \

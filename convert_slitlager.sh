@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ogr2ogr="flatpak run --command=ogr2ogr org.qgis.qgis"
-
 SLITLAGER="$HOME/Karta/NVDB/slitlager.gdb/"
 KOMMUNIKATION_SVERIGE="$HOME/Karta/topografi50/kommunikation_sverige.gpkg"
 OUTPUT="$HOME/Karta/NVDB/slitlager.gpkg"
@@ -9,7 +7,7 @@ OUTPUT="$HOME/Karta/NVDB/slitlager.gpkg"
 if [ ! -f $OUTPUT ]; then
 # Slitlager
     echo "Skapar slitlager..."
-    $ogr2ogr $OUTPUT \
+    ogr2ogr $OUTPUT \
     -t_srs "EPSG:3857" \
     -progress \
     -append \
@@ -20,7 +18,7 @@ if [ ! -f $OUTPUT ]; then
 
 # övrig väg
     echo "Skapar övrig väg..."
-    $ogr2ogr $OUTPUT \
+    ogr2ogr $OUTPUT \
     -t_srs "EPSG:3857" \
     -progress \
     -append \
