@@ -5,9 +5,9 @@ import os
 
 layers_to_add = [
     ["ATK", "/home/johan/Karta/NVDB/ATK.gpkg"],
-    ["Stratväg_VIS_DK_O_90_P_ficka", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
-    ["Stratväg_VIS_DK_O_32_Rastplats", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
-    ["Stratväg_NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
+    ["VIS_DK_O_90_P_ficka", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
+    ["VIS_DK_O_32_Rastplats", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
+    ["NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
     ["textpunkt", "/home/johan/Karta/topografi50/text.gpkg"],
     ["textlinje", "/home/johan/Karta/topografi50/text.gpkg"],
     ["transformatoromradespunkt", "/home/johan/Karta/topografi50/ledningar.gpkg"],
