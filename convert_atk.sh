@@ -2,13 +2,13 @@
 
 # Place Sverige_Hastighetsgräns*.gpkg and ATK_matplats.gpkg in atk/
 
-isa_file="atk/$(ls -1 Sverige_Hastighetsgräns*.gpkg)"
+isa_file="$(ls -1 atk/Sverige_Hastighetsgräns*.gpkg)"
 atk_file="atk/ATK_matplats.gpkg"
-atk_3857="atk/atk_3857.gpkg"
-isa_3857="atk/isa_3857.gpkg"
-buffered="atk/buffered.gpkg"
-joined="atk/joined.gpkg"
-output_atk="/ATK.gpkg"
+atk_3857="atk_3857.gpkg"
+isa_3857="isa_3857.gpkg"
+buffered="buffered.gpkg"
+joined="joined.gpkg"
+output_atk="ATK.gpkg"
 
 qgis_process="flatpak run --command=qgis_process org.qgis.qgis"
 qgis_ogr2ogr="flatpak run --command=ogr2ogr org.qgis.qgis"
@@ -54,3 +54,5 @@ $qgis_process \
     JOIN_FIELDS=HTHAST \
     METHOD=2 \
     OUTPUT=$output_atk
+
+rm $atk_3857 $isa_3857 $buffered $joined
