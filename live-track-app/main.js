@@ -142,11 +142,14 @@ geolocation.on('change', function () {
   const lonlat = toLonLat(geolocation.getPosition());
   
   const html = [
-    'Position: ' + lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
-    'Precision: ' + Math.round(accuracy) + ' m',
-    'Kurs: ' + Math.round(radToDeg(heading)) + '&deg;',
-    'Hastighet: ' + (speed * 3.6).toFixed(1) + ' km/h',
-    'Trackpoints: ' + trackLog.length,
+    // 'Position: ' + lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
+    // 'Precision: ' + Math.round(accuracy) + ' m',
+    // 'Kurs: ' + Math.round(radToDeg(heading)) + '&deg;',
+    // 'Hastighet: ' + (speed * 3.6).toFixed(1) + ' km/h',
+    // 'Trackpoints: ' + trackLog.length,
+    lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
+    Math.round(accuracy) + ' m / ' + trackLog.length + ' gpx',
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(radToDeg(heading)) + '&deg;'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
