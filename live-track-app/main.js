@@ -287,13 +287,13 @@ const trackLog = [`<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 let lastFix = 0; 
 function trackLogger() {
   const lonlat = toLonLat(geolocation.getPosition());
-  const altitude = geolocation.getAltitude() || 0;
+  const ele = (geolocation.getAltitude() || 0).toFixed(2);
   const isoTime = new Date().toISOString();
-  const lon = lonlat[0];
-  const lat = lonlat[1];
+  const lon = lonlat[0].toFixed(6);
+  const lat = lonlat[1].toFixed(6);
   const speed = geolocation.getSpeed() || 0;
   const trkpt = `
-  <trkpt lat="${lat}" lon="${lon}"><ele>${altitude}</ele><time>${isoTime}</time></trkpt>`;
+  <trkpt lat="${lat}" lon="${lon}"><ele>${ele}</ele><time>${isoTime}</time></trkpt>`;
   if (speed > 1) {
     trackLog.push(trkpt);
     lastFix = new Date();
