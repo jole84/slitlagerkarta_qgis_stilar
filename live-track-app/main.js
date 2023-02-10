@@ -1,5 +1,5 @@
 import './style.css';
-import {Map, View} from 'ol';
+import {Feature, Map, View} from 'ol';
 import XYZ from 'ol/source/XYZ.js';
 import {fromLonLat, toLonLat} from 'ol/proj.js';
 import TileLayer from 'ol/layer/Tile.js';
@@ -35,6 +35,26 @@ const defaultStyle = {
   }),
 };
 
+const trackStyle = {
+  'LineString': new Style({
+    stroke: new Stroke({
+      color: 'rgba(255,0,0,0.8)',
+      width: 8,
+    }),
+  }),
+  'MultiLineString': new Style({
+    stroke: new Stroke({
+      color: 'rgba(255,0,0,0.8)',
+      width: 8,
+    }),
+  }),
+};
+
+var line = new LineString([]);
+var trackLine = new Feature({
+  geometry: line,
+})
+
 var slitlagerkarta = new TileLayer({
   source: new XYZ({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta/{z}/{x}/{y}.jpg',
@@ -61,6 +81,14 @@ var gpxLayer = new VectorLayer({
     return defaultStyle[feature.getGeometry().getType()];
   },
 });
+
+var trackLayer = new VectorLayer({
+  source: new VectorSource(),
+  style: function (feature) {
+    return trackStyle[feature.getGeometry().getType()];
+  },
+});
+trackLayer.getSource().addFeature(trackLine);
 
 // creating the map
 const map = new Map({
@@ -105,6 +133,8 @@ const marker = new Overlay({
   stopEvent: false,
 });
 map.addOverlay(marker);
+
+map.addLayer(trackLayer);
 
 // LineString to store the different geolocation positions. This LineString
 // is time aware.
@@ -284,9 +314,10 @@ const trackLog = [`<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <trkseg>`];
 
 // trackLogger function
-let lastFix = 0; 
+let lastFix = new Date(); 
 function trackLogger() {
-  const lonlat = toLonLat(geolocation.getPosition());
+  const position = geolocation.getPosition();
+  const lonlat = toLonLat(position);
   const ele = (geolocation.getAltitude() || 0).toFixed(2);
   const isoTime = new Date().toISOString();
   const lon = lonlat[0].toFixed(6);
@@ -296,10 +327,12 @@ function trackLogger() {
   <trkpt lat="${lat}" lon="${lon}"><ele>${ele}</ele><time>${isoTime}</time></trkpt>`;
   if (speed > 1) {
     trackLog.push(trkpt);
+    line.appendCoordinate(position);
     lastFix = new Date();
     console.log(trkpt);
   } else if (new Date() - lastFix < 10000) {
     trackLog.push(trkpt);
+    line.appendCoordinate(position);
     console.log("<1" + trkpt);
   }
 }
@@ -337,3 +370,5 @@ function download(data, filename, type) {
       }, 0); 
   }
 }
+
+// line.appendCoordinate(fromLonLat([14,57]));
