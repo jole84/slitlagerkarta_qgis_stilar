@@ -316,7 +316,7 @@ const trackLog = [`<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 // trackLogger function
 let lastFix = new Date(); 
 function trackLogger() {
-  const position = geolocation.getPosition();
+  const position = geolocation.getPosition() || [0, 0];
   const lonlat = toLonLat(position);
   const ele = (geolocation.getAltitude() || 0).toFixed(2);
   const isoTime = new Date().toISOString();
