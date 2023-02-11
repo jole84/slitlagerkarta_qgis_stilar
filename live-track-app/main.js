@@ -10,6 +10,7 @@ import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
 import {Stroke, Style} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
+import { add } from 'ol/coordinate';
 
 var center = fromLonLat([14.18, 57.786]);
 
@@ -152,7 +153,7 @@ const geolocation = new Geolocation({
 });
 
 let deltaMean = 500; // the geolocation sampling period mean in ms
-
+let lastFix = new Date();
 // Listen to position changes
 geolocation.on('change', function () {
   const position = geolocation.getPosition();
@@ -178,15 +179,26 @@ geolocation.on('change', function () {
     // 'Hastighet: ' + (speed * 3.6).toFixed(1) + ' km/h',
     // 'Trackpoints: ' + trackLog.length,
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
-    Math.round(accuracy) + ' m / ' + trackLog.length + ' gpx',
+    Math.round(accuracy) + ' m / ' + gpxCount + ' gpx',
     (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(radToDeg(heading)) + '&deg;'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
+
+  // tracklogger
+  if (speed > 1) {
+    updateView();
+    if (new Date() - lastFix > 5000) {
+      lastFix = new Date();
+      trackLogger();
+    }
+  } else if (new Date() - lastFix > 5000) {
+    lastFix = 0;
+    trackLogger();
+  }
 });
 
 geolocation.on('error', function () {
-  alert('Geolocation error');
-  // FIXME we should remove the coordinates in positions
+  alert('Aktivera platsjänster för att se din position på kartan!');
 });
 
 // convert radians to degrees
@@ -268,14 +280,6 @@ geolocation.once('change', function() {
   view.setZoom(14);
 });
 
-// runs every time position is recieved
-geolocation.on('change', function() {
-  const speed = geolocation.getSpeed() || 0;
-  if (speed > 1) {
-    updateView();
-  }
-});
-
 map.render();
 
 document.getElementById('customFile').addEventListener('change', handleFileSelect, false);
@@ -302,54 +306,46 @@ changeMap.addEventListener('click', function () {
 });
 
 // create tracklog
-const startisoTime = new Date();
-const trackLog = [`<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+const startTime = new Date();
+let gpxCount = 0;
+let trackLog = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="webapp">
   <metadata>
     <desc>File with points/tracks from webapp</desc>
-    <time>${startisoTime.toISOString()}</time>
+    <time>${startTime.toISOString()}</time>
   </metadata>
 <trk>
-<name>${startisoTime.toLocaleString()}</name>
-<trkseg>`];
+<name>${startTime.toLocaleString()}</name>
+<trkseg>`;
 
 // trackLogger function
-let lastFix = new Date(); 
 function trackLogger() {
-  const position = geolocation.getPosition() || [0, 0];
+  const position = geolocation.getPosition();
   const lonlat = toLonLat(position);
   const ele = (geolocation.getAltitude() || 0).toFixed(2);
   const isoTime = new Date().toISOString();
   const lon = lonlat[0].toFixed(6);
   const lat = lonlat[1].toFixed(6);
-  const speed = geolocation.getSpeed() || 0;
   const trkpt = `
   <trkpt lat="${lat}" lon="${lon}"><ele>${ele}</ele><time>${isoTime}</time></trkpt>`;
-  if (speed > 1) {
-    trackLog.push(trkpt);
-    line.appendCoordinate(position);
-    lastFix = new Date();
-    console.log(trkpt);
-  } else if (new Date() - lastFix < 10000) {
-    trackLog.push(trkpt);
-    line.appendCoordinate(position);
-    console.log("<1" + trkpt);
-  }
+  trackLog += trkpt;
+  gpxCount += 1;
+  line.appendCoordinate(position);
+  console.log(trkpt);
 }
-
-// record position every 5 second
-setInterval(trackLogger, 5000);
 
 // save log button
 document.getElementById("saveLog").onclick = function() {
-  const filename = startisoTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx'
+  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx'
   const gpxFoot = `
 </trkseg>
 </trk>
 </gpx>`
-  let dataToSave = trackLog.join(',').replace(/,/g, '') + gpxFoot;
-  download(dataToSave, filename, 'octet/stream')
-  // console.log(dataToSave)
+  let dataToSave = trackLog + gpxFoot;
+  // do not save tracklog if it's at least 5 tkpts
+  if (gpxCount > 5) {
+    download(dataToSave, filename, 'octet/stream')
+  }
 }
 
 // Function to download data to a file
@@ -370,5 +366,3 @@ function download(data, filename, type) {
       }, 0); 
   }
 }
-
-// line.appendCoordinate(fromLonLat([14,57]));
