@@ -10,13 +10,12 @@ import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
 import {Stroke, Style} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
-import { add } from 'ol/coordinate';
 
 var center = fromLonLat([14.18, 57.786]);
 
 const view = new View({
   center: center,
-  zoom: 7,
+  zoom: 8,
   minZoom: 6,
   maxZoom: 16,
 });
@@ -61,6 +60,7 @@ var slitlagerkarta = new TileLayer({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
+      transition: 0,
       attributions: "jole84.github.io",
       attributionsCollapsible: false,
   })
@@ -71,6 +71,7 @@ var slitlagerkarta_nedtonad = new TileLayer({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
+      transition: 0,
       attributions: "jole84.github.io",
       attributionsCollapsible: false,
   })
@@ -101,6 +102,7 @@ const map = new Map({
 var gpxFormat = new GPX();
 var gpxFeatures;
 
+document.getElementById('customFile').addEventListener('change', handleFileSelect, false);
 function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   
@@ -121,9 +123,23 @@ function handleFileSelect(evt) {
   f.size, ' bytes, last modified: ',
   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
   '</li>');
-}
-// reaquire wake lock again after file select
+  }
+  // reaquire wake lock again after file select
   acquireWakeLock();
+}
+
+function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = degToRad(lat2-lat1);  // deg2rad below
+  var dLon = degToRad(lon2-lon1); 
+  var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
 }
 
 // Geolocation marker
@@ -134,13 +150,7 @@ const marker = new Overlay({
   stopEvent: false,
 });
 map.addOverlay(marker);
-
 map.addLayer(trackLayer);
-
-// LineString to store the different geolocation positions. This LineString
-// is time aware.
-// The Z dimension is actually used to store the rotation (heading).
-const positions = new LineString([], 'XYZM');
 
 // Geolocation Control
 const geolocation = new Geolocation({
@@ -152,8 +162,15 @@ const geolocation = new Geolocation({
   },
 });
 
+// LineString to store the different geolocation positions. This LineString
+// is time aware.
+// The Z dimension is actually used to store the rotation (heading).
+const positions = new LineString([], 'XYZM');
 let deltaMean = 500; // the geolocation sampling period mean in ms
 let lastFix = new Date();
+let prevCoordinate = geolocation.getPosition();
+let distanceTraveled = 0;
+
 // Listen to position changes
 geolocation.on('change', function () {
   const position = geolocation.getPosition();
@@ -161,16 +178,32 @@ geolocation.on('change', function () {
   const heading = geolocation.getHeading() || 0;
   const speed = geolocation.getSpeed() || 0;
   const m = Date.now();
+  const lonlat = toLonLat(position);
+  const coords = positions.getCoordinates();
   
   addPosition(position, heading, m, speed);
   
-  const coords = positions.getCoordinates();
   const len = coords.length;
   if (len >= 2) {
     deltaMean = (coords[len - 1][3] - coords[0][3]) / (len - 1);
   }
   
-  const lonlat = toLonLat(geolocation.getPosition());
+  // tracklogger
+  if (speed > 1) {
+    updateView();
+    if (new Date() - lastFix > 5000) {
+      lastFix = new Date();
+      trackLogger();
+      // measure distance
+      if (prevCoordinate !== undefined) {
+        distanceTraveled += getDistanceFromLatLonInKm(prevCoordinate, lonlat);
+      }
+      prevCoordinate = lonlat;
+    }
+  } else if (new Date() - lastFix > 5000 && lastFix > startTime) {
+    lastFix = 0;
+    trackLogger();
+  }
   
   const html = [
     // 'Position: ' + lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
@@ -179,22 +212,11 @@ geolocation.on('change', function () {
     // 'Hastighet: ' + (speed * 3.6).toFixed(1) + ' km/h',
     // 'Trackpoints: ' + trackLog.length,
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
-    Math.round(accuracy) + ' m / ' + gpxCount + ' gpx',
+    distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
     (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(radToDeg(heading)) + '&deg;'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 
-  // tracklogger
-  if (speed > 1) {
-    updateView();
-    if (new Date() - lastFix > 5000) {
-      lastFix = new Date();
-      trackLogger();
-    }
-  } else if (new Date() - lastFix > 5000) {
-    lastFix = 0;
-    trackLogger();
-  }
 });
 
 geolocation.on('error', function () {
@@ -281,8 +303,6 @@ geolocation.once('change', function() {
 });
 
 map.render();
-
-document.getElementById('customFile').addEventListener('change', handleFileSelect, false);
 
 // reset button function
 document.getElementById("reset").onclick = function() {
