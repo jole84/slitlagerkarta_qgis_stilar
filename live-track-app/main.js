@@ -56,22 +56,22 @@ var trackLine = new Feature({
 })
 
 var slitlagerkarta = new TileLayer({
+  preload: Infinity,
   source: new XYZ({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
-      transition: 0,
       attributions: "jole84.github.io",
       attributionsCollapsible: false,
   })
 });
  
 var slitlagerkarta_nedtonad = new TileLayer({
+  preload: Infinity,
   source: new XYZ({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
-      transition: 0,
       attributions: "jole84.github.io",
       attributionsCollapsible: false,
   })
