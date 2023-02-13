@@ -177,6 +177,7 @@ geolocation.on('change', function () {
   const accuracy = geolocation.getAccuracy();
   const heading = geolocation.getHeading() || 0;
   const speed = geolocation.getSpeed() || 0;
+  const altitude = geolocation.getAltitude() || 0;
   const m = Date.now();
   const lonlat = toLonLat(position);
   const coords = positions.getCoordinates();
@@ -213,7 +214,7 @@ geolocation.on('change', function () {
     // 'Trackpoints: ' + trackLog.length,
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(radToDeg(heading)) + '&deg;'
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 
