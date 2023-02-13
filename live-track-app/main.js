@@ -17,7 +17,7 @@ const view = new View({
   center: center,
   zoom: 8,
   minZoom: 6,
-  maxZoom: 16,
+  maxZoom: 17,
 });
 
 const defaultStyle = {
@@ -94,35 +94,30 @@ trackLayer.getSource().addFeature(trackLine);
 
 // creating the map
 const map = new Map({
-  layers: [slitlagerkarta_nedtonad, slitlagerkarta, gpxLayer],
+  layers: [slitlagerkarta_nedtonad, slitlagerkarta, gpxLayer, trackLayer],
   target: 'map',
   view: view,
 });
 
+// gpx loader
 var gpxFormat = new GPX();
 var gpxFeatures;
-
 document.getElementById('customFile').addEventListener('change', handleFileSelect, false);
 function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   
   // files is a FileList of File objects. List some properties.
-  var output = [];
   for (var i = 0, f; f = files[i]; i++) {
     console.log("files[i]",files[i]);
     var reader = new FileReader();
-  reader.readAsText(files[i], "UTF-8");
-  reader.onload = function (evt) {
-    gpxFeatures = gpxFormat.readFeatures(evt.target.result,{
-      dataProjection:'EPSG:4326',
-      featureProjection:'EPSG:3857'
-    });
-    gpxLayer.getSource().addFeatures(gpxFeatures);
-  }
-  output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-  f.size, ' bytes, last modified: ',
-  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-  '</li>');
+    reader.readAsText(files[i], "UTF-8");
+    reader.onload = function (evt) {
+      gpxFeatures = gpxFormat.readFeatures(evt.target.result,{
+        dataProjection:'EPSG:4326',
+        featureProjection:'EPSG:3857'
+      });
+      gpxLayer.getSource().addFeatures(gpxFeatures);
+    }
   }
   // reaquire wake lock again after file select
   acquireWakeLock();
@@ -150,7 +145,6 @@ const marker = new Overlay({
   stopEvent: false,
 });
 map.addOverlay(marker);
-map.addLayer(trackLayer);
 
 // Geolocation Control
 const geolocation = new Geolocation({
@@ -206,28 +200,19 @@ geolocation.on('change', function () {
     trackLogger();
   }
   
+  // info box
   const html = [
-    // 'Position: ' + lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
-    // 'Precision: ' + Math.round(accuracy) + ' m',
-    // 'Kurs: ' + Math.round(radToDeg(heading)) + '&deg;',
-    // 'Hastighet: ' + (speed * 3.6).toFixed(1) + ' km/h',
-    // 'Trackpoints: ' + trackLog.length,
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
     (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
-
 });
 
 geolocation.on('error', function () {
   alert('Aktivera platsjänster för att se din position på kartan!');
 });
 
-// convert radians to degrees
-function radToDeg(rad) {
-  return (rad * 360) / (Math.PI * 2);
-}
 // convert degrees to radians
 function degToRad(deg) {
   return (deg * Math.PI * 2) / 360;
@@ -303,8 +288,6 @@ geolocation.once('change', function() {
   view.setZoom(14);
 });
 
-map.render();
-
 // reset button function
 document.getElementById("reset").onclick = function() {
   view.setCenter(geolocation.getPosition() || center);
@@ -365,7 +348,7 @@ document.getElementById("saveLog").onclick = function() {
   let dataToSave = trackLog + gpxFoot;
   // do not save tracklog if it's at least 5 tkpts
   if (gpxCount > 5) {
-    download(dataToSave, filename, 'octet/stream')
+    download(dataToSave, filename, 'application/gpx+xml')
   }
 }
 
