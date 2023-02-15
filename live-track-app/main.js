@@ -18,6 +18,7 @@ const view = new View({
   zoom: 8,
   minZoom: 6,
   maxZoom: 17,
+  constrainRotation: false,
 });
 
 const defaultStyle = {
@@ -102,7 +103,7 @@ const map = new Map({
 // gpx loader
 var gpxFormat = new GPX();
 var gpxFeatures;
-document.getElementById('customFile').addEventListener('change', handleFileSelect, false);
+document.getElementById('customFileButton').addEventListener('change', handleFileSelect, false);
 function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   
@@ -123,6 +124,11 @@ function handleFileSelect(evt) {
   acquireWakeLock();
 }
 
+// convert degrees to radians
+function degToRad(deg) {
+  return (deg * Math.PI * 2) / 360;
+}
+
 function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
   var R = 6371; // Radius of the earth in km
   var dLat = degToRad(lat2-lat1);  // deg2rad below
@@ -132,19 +138,10 @@ function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
     Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) * 
     Math.sin(dLon/2) * Math.sin(dLon/2)
     ; 
-  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-  var d = R * c; // Distance in km
-  return d;
-}
-
-// Geolocation marker
-const markerEl = document.getElementById('geolocation_marker');
-const marker = new Overlay({
-  positioning: 'center-center',
-  element: markerEl,
-  stopEvent: false,
-});
-map.addOverlay(marker);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    var d = R * c; // Distance in km
+    return d;
+  }
 
 // Geolocation Control
 const geolocation = new Geolocation({
@@ -155,12 +152,8 @@ const geolocation = new Geolocation({
     timeout: 600000,
   },
 });
+geolocation.setTracking(true); // Start position tracking
 
-// LineString to store the different geolocation positions. This LineString
-// is time aware.
-// The Z dimension is actually used to store the rotation (heading).
-const positions = new LineString([], 'XYZM');
-let deltaMean = 500; // the geolocation sampling period mean in ms
 let lastFix = new Date();
 let prevCoordinate = geolocation.getPosition();
 let distanceTraveled = 0;
@@ -172,35 +165,33 @@ geolocation.on('change', function () {
   const heading = geolocation.getHeading() || 0;
   const speed = geolocation.getSpeed() || 0;
   const altitude = geolocation.getAltitude() || 0;
-  const m = Date.now();
   const lonlat = toLonLat(position);
-  const coords = positions.getCoordinates();
   
-  addPosition(position, heading, m, speed);
-  
-  const len = coords.length;
-  if (len >= 2) {
-    deltaMean = (coords[len - 1][3] - coords[0][3]) / (len - 1);
-  }
-  
-  // tracklogger
   if (speed > 1) {
-    updateView();
+    updateView(position, heading);
+    // measure distance
+    if (prevCoordinate !== undefined) {
+      distanceTraveled += getDistanceFromLatLonInKm(prevCoordinate, lonlat);
+    }
+    prevCoordinate = lonlat;
+    // tracklogger
     if (new Date() - lastFix > 5000) {
       lastFix = new Date();
       trackLogger();
-      // measure distance
-      if (prevCoordinate !== undefined) {
-        distanceTraveled += getDistanceFromLatLonInKm(prevCoordinate, lonlat);
-      }
-      prevCoordinate = lonlat;
     }
   } else if (new Date() - lastFix > 5000 && lastFix > startTime) {
     lastFix = 0;
     trackLogger();
   }
+
+  // change marker icon
+  if (heading && speed) {
+    markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker_heading.png';
+  } else {
+    markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker.png';
+  }
   
-  // info box
+  // send text to info box
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
@@ -213,47 +204,19 @@ geolocation.on('error', function () {
   alert('Aktivera platsjänster för att se din position på kartan!');
 });
 
-// convert degrees to radians
-function degToRad(deg) {
-  return (deg * Math.PI * 2) / 360;
-}
-// modulo for negative values
-function mod(n) {
-  return ((n % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-}
-
-function addPosition(position, heading, m, speed) {
-  const x = position[0];
-  const y = position[1];
-  const fCoords = positions.getCoordinates();
-  const previous = fCoords[fCoords.length - 1];
-  const prevHeading = previous && previous[2];
-  if (prevHeading) {
-    let headingDiff = heading - mod(prevHeading);
-    
-    // force the rotation change to be less than 180°
-    if (Math.abs(headingDiff) > Math.PI) {
-      const sign = headingDiff >= 0 ? 1 : -1;
-      headingDiff = -sign * (2 * Math.PI - Math.abs(headingDiff));
-    }
-    heading = prevHeading + headingDiff;
-  }
-  positions.appendCoordinate([x, y, heading, m]);
-  
-  // only keep the 20 last coordinates
-  positions.setCoordinates(positions.getCoordinates().slice(-20));
-  
-  // FIXME use speed instead
-  if (heading && speed) {
-    markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker_heading.png';
-  } else {
-    markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker.png';
-  }
-}
+// Geolocation marker
+const markerEl = document.getElementById('geolocation_marker');
+const marker = new Overlay({
+  positioning: 'center-center',
+  element: markerEl,
+  stopEvent: false,
+});
+map.addOverlay(marker);
 
 // recenters the view by putting the given coordinates at 3/4 from the top or
 // the screen
-function getCenterWithHeading(position, rotation, resolution) {
+function getCenterWithHeading(position, rotation) {
+  const resolution = view.getResolution()
   const size = map.getSize();
   const height = size[1];
   
@@ -263,42 +226,61 @@ function getCenterWithHeading(position, rotation, resolution) {
   ];
 }
 
-let previousM = 0;
-function updateView() {
-  // use sampling period to get a smooth transition
-  let m = Date.now() - deltaMean * 1.5;
-  m = Math.max(m, previousM);
-  previousM = m;
-  // interpolate position along positions LineString
-  const c = positions.getCoordinateAtM(m, true);
-  if (c) {
-    view.setCenter(getCenterWithHeading(c, -c[2], view.getResolution()));
-    view.setRotation(-c[2]);
-    marker.setPosition(c);
-    map.render();
-  }
+function updateView(position, rotation) {
+  view.setCenter(getCenterWithHeading(position, -rotation));
+  view.setRotation(-rotation);
+  marker.setPosition(position);
+  map.render(); 
 }
-geolocation.setTracking(true); // Start position tracking
 
 // run at when first position is recieved
 geolocation.once('change', function() { 
-  updateView();
-  view.setRotation(0);
-  view.setCenter(geolocation.getPosition());
-  view.setZoom(14);
+  const position = geolocation.getPosition() || center;
+  const duration = 500;
+  view.animate({
+    center: position,
+    duration: duration
+  });
+  view.animate({
+    zoom: 14,
+    duration: duration
+  });
+  view.animate({
+    rotation: 0,
+    duration: duration
+  });
+  marker.setPosition(position);
 });
 
-// reset button function
-document.getElementById("reset").onclick = function() {
-  view.setCenter(geolocation.getPosition() || center);
-  view.setRotation(0);
-  view.setZoom(14);
+// center button function
+document.getElementById("centerButton").onclick = function() {
+  const position = (geolocation.getPosition() || center);
+  const speed = (geolocation.getSpeed() || center)
+  // view.setRotation(0);
+  // view.setCenter(position);
+  if (speed > 1){
+    view.setZoom(14);
+  } else {
+    const duration = 500;
+    view.animate({
+      center: position,
+      duration: duration
+    });
+    view.animate({
+      zoom: 14,
+      duration: duration
+    });
+    view.animate({
+      rotation: 0,
+      duration: duration
+    });
+  }
   acquireWakeLock();
 }
 
 // function to switch maps
 slitlagerkarta_nedtonad.setVisible(false);
-const changeMap = document.getElementById('changeMap');
+const changeMap = document.getElementById('changeMapButton');
 changeMap.addEventListener('click', function () {
   if (slitlagerkarta.getVisible()) {
     slitlagerkarta.setVisible(false);
@@ -313,9 +295,9 @@ changeMap.addEventListener('click', function () {
 const startTime = new Date();
 let gpxCount = 0;
 let trackLog = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<gpx version="1.1" creator="webapp">
+<gpx version="1.1" creator="jole84 webapp">
   <metadata>
-    <desc>File with points/tracks from webapp</desc>
+    <desc>File with points/tracks from jole84 webapp</desc>
     <time>${startTime.toISOString()}</time>
   </metadata>
 <trk>
@@ -339,7 +321,7 @@ function trackLogger() {
 }
 
 // save log button
-document.getElementById("saveLog").onclick = function() {
+document.getElementById("saveLogButton").onclick = function() {
   const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx'
   const gpxFoot = `
 </trkseg>
@@ -349,6 +331,8 @@ document.getElementById("saveLog").onclick = function() {
   // do not save tracklog if it's at least 5 tkpts
   if (gpxCount > 5) {
     download(dataToSave, filename, 'application/gpx+xml')
+  } else {
+    document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
   }
 }
 
