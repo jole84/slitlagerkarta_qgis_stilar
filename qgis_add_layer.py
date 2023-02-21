@@ -21,7 +21,7 @@ layers_to_add = [
     ["ralstrafik", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
     ["militart_omrade", "/home/johan/Karta/topografi50/militartomrade.gpkg"],
     ["TNE_FT_VAGDATA", "/home/johan/Karta/NVDB/slitlager.gpkg"],
-    ["ovrig_vag", "/home/johan/Karta/NVDB/slitlager.gpkg"],
+    ["ovrig_vag", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
     ["skyddadnatur", "/home/johan/Karta/topografi50/naturvard.gpkg"],
     ["byggnad", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
     ["hydroanlaggningslinje", "/home/johan/Karta/topografi50/hydrografi.gpkg"],

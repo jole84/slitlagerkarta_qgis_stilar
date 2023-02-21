@@ -25,13 +25,13 @@ const defaultStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: 'rgba(0,0,255,0.5)',
-      width: 8,
+      width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: 'rgba(0,0,255,0.5)',
-      width: 8,
+      width: 10,
     }),
   }),
 };
@@ -78,6 +78,17 @@ var slitlagerkarta_nedtonad = new TileLayer({
   })
 });
 
+import TileWMS from 'ol/source/TileWMS.js';
+var ortofoto = new TileLayer({
+  source: new TileWMS({
+    url: 'https://minkarta.lantmateriet.se/map/ortofoto/SERVICE?',
+    params: {
+      'layers': 'Ortofoto_0.5',
+      'TILED': true
+    }
+  })
+});
+
 var gpxLayer = new VectorLayer({
   source: new VectorSource(),
   style: function (feature) {
@@ -95,7 +106,7 @@ trackLayer.getSource().addFeature(trackLine);
 
 // creating the map
 const map = new Map({
-  layers: [slitlagerkarta_nedtonad, slitlagerkarta, gpxLayer, trackLayer],
+  layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, gpxLayer, trackLayer],
   target: 'map',
   view: view,
 });
@@ -279,15 +290,24 @@ document.getElementById("centerButton").onclick = function() {
 }
 
 // function to switch maps
+var enableLmt = 0;
 slitlagerkarta_nedtonad.setVisible(false);
+ortofoto.setVisible(false);
 const changeMap = document.getElementById('changeMapButton');
 changeMap.addEventListener('click', function () {
   if (slitlagerkarta.getVisible()) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
   } else if (slitlagerkarta_nedtonad.getVisible()) {
-    slitlagerkarta.setVisible(true);
     slitlagerkarta_nedtonad.setVisible(false);
+    if (enableLmt > 3) {
+      ortofoto.setVisible(true);
+    } else {
+      slitlagerkarta.setVisible(true);
+    }
+  } else if (ortofoto.getVisible()) {
+    ortofoto.setVisible(false);
+    slitlagerkarta.setVisible(true);
   }
 });
 
@@ -333,6 +353,7 @@ document.getElementById("saveLogButton").onclick = function() {
     download(dataToSave, filename, 'application/gpx+xml')
   } else {
     document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
+    ++enableLmt;
   }
 }
 

@@ -17,18 +17,18 @@ if [ ! -f $OUTPUT ]; then
     $SLITLAGER
 
 # övrig väg
-    echo "Skapar övrig väg..."
-    ogr2ogr $OUTPUT \
-    -t_srs "EPSG:3857" \
-    -progress \
-    -append \
-    -skipfailures \
-    -nln "ovrig_vag" \
-    -where "objekttypnr = 1624 OR 
-            objekttypnr = 1625 OR 
-            objekttypnr = 1628" \
-    $KOMMUNIKATION_SVERIGE \
-    ovrig_vag
+    # echo "Skapar övrig väg..."
+    # ogr2ogr $OUTPUT \
+    # -t_srs "EPSG:3857" \
+    # -progress \
+    # -append \
+    # -skipfailures \
+    # -nln "ovrig_vag" \
+    # -where "objekttypnr = 1624 OR 
+    #         objekttypnr = 1625 OR 
+    #         objekttypnr = 1628" \
+    # $KOMMUNIKATION_SVERIGE \
+    # ovrig_vag
 fi
 
 # 1624 = gångstig
