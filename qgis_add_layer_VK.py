@@ -44,8 +44,8 @@ layers_to_add.reverse()
 for layer in layers_to_add:
     layer_name = layer[0]
     path_to_layer = layer[1] + "|layername=" + layer_name
-    if os.path.isfile("/home/johan/git/slitlagerkarta_qgis_stilar/stil_VK/{}.qml".format(layer_name)): # check if style exists in VK dir
-        style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_VK/{}.qml".format(layer_name)
+    if os.path.isfile("/home/johan/git/slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)): # check if style exists in stil_vagkarta dir
+        style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)
     else:
         style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name) # else use topo50 style
     vlayer = QgsVectorLayer(path_to_layer, layer_name, "ogr")
