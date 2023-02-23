@@ -4,12 +4,15 @@ import XYZ from 'ol/source/XYZ.js';
 import {fromLonLat, toLonLat} from 'ol/proj.js';
 import TileLayer from 'ol/layer/Tile.js';
 import Overlay from 'ol/Overlay.js';
+import Point from 'ol/geom/Point.js';
 import LineString from 'ol/geom/LineString';
 import Geolocation from 'ol/Geolocation.js';
 import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
-import {Stroke, Style} from 'ol/style.js';
+import {Stroke, Style, Icon} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
+import Polyline from 'ol/format/Polyline.js';
+import TileWMS from 'ol/source/TileWMS.js';
 
 var center = fromLonLat([14.18, 57.786]);
 
@@ -49,6 +52,18 @@ const trackStyle = {
       width: 8,
     }),
   }),
+  'route': new Style({
+    stroke: new Stroke({
+      width: 10,
+      color: [237, 212, 0, 0.8],
+    }),
+  }),
+  'icon': new Style({
+    image: new Icon({
+      anchor: [0.5, 1],
+      src: 'https://openlayers.org/en/main/examples/data/icon.png',
+    }),
+  }),
 };
 
 var line = new LineString([]);
@@ -78,7 +93,6 @@ var slitlagerkarta_nedtonad = new TileLayer({
   })
 });
 
-import TileWMS from 'ol/source/TileWMS.js';
 var ortofoto = new TileLayer({
   source: new TileWMS({
     url: 'https://minkarta.lantmateriet.se/map/ortofoto/SERVICE?',
@@ -104,9 +118,18 @@ var trackLayer = new VectorLayer({
 });
 trackLayer.getSource().addFeature(trackLine);
 
+const routeLayer = new VectorLayer({
+  source: new VectorSource({
+    // features: [routeFeature, endMarker],
+  }),
+  style: function (feature) {
+    return trackStyle[feature.get('type')];
+  },
+});
+
 // creating the map
 const map = new Map({
-  layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, gpxLayer, trackLayer],
+  layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, gpxLayer, routeLayer, trackLayer],
   target: 'map',
   view: view,
 });
@@ -375,3 +398,51 @@ function download(data, filename, type) {
       }, 0); 
   }
 }
+
+// graphhopper routing
+const api_key = '89fef6e4-250b-400c-8e85-1ab9107f84a8'; // graphhopper api key
+
+function routeMe(startLonLat, endLonLat) {
+  fetch('https://graphhopper.com/api/1/route' +
+  '?point=' + startLonLat.slice().reverse().join(',') +
+  '&point=' + endLonLat.slice().reverse().join(',') +
+  '&type=json&locale=en-US&key=' + api_key +
+  '&elevation=true&profile=car'
+).then(function (response) {
+  response.json().then(function (result) {
+
+    const polyline = result.paths[0].points;
+
+    const route = new Polyline({
+      factor: 1e5,
+      geometryLayout: 'XYZ'
+    }).readGeometry(polyline, {
+      dataProjection: 'EPSG:4326',
+      featureProjection: 'EPSG:3857',
+    });
+
+    const routeFeature = new Feature({
+      type: 'route',
+      geometry: route,
+    });
+    const endMarker = new Feature({
+      type: 'icon',
+      geometry: new Point(route.getCoordinateAt(1)),
+    });
+
+    // remove previus route
+    routeLayer.getSource().getFeatures().forEach(function(layer) {
+      routeLayer.getSource().removeFeature(layer);
+    });
+
+    // finally add route to map
+    routeLayer.getSource().addFeatures([routeFeature, endMarker]);
+  });
+});
+}
+
+map.on('contextmenu', function(event) {
+  var currentPostition = toLonLat(geolocation.getPosition());
+  var destinationCoordinate = toLonLat(event.coordinate);
+  routeMe(currentPostition, destinationCoordinate);
+});
