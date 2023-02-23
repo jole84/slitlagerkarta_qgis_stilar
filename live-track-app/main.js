@@ -24,7 +24,7 @@ const view = new View({
   constrainRotation: false,
 });
 
-const defaultStyle = {
+const gpxStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: 'rgba(0,0,255,0.5)',
@@ -55,7 +55,7 @@ const trackStyle = {
   'route': new Style({
     stroke: new Stroke({
       width: 10,
-      color: [237, 212, 0, 0.8],
+      color: [245, 75, 240, 0.8],
     }),
   }),
   'icon': new Style({
@@ -106,7 +106,7 @@ var ortofoto = new TileLayer({
 var gpxLayer = new VectorLayer({
   source: new VectorSource(),
   style: function (feature) {
-    return defaultStyle[feature.getGeometry().getType()];
+    return gpxStyle[feature.getGeometry().getType()];
   },
 });
 
