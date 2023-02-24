@@ -163,6 +163,7 @@ function degToRad(deg) {
   return (deg * Math.PI * 2) / 360;
 }
 
+// calculate distance between two positions
 function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
   var R = 6371; // Radius of the earth in km
   var dLat = degToRad(lat2-lat1);  // deg2rad below
@@ -177,7 +178,7 @@ function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
     return d;
   }
 
-// Geolocation Control
+// create and start geolocation
 const geolocation = new Geolocation({
   projection: view.getProjection(),
   trackingOptions: {
@@ -192,7 +193,7 @@ let lastFix = new Date();
 let prevCoordinate = geolocation.getPosition();
 let distanceTraveled = 0;
 
-// Listen to position changes
+// runs when position changes
 geolocation.on('change', function () {
   const position = geolocation.getPosition();
   const accuracy = geolocation.getAccuracy();
@@ -234,6 +235,7 @@ geolocation.on('change', function () {
   document.getElementById('info').innerHTML = html;
 });
 
+// alert user if geolocation fails
 geolocation.on('error', function () {
   alert('Aktivera platsjänster för att se din position på kartan!');
 });
@@ -247,8 +249,7 @@ const marker = new Overlay({
 });
 map.addOverlay(marker);
 
-// recenters the view by putting the given coordinates at 3/4 from the top or
-// the screen
+// recenters the view by putting the given coordinates at 3/4 from the top of the screen
 function getCenterWithHeading(position, rotation) {
   const resolution = view.getResolution()
   const size = map.getSize();
@@ -267,7 +268,7 @@ function updateView(position, rotation) {
   map.render(); 
 }
 
-// run at when first position is recieved
+// run once when first position is recieved
 geolocation.once('change', function() { 
   const position = geolocation.getPosition() || center;
   const duration = 500;
@@ -276,7 +277,7 @@ geolocation.once('change', function() {
     duration: duration
   });
   view.animate({
-    zoom: 14,
+    zoom: defaultZoom,
     duration: duration
   });
   view.animate({
@@ -286,14 +287,13 @@ geolocation.once('change', function() {
   marker.setPosition(position);
 });
 
-// center button function
+// center button logic
+const defaultZoom = 14;
 document.getElementById("centerButton").onclick = function() {
   const position = (geolocation.getPosition() || center);
-  const speed = (geolocation.getSpeed() || center)
-  // view.setRotation(0);
-  // view.setCenter(position);
+  const speed = (geolocation.getSpeed() || 0)
   if (speed > 1){
-    view.setZoom(14);
+    view.setZoom(defaultZoom);
   } else {
     const duration = 500;
     view.animate({
@@ -301,7 +301,7 @@ document.getElementById("centerButton").onclick = function() {
       duration: duration
     });
     view.animate({
-      zoom: 14,
+      zoom: defaultZoom,
       duration: duration
     });
     view.animate({
@@ -312,8 +312,8 @@ document.getElementById("centerButton").onclick = function() {
   acquireWakeLock();
 }
 
-// function to switch maps
-var enableLmt = 0;
+// switch map logic
+var enableLnt = 0;
 slitlagerkarta_nedtonad.setVisible(false);
 ortofoto.setVisible(false);
 const changeMap = document.getElementById('changeMapButton');
@@ -323,7 +323,7 @@ changeMap.addEventListener('click', function () {
     slitlagerkarta_nedtonad.setVisible(true);
   } else if (slitlagerkarta_nedtonad.getVisible()) {
     slitlagerkarta_nedtonad.setVisible(false);
-    if (enableLmt > 3) {
+    if (enableLnt > 3) {
       ortofoto.setVisible(true);
     } else {
       slitlagerkarta.setVisible(true);
@@ -351,32 +351,31 @@ let trackLog = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 function trackLogger() {
   const position = geolocation.getPosition();
   const lonlat = toLonLat(position);
-  const ele = (geolocation.getAltitude() || 0).toFixed(2);
-  const isoTime = new Date().toISOString();
   const lon = lonlat[0].toFixed(6);
   const lat = lonlat[1].toFixed(6);
+  const ele = (geolocation.getAltitude() || 0).toFixed(2);
+  const isoTime = new Date().toISOString();
   const trkpt = `
   <trkpt lat="${lat}" lon="${lon}"><ele>${ele}</ele><time>${isoTime}</time></trkpt>`;
   trackLog += trkpt;
   gpxCount += 1;
   line.appendCoordinate(position);
-  console.log(trkpt);
 }
 
 // save log button
 document.getElementById("saveLogButton").onclick = function() {
-  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx'
+  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
   const gpxFoot = `
 </trkseg>
 </trk>
 </gpx>`
   let dataToSave = trackLog + gpxFoot;
-  // do not save tracklog if it's at least 5 tkpts
+  // do not save tracklog if it is less than 5 tkpts
   if (gpxCount > 5) {
     download(dataToSave, filename, 'application/gpx+xml')
   } else {
     document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
-    ++enableLmt;
+    ++enableLnt;
   }
 }
 
@@ -441,6 +440,7 @@ function routeMe(startLonLat, endLonLat) {
 });
 }
 
+// right clock/long press to route from current position to clicked
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
