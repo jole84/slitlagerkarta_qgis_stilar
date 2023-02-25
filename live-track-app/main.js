@@ -460,5 +460,15 @@ function routeMe(startLonLat, endLonLat) {
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
-  routeMe(currentPostition, destinationCoordinate);
+  // if click near current position clear route else start route
+  if (
+      currentPostition[0].toFixed(2) == destinationCoordinate[0].toFixed(2) && 
+      currentPostition[1].toFixed(2) == destinationCoordinate[1].toFixed(2)
+    ) {
+    routeLayer.getSource().getFeatures().forEach(function(layer) {
+      routeLayer.getSource().removeFeature(layer);
+    });
+  }else {
+    routeMe(currentPostition, destinationCoordinate);
+  }
 });
