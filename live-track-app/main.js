@@ -140,7 +140,10 @@ var gpxFeatures;
 document.getElementById('customFileButton').addEventListener('change', handleFileSelect, false);
 function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
-  
+  // remove previously loaded gpx files
+  gpxLayer.getSource().getFeatures().forEach(function(layer) {
+    gpxLayer.getSource().removeFeature(layer);
+  });
   // files is a FileList of File objects. List some properties.
   for (var i = 0, f; f = files[i]; i++) {
     console.log("files[i]",files[i]);
