@@ -144,6 +144,7 @@ const map = new Map({
   layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, gpxLayer, routeLayer, trackLayer],
   target: 'map',
   view: view,
+  keyboardEventTarget: document,
 });
 
 // gpx loader
