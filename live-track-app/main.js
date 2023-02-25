@@ -66,8 +66,8 @@ const trackStyle = {
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 8,
-      color: [245, 75, 240, 0.8],
+      width: 10,
+      color: [245, 75, 240, 0.6],
     }),
   }),
   'icon': new Style({
