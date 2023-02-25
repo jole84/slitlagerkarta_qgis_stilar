@@ -9,7 +9,7 @@ import LineString from 'ol/geom/LineString';
 import Geolocation from 'ol/Geolocation.js';
 import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
-import {Stroke, Style, Icon} from 'ol/style.js';
+import {Stroke, Style, Icon, Circle, Fill} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
 import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
@@ -25,15 +25,27 @@ const view = new View({
 });
 
 const gpxStyle = {
+  'Point': new Style({
+    image: new Circle({
+      fill: new Fill({
+        color: [255, 0, 0, 0.6],
+      }),
+      radius: 5,
+      stroke: new Stroke({
+        color: [255, 0, 0, 1],
+        width: 2,
+      }),
+    }),
+  }),
   'LineString': new Style({
     stroke: new Stroke({
-      color: 'rgba(0,0,255,0.5)',
+      color: [0, 0, 255, 0.5],
       width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: 'rgba(0,0,255,0.5)',
+      color: [0, 0, 255, 0.5],
       width: 10,
     }),
   }),
@@ -42,19 +54,19 @@ const gpxStyle = {
 const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
-      color: 'rgba(255,0,0,0.8)',
+      color: [255, 0, 0, 0.8],
       width: 8,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: 'rgba(255,0,0,0.8)',
+      color: [255, 0, 0, 0.8],
       width: 8,
     }),
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 10,
+      width: 8,
       color: [245, 75, 240, 0.8],
     }),
   }),
