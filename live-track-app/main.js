@@ -123,17 +123,16 @@ var gpxLayer = new VectorLayer({
 });
 
 var trackLayer = new VectorLayer({
-  source: new VectorSource(),
+  source: new VectorSource({
+    features: [trackLine],
+  }),
   style: function (feature) {
     return trackStyle[feature.getGeometry().getType()];
   },
 });
-trackLayer.getSource().addFeature(trackLine);
 
 const routeLayer = new VectorLayer({
-  source: new VectorSource({
-    // features: [routeFeature, endMarker],
-  }),
+  source: new VectorSource(),
   style: function (feature) {
     return trackStyle[feature.get('type')];
   },
@@ -147,6 +146,12 @@ const map = new Map({
   keyboardEventTarget: document,
 });
 
+function removeOld(featureToRemove) {
+  featureToRemove.getSource().getFeatures().forEach(function(layer) {
+    featureToRemove.getSource().removeFeature(layer);
+  });
+}
+
 // gpx loader
 var gpxFormat = new GPX();
 var gpxFeatures;
@@ -154,9 +159,7 @@ document.getElementById('customFileButton').addEventListener('change', handleFil
 function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   // remove previously loaded gpx files
-  gpxLayer.getSource().getFeatures().forEach(function(layer) {
-    gpxLayer.getSource().removeFeature(layer);
-  });
+  removeOld(gpxLayer);
   // files is a FileList of File objects. List some properties.
   for (var i = 0, f; f = files[i]; i++) {
     console.log("files[i]",files[i]);
@@ -414,6 +417,45 @@ function download(data, filename, type) {
   }
 }
 
+// brouter routing
+
+// import GeoJSON from 'ol/format/GeoJSON.js';
+// function routeMe(startLonLat, endLonLat) {
+//   fetch('https://jole84.se:17777/brouter' +
+//   '?lonlats=' + startLonLat +
+//   '|' + endLonLat +
+//   '&profile=mc&alternativeidx=0&format=geojson'
+//   ).then(function (response) {
+//     response.json().then(function (result) {
+    
+
+//       const route = new GeoJSON().readFeature((result).features[0], {
+//         dataProjection: 'EPSG:4326',
+//         featureProjection: 'EPSG:3857'
+//       }).getGeometry();
+    
+//       console.log((result.paths[0].distance / 1000).toFixed(2) + " km");
+//       console.log(new Date(result.paths[0].time).toISOString().slice(11,19));
+
+//       const routeFeature = new Feature({
+//         type: 'route',
+//         geometry: route,
+//       });
+//       const endMarker = new Feature({
+//         type: 'icon',
+//         geometry: new Point(route.getCoordinateAt(1)),
+//       });
+
+//       // remove previus route
+//       removeOld(routeLayer);
+
+//       // finally add route to map
+//       routeLayer.getSource().addFeatures([routeFeature, endMarker]);
+//     });
+//   });
+// }
+
+
 // graphhopper routing
 const api_key = '89fef6e4-250b-400c-8e85-1ab9107f84a8'; // graphhopper api key
 
@@ -421,12 +463,14 @@ function routeMe(startLonLat, endLonLat) {
   fetch('https://graphhopper.com/api/1/route' +
   '?point=' + startLonLat.slice().reverse().join(',') +
   '&point=' + endLonLat.slice().reverse().join(',') +
-  '&type=json&locale=en-US&key=' + api_key +
+  '&type=json&locale=sv-SE&key=' + api_key +
   '&elevation=true&profile=car'
 ).then(function (response) {
   response.json().then(function (result) {
-
     const polyline = result.paths[0].points;
+
+    console.log((result.paths[0].distance / 1000).toFixed(2) + " km");
+    console.log(new Date(result.paths[0].time).toISOString().slice(11,19));
 
     const route = new Polyline({
       factor: 1e5,
@@ -446,9 +490,7 @@ function routeMe(startLonLat, endLonLat) {
     });
 
     // remove previus route
-    routeLayer.getSource().getFeatures().forEach(function(layer) {
-      routeLayer.getSource().removeFeature(layer);
-    });
+    removeOld(routeLayer);
 
     // finally add route to map
     routeLayer.getSource().addFeatures([routeFeature, endMarker]);
@@ -465,9 +507,7 @@ map.on('contextmenu', function(event) {
       currentPostition[0].toFixed(2) == destinationCoordinate[0].toFixed(2) && 
       currentPostition[1].toFixed(2) == destinationCoordinate[1].toFixed(2)
     ) {
-    routeLayer.getSource().getFeatures().forEach(function(layer) {
-      routeLayer.getSource().removeFeature(layer);
-    });
+    removeOld(routeLayer);
   }else {
     routeMe(currentPostition, destinationCoordinate);
   }
