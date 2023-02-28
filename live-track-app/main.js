@@ -30,7 +30,7 @@ const gpxStyle = {
       fill: new Fill({
         color: [255, 0, 0, 0.6],
       }),
-      radius: 5,
+      radius: 7,
       stroke: new Stroke({
         color: [255, 0, 0, 1],
         width: 2,
@@ -40,13 +40,13 @@ const gpxStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.5],
-      width: 10,
+      width: 12,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.5],
-      width: 10,
+      width: 12,
     }),
   }),
 };
@@ -66,7 +66,7 @@ const trackStyle = {
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 10,
+      width: 12,
       color: [255, 0, 255, 0.6],
     }),
   }),
@@ -249,7 +249,8 @@ geolocation.on('change', function () {
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh',
+    'zoomLevel: ' + view.getZoom().toFixed(2)
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
@@ -307,7 +308,7 @@ geolocation.once('change', function() {
 });
 
 // center button logic
-const defaultZoom = 14;
+const defaultZoom = 13.5;
 document.getElementById("centerButton").onclick = function() {
   const position = (geolocation.getPosition() || center);
   const speed = (geolocation.getSpeed() || 0)
