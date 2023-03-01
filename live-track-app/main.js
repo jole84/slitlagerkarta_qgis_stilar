@@ -15,6 +15,9 @@ import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 var center = fromLonLat([14.18, 57.786]);
+const defaultZoom = 13.5;
+let distanceTraveled = 0;
+var lastInteraction = new Date();
 
 const view = new View({
   center: center,
@@ -208,9 +211,8 @@ const geolocation = new Geolocation({
 });
 geolocation.setTracking(true); // Start position tracking
 
-let lastFix = new Date();
 let prevCoordinate = geolocation.getPosition();
-let distanceTraveled = 0;
+let lastFix = new Date();
 
 // runs when position changes
 geolocation.on('change', function () {
@@ -220,26 +222,31 @@ geolocation.on('change', function () {
   const speed = geolocation.getSpeed() || 0;
   const altitude = geolocation.getAltitude() || 0;
   const lonlat = toLonLat(position);
+  const currentTime = new Date();
+  marker.setPosition(position); // move marker to current location
   
   if (speed > 1) {
-    updateView(position, heading);
+    // change view if no interaction occurred last 5 seconds
+    if (currentTime - lastInteraction > 5000) {
+      updateView(position, heading);
+    }
     // measure distance
     if (prevCoordinate !== undefined) {
       distanceTraveled += getDistanceFromLatLonInKm(prevCoordinate, lonlat);
     }
     prevCoordinate = lonlat;
     // tracklogger
-    if (new Date() - lastFix > 5000) {
+    if (currentTime - lastFix > 5000) {
       lastFix = new Date();
       trackLogger();
     }
-  } else if (new Date() - lastFix > 5000 && lastFix > startTime) {
+  } else if (currentTime - lastFix > 5000 && lastFix > startTime) {
     lastFix = 0;
     trackLogger();
   }
 
   // change marker icon
-  if (heading && speed) {
+  if (heading && speed > 1) {
     markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker_heading.png';
   } else {
     markerEl.src = 'https://openlayers.org/en/latest/examples/data/geolocation_marker.png';
@@ -249,8 +256,7 @@ geolocation.on('change', function () {
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh',
-    'zoomLevel: ' + view.getZoom().toFixed(2)
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
@@ -281,10 +287,9 @@ function getCenterWithHeading(position, rotation) {
   ];
 }
 
-function updateView(position, rotation) {
-  view.setCenter(getCenterWithHeading(position, -rotation));
-  view.setRotation(-rotation);
-  marker.setPosition(position);
+function updateView(position, heading) {
+  view.setCenter(getCenterWithHeading(position, -heading));
+  view.setRotation(-heading);
   map.render(); 
 }
 
@@ -308,14 +313,17 @@ geolocation.once('change', function() {
 });
 
 // center button logic
-const defaultZoom = 13.5;
 document.getElementById("centerButton").onclick = function() {
   const position = (geolocation.getPosition() || center);
   const speed = (geolocation.getSpeed() || 0)
+  const duration = 500;
   if (speed > 1){
     view.setZoom(defaultZoom);
+    if (new Date() - lastInteraction < 5000) {
+      view.setRotation(0);
+      lastInteraction = new Date();
+    }
   } else {
-    const duration = 500;
     view.animate({
       center: position,
       duration: duration
@@ -456,10 +464,8 @@ function download(data, filename, type) {
 //   });
 // }
 
-
 // graphhopper routing
 const api_key = '89fef6e4-250b-400c-8e85-1ab9107f84a8'; // graphhopper api key
-
 function routeMe(startLonLat, endLonLat) {
   fetch('https://graphhopper.com/api/1/route' +
   '?point=' + startLonLat.slice().reverse().join(',') +
@@ -512,4 +518,16 @@ map.on('contextmenu', function(event) {
   }else {
     routeMe(currentPostition, destinationCoordinate);
   }
+});
+
+// map.on('click', function(evt) {
+//   map.forEachFeatureAtPixel(evt.pixel, function (f) {
+//     console.log(f.get('name'));
+//     console.log(toLonLat(f.getGeometry().getCoordinates()));
+//   });
+// });
+
+// store time of last interaction
+map.on('pointerdrag', function() {
+  lastInteraction = new Date();
 });
