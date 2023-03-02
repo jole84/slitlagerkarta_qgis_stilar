@@ -15,6 +15,7 @@
         width: 100%;
         height: 100%;
         font-family: arial;
+        overscroll-behavior-y: contain !important;
       }
       #info {
         position: absolute;
@@ -81,6 +82,9 @@
           acquireWakeLock();
         }
       });
+      // window.onbeforeunload = function() {
+      //   return "";
+      // };
     </script>
   <script type="module" src="./main.js"></script>
   </head>
