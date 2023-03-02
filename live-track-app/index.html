@@ -20,6 +20,7 @@
       #info {
         position: absolute;
         font-size: 0.8em;
+        font-weight: bold;
         top: 5px;
         right: 5px;
         padding-left: 5px;
@@ -37,6 +38,7 @@
       #changeMapButton {
         position: absolute;
         text-align: center;
+        white-space: nowrap;
         height: 36px;
         width: 130px;
         bottom: 5px;
@@ -45,6 +47,7 @@
       #saveLogButton {
         position: absolute;
         text-align: center;
+        white-space: nowrap;
         height: 36px;
         width: 130px;
         bottom: 46px;
@@ -92,7 +95,7 @@
     <div id="map"></div>
     <div style="background: rgba(251, 251, 251, 0.6);" class="rounded-1" id="info"></div>
     <button style="opacity: 0.9;" class="btn btn-danger" id="centerButton">Center</button>
-    <button style="opacity: 0.9;" class="btn btn-warning" style="display:inline;" id="saveLogButton">Spara GPX</button>
+    <button style="opacity: 0.9;" class="btn btn-warning" id="saveLogButton">Spara GPX</button>
     <button style="opacity: 0.9;" class="btn btn-primary" id="changeMapButton">Växla karta</button>
     <input style="opacity: 0.9;" type="file" class="form-control" id="customFileButton" multiple accept=".gpx"/>
     <img id="geolocation_marker" src="https://openlayers.org/en/latest/examples/data/geolocation_marker.png" />
