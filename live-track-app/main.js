@@ -18,6 +18,9 @@ var center = fromLonLat([14.18, 57.786]);
 const defaultZoom = 13.5;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
+document.getElementById("saveLogButton").onclick = saveLog;
+document.getElementById("centerButton").onclick = centerFunction;
+document.getElementById('switchMapButton').onclick = switchMap;
 
 const view = new View({
   center: center,
@@ -200,7 +203,7 @@ function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
     return d;
   }
 
-// create and start geolocation
+// start geolocation
 const geolocation = new Geolocation({
   projection: view.getProjection(),
   trackingOptions: {
@@ -211,10 +214,9 @@ const geolocation = new Geolocation({
 });
 geolocation.setTracking(true); // Start position tracking
 
+// runs when position changes
 let prevCoordinate = geolocation.getPosition();
 let lastFix = new Date();
-
-// runs when position changes
 geolocation.on('change', function () {
   const position = geolocation.getPosition();
   const accuracy = geolocation.getAccuracy();
@@ -287,33 +289,8 @@ function getCenterWithHeading(position, rotation) {
   ];
 }
 
-function updateView(position, heading) {
-  view.setCenter(getCenterWithHeading(position, -heading));
-  view.setRotation(-heading);
-  map.render(); 
-}
-
-// run once when first position is recieved
-geolocation.once('change', function() { 
-  const position = geolocation.getPosition() || center;
-  const duration = 500;
-  view.animate({
-    center: position,
-    duration: duration
-  });
-  view.animate({
-    zoom: defaultZoom,
-    duration: duration
-  });
-  view.animate({
-    rotation: 0,
-    duration: duration
-  });
-  marker.setPosition(position);
-});
-
-// center button logic
-document.getElementById("centerButton").onclick = function() {
+// center map function
+function centerFunction() {
   const position = (geolocation.getPosition() || center);
   const speed = (geolocation.getSpeed() || 0)
   const duration = 500;
@@ -340,12 +317,36 @@ document.getElementById("centerButton").onclick = function() {
   acquireWakeLock();
 }
 
+function updateView(position, heading) {
+  view.setCenter(getCenterWithHeading(position, -heading));
+  view.setRotation(-heading);
+  map.render(); 
+}
+
+// run once when first position is recieved
+geolocation.once('change', function() { 
+  const position = geolocation.getPosition() || center;
+  const duration = 500;
+  view.animate({
+    center: position,
+    duration: duration
+  });
+  view.animate({
+    zoom: defaultZoom,
+    duration: duration
+  });
+  view.animate({
+    rotation: 0,
+    duration: duration
+  });
+  marker.setPosition(position);
+});
+
 // switch map logic
 var enableLnt = 0;
 slitlagerkarta_nedtonad.setVisible(false);
 ortofoto.setVisible(false);
-const changeMap = document.getElementById('changeMapButton');
-changeMap.addEventListener('click', function () {
+function switchMap() {
   if (slitlagerkarta.getVisible()) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
@@ -360,7 +361,7 @@ changeMap.addEventListener('click', function () {
     ortofoto.setVisible(false);
     slitlagerkarta.setVisible(true);
   }
-});
+};
 
 // create tracklog
 const startTime = new Date();
@@ -390,8 +391,8 @@ function trackLogger() {
   line.appendCoordinate(position);
 }
 
-// save log button
-document.getElementById("saveLogButton").onclick = function() {
+// save log function
+function saveLog() {
   const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
   const gpxFoot = `
 </trkseg>
@@ -530,4 +531,23 @@ map.on('contextmenu', function(event) {
 // store time of last interaction
 map.on('pointerdrag', function() {
   lastInteraction = new Date();
+});
+
+// add keyboard controls
+document.addEventListener('keydown', function(event) {
+  if (event.key == 'c') {
+    centerFunction();
+  }
+  if (event.key == 'v') {
+    switchMap();
+  }
+  if (event.key == 'z') {
+    view.adjustRotation(0.2);
+  }
+  if (event.key == 'x') {
+    view.adjustRotation(-0.2);
+  }
+  if (event.key == 's') {
+    saveLog();
+  }
 });
