@@ -339,20 +339,43 @@ geolocation.once('change', function() {
 var enableLnt = 0;
 slitlagerkarta_nedtonad.setVisible(false);
 ortofoto.setVisible(false);
+// mapMode 0: slitlagerkarta
+// mapMode 1: slitlagerkarta_nedtonad
+// mapMode 2: slitlagerkarta_nedtonad + night mode
+// mapMode 3: orto
+var mapMode = 0;
 function switchMap() {
-  if (slitlagerkarta.getVisible()) {
+  var mapDiv = document.getElementById("map");
+  var infoDiv = document.getElementById("info");
+  if (mapMode == 0) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
-  } else if (slitlagerkarta_nedtonad.getVisible()) {
+    mapMode++;
+  }
+  
+  else if (mapMode == 1) {
+    mapDiv.setAttribute("style", "filter: invert(1) hue-rotate(180deg);");
+    infoDiv.setAttribute("style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
+    mapMode++;
+  }
+  
+  else if (mapMode == 2) {
+    mapDiv.setAttribute("style", "-webkit-filter: initial;filter: initial;");
+    infoDiv.setAttribute("style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
     slitlagerkarta_nedtonad.setVisible(false);
     if (enableLnt > 3) {
       ortofoto.setVisible(true);
+      mapMode++;
     } else {
       slitlagerkarta.setVisible(true);
+      mapMode = 0;
     }
-  } else if (ortofoto.getVisible()) {
+  } 
+  
+  else if (mapMode == 3) {
     ortofoto.setVisible(false);
     slitlagerkarta.setVisible(true);
+    mapMode = 0;
   }
 };
 
