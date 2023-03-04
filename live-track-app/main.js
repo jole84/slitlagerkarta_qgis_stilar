@@ -20,7 +20,7 @@ let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
 var trackLog = [];
-document.getElementById("saveLogButton").onclick = saveLog;
+document.getElementById("saveLogButton").onclick = saveLogButtonFunction;
 document.getElementById("centerButton").onclick = centerFunction;
 document.getElementById('switchMapButton').onclick = switchMap;
 
@@ -222,8 +222,6 @@ geolocation.on('change', function () {
   const speed = geolocation.getSpeed() || 0;
   const altitude = geolocation.getAltitude() || 0;
   const lonlat = toLonLat(position);
-  const lon = lonlat[0];
-  const lat = lonlat[1];
   const currentTime = new Date();
   marker.setPosition(position); // move marker to current location
 
@@ -240,18 +238,18 @@ geolocation.on('change', function () {
     // tracklogger
     if (currentTime - lastFix > 5000) {
       lastFix = currentTime;
-      trackLog.push([lon.toFixed(6), lat.toFixed(6), altitude.toFixed(2), currentTime]);
+      trackLog.push([lonlat[0].toFixed(6), lonlat[1].toFixed(6), altitude.toFixed(2), currentTime]);
       line.appendCoordinate(position);
     }
   } else if (currentTime - lastFix > 5000 && lastFix > startTime) {
     lastFix = 0;
-    trackLog.push([lon.toFixed(6), lat.toFixed(6), altitude.toFixed(2), currentTime]);
+    trackLog.push([lonlat[0].toFixed(6), lonlat[1].toFixed(6), altitude.toFixed(2), currentTime]);
     line.appendCoordinate(position);
   }
   
   // send text to info box
   const html = [
-    lat.toFixed(5) + ', ' + lon.toFixed(5),
+    lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
     (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
@@ -349,6 +347,10 @@ var mapMode = 0;
 function switchMap() {
   var mapDiv = document.getElementById("map");
   var infoDiv = document.getElementById("info");
+  var centerButton = document.getElementById("centerButton");
+  var saveLogButton = document.getElementById("saveLogButton");
+  var switchMapButton = document.getElementById("switchMapButton");
+  var customFileButton = document.getElementById("customFileButton");
   if (mapMode == 0) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
@@ -356,14 +358,22 @@ function switchMap() {
   }
   
   else if (mapMode == 1) {
-    mapDiv.setAttribute("style", "filter: invert(1) hue-rotate(180deg);");
-    infoDiv.setAttribute("style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
+    mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);");
+    infoDiv.setAttribute(           "style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
+    centerButton.setAttribute(      "style", "filter: brightness(65%)");
+    saveLogButton.setAttribute(     "style", "filter: brightness(65%)");
+    switchMapButton.setAttribute(   "style", "filter: brightness(65%)");
+    customFileButton.setAttribute(  "style", "filter: invert(1)");
     mapMode++;
   }
   
   else if (mapMode == 2) {
-    mapDiv.setAttribute("style", "-webkit-filter: initial;filter: initial;");
-    infoDiv.setAttribute("style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
+    mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;");
+    infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
+    centerButton.setAttribute(      "style", "filter: initial");
+    saveLogButton.setAttribute(     "style", "filter: initial");
+    switchMapButton.setAttribute(   "style", "filter: initial");
+    customFileButton.setAttribute(  "style", "filter: initial");
     slitlagerkarta_nedtonad.setVisible(false);
     if (enableLnt > 3) {
       ortofoto.setVisible(true);
@@ -381,12 +391,21 @@ function switchMap() {
   }
 };
 
+function saveLogButtonFunction() {
+  if (trackLog.length > 5) {
+    saveLog();
+  } else {
+    document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
+    ++enableLnt;
+  }
+}
+
 // new saveLog
 function saveLog() {
   let gpxFile = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="jole84 webapp">
 <metadata>
-    <desc>File with points/tracks from jole84 webapp</desc>
+    <desc>GPX log from jole84 webapp</desc>
     <time>${startTime.toISOString()}</time>
 </metadata>
 <trk>
@@ -394,8 +413,8 @@ function saveLog() {
 <trkseg>`;
 
   for (let i = 0; i < trackLog.length; i++){
-    const lat = trackLog[i][1];
     const lon = trackLog[i][0];
+    const lat = trackLog[i][1];
     const ele = trackLog[i][2];
     const isoTime = trackLog[i][3].toISOString();
     const trkpt = `
@@ -409,15 +428,7 @@ function saveLog() {
 </gpx>`;
 
   const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
-  if (trackLog.length > 5) {
-    console.log("saveLog");
-    // console.log(gpxFile);
-    download(gpxFile, filename, 'application/gpx+xml');
-  } else {
-    document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
-    ++enableLnt;
-  }
-
+  download(gpxFile, filename, 'application/gpx+xml');
 }
 
 // Function to download data to a file
@@ -558,6 +569,6 @@ document.addEventListener('keydown', function(event) {
     view.adjustRotation(-0.2);
   }
   if (event.key == 's') {
-    saveLog();
+    saveLogButtonFunction();
   }
 });
