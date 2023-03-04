@@ -11,13 +11,15 @@ import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
 import {Stroke, Style, Icon, Circle, Fill} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
-import Polyline from 'ol/format/Polyline.js';
+// import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 var center = fromLonLat([14.18, 57.786]);
 const defaultZoom = 13.5;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
+const startTime = new Date();
+var trackLog = [];
 document.getElementById("saveLogButton").onclick = saveLog;
 document.getElementById("centerButton").onclick = centerFunction;
 document.getElementById('switchMapButton').onclick = switchMap;
@@ -95,8 +97,6 @@ var slitlagerkarta = new TileLayer({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
-      attributions: "jole84.github.io",
-      attributionsCollapsible: false,
   })
 });
  
@@ -106,8 +106,6 @@ var slitlagerkarta_nedtonad = new TileLayer({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
-      attributions: "jole84.github.io",
-      attributionsCollapsible: false,
   })
 });
 
@@ -224,9 +222,11 @@ geolocation.on('change', function () {
   const speed = geolocation.getSpeed() || 0;
   const altitude = geolocation.getAltitude() || 0;
   const lonlat = toLonLat(position);
+  const lon = lonlat[0];
+  const lat = lonlat[1];
   const currentTime = new Date();
   marker.setPosition(position); // move marker to current location
-  
+
   if (speed > 1) {
     // change view if no interaction occurred last 5 seconds
     if (currentTime - lastInteraction > 5000) {
@@ -239,17 +239,19 @@ geolocation.on('change', function () {
     prevCoordinate = lonlat;
     // tracklogger
     if (currentTime - lastFix > 5000) {
-      lastFix = new Date();
-      trackLogger();
+      lastFix = currentTime;
+      trackLog.push([lon.toFixed(6), lat.toFixed(6), altitude.toFixed(2), currentTime]);
+      line.appendCoordinate(position);
     }
   } else if (currentTime - lastFix > 5000 && lastFix > startTime) {
     lastFix = 0;
-    trackLogger();
+    trackLog.push([lon.toFixed(6), lat.toFixed(6), altitude.toFixed(2), currentTime]);
+    line.appendCoordinate(position);
   }
   
   // send text to info box
   const html = [
-    lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
+    lat.toFixed(5) + ', ' + lon.toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
     (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
@@ -379,49 +381,43 @@ function switchMap() {
   }
 };
 
-// create tracklog
-const startTime = new Date();
-let gpxCount = 0;
-let trackLog = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+// new saveLog
+function saveLog() {
+  let gpxFile = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="jole84 webapp">
-  <metadata>
+<metadata>
     <desc>File with points/tracks from jole84 webapp</desc>
     <time>${startTime.toISOString()}</time>
-  </metadata>
+</metadata>
 <trk>
 <name>${startTime.toLocaleString()}</name>
 <trkseg>`;
 
-// trackLogger function
-function trackLogger() {
-  const position = geolocation.getPosition();
-  const lonlat = toLonLat(position);
-  const lon = lonlat[0].toFixed(6);
-  const lat = lonlat[1].toFixed(6);
-  const ele = (geolocation.getAltitude() || 0).toFixed(2);
-  const isoTime = new Date().toISOString();
-  const trkpt = `
+  for (let i = 0; i < trackLog.length; i++){
+    const lat = trackLog[i][1];
+    const lon = trackLog[i][0];
+    const ele = trackLog[i][2];
+    const isoTime = trackLog[i][3].toISOString();
+    const trkpt = `
   <trkpt lat="${lat}" lon="${lon}"><ele>${ele}</ele><time>${isoTime}</time></trkpt>`;
-  trackLog += trkpt;
-  gpxCount += 1;
-  line.appendCoordinate(position);
-}
+    gpxFile += trkpt;
+  }
 
-// save log function
-function saveLog() {
-  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
-  const gpxFoot = `
+  gpxFile += `
 </trkseg>
 </trk>
-</gpx>`
-  let dataToSave = trackLog + gpxFoot;
-  // do not save tracklog if it is less than 5 tkpts
-  if (gpxCount > 5) {
-    download(dataToSave, filename, 'application/gpx+xml')
+</gpx>`;
+
+  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
+  if (trackLog.length > 5) {
+    console.log("saveLog");
+    // console.log(gpxFile);
+    download(gpxFile, filename, 'application/gpx+xml');
   } else {
     document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
     ++enableLnt;
   }
+
 }
 
 // Function to download data to a file
