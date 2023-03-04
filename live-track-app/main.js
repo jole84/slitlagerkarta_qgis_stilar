@@ -164,9 +164,8 @@ function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   // remove previously loaded gpx files
   removeOld(gpxLayer);
-  // files is a FileList of File objects. List some properties.
-  for (var i = 0, f; f = files[i]; i++) {
-    console.log("files[i]",files[i]);
+  for (var i = 0; i < files.length; i++) {
+    console.log(files[i]);
     var reader = new FileReader();
     reader.readAsText(files[i], "UTF-8");
     reader.onload = function (evt) {
@@ -391,16 +390,17 @@ function switchMap() {
   }
 };
 
+// logic for saveLogButton
 function saveLogButtonFunction() {
   if (trackLog.length > 5) {
     saveLog();
   } else {
     document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
-    ++enableLnt;
+    enableLnt++;
   }
 }
 
-// new saveLog
+// new saveLog function
 function saveLog() {
   let gpxFile = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="jole84 webapp">
@@ -428,12 +428,12 @@ function saveLog() {
 </gpx>`;
 
   const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
-  download(gpxFile, filename, 'application/gpx+xml');
+  download(gpxFile, filename);
 }
 
 // Function to download data to a file
-function download(data, filename, type) {
-  var file = new Blob([data], {type: type});
+function download(data, filename) {
+  var file = new Blob([data], {type: 'application/gpx+xml'});
   if (window.navigator.msSaveOrOpenBlob) // IE10+
       window.navigator.msSaveOrOpenBlob(file, filename);
   else { // Others
@@ -465,7 +465,7 @@ function routeMe(startLonLat, endLonLat) {
         featureProjection: 'EPSG:3857'
       }).getGeometry();
     
-      // console.log((result.paths[0].distance / 1000).toFixed(2) + " km");
+      // console.log(result.features[0].properties.track-length);
       // console.log(new Date(result.paths[0].time).toISOString().slice(11,19));
 
       const routeFeature = new Feature({
