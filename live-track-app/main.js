@@ -30,6 +30,7 @@ const view = new View({
   minZoom: 6,
   maxZoom: 17,
   constrainRotation: false,
+  extent: [1100000, 7200000, 2800000, 11000000]
 });
 
 const gpxStyle = {
@@ -544,9 +545,10 @@ map.on('contextmenu', function(event) {
 });
 
 // map.on('click', function(evt) {
+//   console.log(evt.coordinate);
 //   map.forEachFeatureAtPixel(evt.pixel, function (f) {
-//     console.log(f.get('name'));
-//     console.log(toLonLat(f.getGeometry().getCoordinates()));
+//   console.log(f.get('name'));
+//   console.log(toLonLat(f.getGeometry().getCoordinates()));
 //   });
 // });
 
