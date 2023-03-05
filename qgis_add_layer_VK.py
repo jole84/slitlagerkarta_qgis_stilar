@@ -36,7 +36,8 @@ layers_to_add = [
     ["mark", "/home/johan/Karta/topografi50/mark.gpkg"],
     ["Svealand", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"],
     ["Norrland", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"],
-    ["Götaland", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"]
+    ["Götaland", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"],
+    ["Bakgrund", "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg"]
 ]
 
 layers_to_add.reverse()
