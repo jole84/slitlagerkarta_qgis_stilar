@@ -106,7 +106,8 @@ var slitlagerkarta_nedtonad = new TileLayer({
     url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
-  })
+  }),
+  visible: false
 });
 
 var ortofoto = new TileLayer({
@@ -114,9 +115,10 @@ var ortofoto = new TileLayer({
     url: 'https://minkarta.lantmateriet.se/map/ortofoto/SERVICE?',
     params: {
       'layers': 'Ortofoto_0.5',
-      'TILED': true
-    }
-  })
+      'TILED': true,
+    },
+  }),
+  visible:false
 });
 
 var gpxLayer = new VectorLayer({
@@ -336,8 +338,6 @@ geolocation.once('change', function() {
 
 // switch map logic
 var enableLnt = 0;
-slitlagerkarta_nedtonad.setVisible(false);
-ortofoto.setVisible(false);
 // mapMode 0: slitlagerkarta
 // mapMode 1: slitlagerkarta_nedtonad
 // mapMode 2: slitlagerkarta_nedtonad + night mode
