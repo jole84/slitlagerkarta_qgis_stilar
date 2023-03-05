@@ -455,6 +455,7 @@ function download(data, filename) {
 import GeoJSON from 'ol/format/GeoJSON.js';
 function routeMe(startLonLat, endLonLat) {
   fetch('https://brouter.de/brouter' +
+  // fetch('https://jole84.se:17777/brouter' +
   '?lonlats=' + startLonLat +
   '|' + endLonLat +
   '&profile=car-fast&alternativeidx=0&format=geojson'
