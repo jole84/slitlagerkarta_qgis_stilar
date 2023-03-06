@@ -319,21 +319,8 @@ function updateView(position, heading) {
 }
 
 // run once when first position is recieved
-geolocation.once('change', function() { 
-  const position = geolocation.getPosition() || center;
-  const duration = 500;
-  view.animate({
-    center: position,
-    duration: duration
-  });
-  view.animate({
-    zoom: defaultZoom,
-    duration: duration
-  });
-  view.animate({
-    rotation: 0,
-    duration: duration
-  });
+geolocation.once('change', function() {
+  centerFunction();
   marker.setPosition(position);
 });
 
@@ -359,7 +346,7 @@ function switchMap() {
   }
   
   else if (mapMode == 1) {
-    mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);");
+    mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);background-color: #e5f5ff;");
     infoDiv.setAttribute(           "style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
     centerButton.setAttribute(      "style", "filter: brightness(65%)");
     saveLogButton.setAttribute(     "style", "filter: brightness(65%)");
@@ -369,7 +356,7 @@ function switchMap() {
   }
   
   else if (mapMode == 2) {
-    mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;background-color: initial");
+    mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;background-color: initial;");
     infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
     centerButton.setAttribute(      "style", "filter: initial");
     saveLogButton.setAttribute(     "style", "filter: initial");
