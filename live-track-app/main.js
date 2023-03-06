@@ -28,9 +28,9 @@ const view = new View({
   center: center,
   zoom: 8,
   minZoom: 6,
-  maxZoom: 17,
+  maxZoom: 19,
   constrainRotation: false,
-  extent: [1100000, 7200000, 2800000, 11000000]
+  extent: [900000, 7200000, 2900000, 11000000]
 });
 
 const gpxStyle = {
@@ -354,6 +354,7 @@ function switchMap() {
   if (mapMode == 0) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
+    mapDiv.setAttribute(            "style", "background-color: #e5f5ff;");
     mapMode++;
   }
   
@@ -368,7 +369,7 @@ function switchMap() {
   }
   
   else if (mapMode == 2) {
-    mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;");
+    mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;background-color: initial");
     infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
     centerButton.setAttribute(      "style", "filter: initial");
     saveLogButton.setAttribute(     "style", "filter: initial");
