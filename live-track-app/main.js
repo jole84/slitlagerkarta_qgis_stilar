@@ -28,7 +28,7 @@ const view = new View({
   center: center,
   zoom: 8,
   minZoom: 6,
-  maxZoom: 19,
+  maxZoom: 20,
   constrainRotation: false,
   extent: [900000, 7200000, 2900000, 11000000]
 });
@@ -115,7 +115,7 @@ var ortofoto = new TileLayer({
   source: new TileWMS({
     url: 'https://minkarta.lantmateriet.se/map/ortofoto/SERVICE?',
     params: {
-      'layers': 'Ortofoto_0.5',
+      'layers': 'Ortofoto_0.16', // Ortofoto_0.5 hela sve
       'TILED': true,
     },
   }),
@@ -325,7 +325,10 @@ geolocation.once('change', function() {
 });
 
 // switch map logic
-var enableLnt = 0;
+var enableLnt = false;
+if (window.location.href.split('?')[1] == 'Lnt') {
+  enableLnt = true;
+}
 // mapMode 0: slitlagerkarta
 // mapMode 1: slitlagerkarta_nedtonad
 // mapMode 2: slitlagerkarta_nedtonad + night mode
@@ -363,7 +366,7 @@ function switchMap() {
     switchMapButton.setAttribute(   "style", "filter: initial");
     customFileButton.setAttribute(  "style", "filter: initial");
     slitlagerkarta_nedtonad.setVisible(false);
-    if (enableLnt > 3) {
+    if (enableLnt) {
       ortofoto.setVisible(true);
       mapMode++;
     } else {
@@ -385,7 +388,6 @@ function saveLogButtonFunction() {
     saveLog();
   } else {
     document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
-    enableLnt++;
   }
 }
 
@@ -440,7 +442,6 @@ function download(data, filename) {
 }
 
 // brouter routing
-
 import GeoJSON from 'ol/format/GeoJSON.js';
 function routeMe(startLonLat, endLonLat) {
   fetch('https://brouter.de/brouter' +
