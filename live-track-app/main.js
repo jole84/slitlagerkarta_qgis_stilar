@@ -63,20 +63,20 @@ const gpxStyle = {
 const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.8],
+      color: [255, 0, 0, 0.5],
       width: 8,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.8],
+      color: [255, 0, 0, 0.5],
       width: 8,
     }),
   }),
   'route': new Style({
     stroke: new Stroke({
       width: 12,
-      color: [255, 0, 255, 0.6],
+      color: [255, 0, 255, 0.5],
     }),
   }),
   'icon': new Style({
@@ -113,9 +113,9 @@ var slitlagerkarta_nedtonad = new TileLayer({
 
 var ortofoto = new TileLayer({
   source: new TileWMS({
-    url: 'https://minkarta.lantmateriet.se/map/ortofoto/SERVICE?',
+    url: 'https://minkarta.lantmateriet.se/map/ortofoto/',
     params: {
-      'layers': 'Ortofoto_0.16', // Ortofoto_0.5 hela sve
+      'layers': 'Ortofoto_0.5,Ortofoto_0.4,Ortofoto_0.25,Ortofoto_0.16',
       'TILED': true,
     },
   }),
@@ -321,7 +321,6 @@ function updateView(position, heading) {
 // run once when first position is recieved
 geolocation.once('change', function() {
   centerFunction();
-  marker.setPosition(position);
 });
 
 // switch map logic
@@ -534,10 +533,8 @@ map.on('contextmenu', function(event) {
 });
 
 // map.on('click', function(evt) {
-//   console.log(evt.coordinate);
 //   map.forEachFeatureAtPixel(evt.pixel, function (f) {
 //   console.log(f.get('name'));
-//   console.log(toLonLat(f.getGeometry().getCoordinates()));
 //   });
 // });
 
@@ -548,6 +545,9 @@ map.on('pointerdrag', function() {
 
 // add keyboard controls
 document.addEventListener('keydown', function(event) {
+  if (event.key != 'a' && event.key != 'Escape') { // store time of last interaction
+    lastInteraction = new Date();
+  }
   if (event.key == 'c') {
     centerFunction();
   }
@@ -562,5 +562,11 @@ document.addEventListener('keydown', function(event) {
   }
   if (event.key == 's') {
     saveLogButtonFunction();
+  }
+  if (event.key == 'Escape') { // carpe iter adventure controller compatibility
+    view.adjustZoom(-1);
+  }
+  if (event.key == 'a') {
+    view.adjustZoom(1);
   }
 });
