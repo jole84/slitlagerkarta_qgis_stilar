@@ -49,13 +49,13 @@ const gpxStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.5],
-      width: 12,
+      width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.5],
-      width: 12,
+      width: 10,
     }),
   }),
 };
@@ -64,18 +64,18 @@ const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [255, 0, 0, 0.5],
-      width: 8,
+      width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [255, 0, 0, 0.5],
-      width: 8,
+      width: 10,
     }),
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 12,
+      width: 10,
       color: [255, 0, 255, 0.5],
     }),
   }),
@@ -563,10 +563,10 @@ document.addEventListener('keydown', function(event) {
   if (event.key == 's') {
     saveLogButtonFunction();
   }
-  if (event.key == 'Escape') { // carpe iter adventure controller compatibility
+  if (event.key == 'Escape') { // carpe iter adventure controller minus button
     view.adjustZoom(-1);
   }
-  if (event.key == 'a') {
+  if (event.key == 'a') { // carpe iter adventure controller plus button
     view.adjustZoom(1);
   }
 });
