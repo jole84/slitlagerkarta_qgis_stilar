@@ -14,7 +14,7 @@ import {Vector as VectorLayer} from 'ol/layer.js';
 // import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
-var center = fromLonLat([14.18, 57.786]);
+const center = fromLonLat([14.18, 57.786]);
 const defaultZoom = 13.5;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
@@ -122,6 +122,18 @@ var ortofoto = new TileLayer({
   visible:false
 });
 
+var topoweb = new TileLayer({
+  source: new TileWMS({
+    url: 'https://minkarta.lantmateriet.se/map/topowebb',
+    params: {
+      'layers': 'topowebbkartan',
+      'TILED': true,
+      'TRANSPARENT': false,
+    },
+  }),
+  visible: false
+});
+
 var gpxLayer = new VectorLayer({
   source: new VectorSource(),
   style: function (feature) {
@@ -147,7 +159,7 @@ const routeLayer = new VectorLayer({
 
 // creating the map
 const map = new Map({
-  layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, gpxLayer, routeLayer, trackLayer],
+  layers: [slitlagerkarta_nedtonad, slitlagerkarta, ortofoto, topoweb, gpxLayer, routeLayer, trackLayer],
   target: 'map',
   view: view,
   keyboardEventTarget: document,
@@ -376,6 +388,12 @@ function switchMap() {
   
   else if (mapMode == 3) {
     ortofoto.setVisible(false);
+    topoweb.setVisible(true);
+    mapMode++;
+  }
+
+  else if (mapMode == 4) {
+    topoweb.setVisible(false);
     slitlagerkarta.setVisible(true);
     mapMode = 0;
   }
