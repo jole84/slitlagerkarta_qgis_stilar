@@ -90,9 +90,9 @@
           acquireWakeLock();
         }
       });
-      // window.onbeforeunload = function() {
-      //   return "";
-      // };
+      window.onbeforeunload = function() {
+        return "";
+      };
     </script>
   <script type="module" src="./main.js"></script>
   </head>
