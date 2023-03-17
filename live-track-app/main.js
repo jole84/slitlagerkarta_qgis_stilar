@@ -372,12 +372,11 @@ function switchMap() {
   if (mapMode == 0) {
     slitlagerkarta.setVisible(false);
     slitlagerkarta_nedtonad.setVisible(true);
-    mapDiv.setAttribute(            "style", "background-color: #e5f5ff;");
     mapMode++;
   }
   
   else if (mapMode == 1) {
-    mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);background-color: #e5f5ff;");
+    mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);");
     infoDiv.setAttribute(           "style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
     centerButton.setAttribute(      "style", "filter: brightness(65%)");
     saveLogButton.setAttribute(     "style", "filter: brightness(65%)");
