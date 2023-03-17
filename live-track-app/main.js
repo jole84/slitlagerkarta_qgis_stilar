@@ -15,7 +15,7 @@ import {Vector as VectorLayer} from 'ol/layer.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 const center = fromLonLat([14.18, 57.786]);
-const defaultZoom = 13.5;
+const defaultZoom = 13.7;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
@@ -95,7 +95,7 @@ var trackLine = new Feature({
 var slitlagerkarta = new TileLayer({
   preload: Infinity,
   source: new XYZ({
-    url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta/{z}/{x}/{y}.jpg',
+    url: 'https://jole84.se/slitlagerkarta/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
   })
@@ -104,7 +104,7 @@ var slitlagerkarta = new TileLayer({
 var slitlagerkarta_nedtonad = new TileLayer({
   preload: Infinity,
   source: new XYZ({
-    url: 'https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
+    url: 'https://jole84.se/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
       maxZoom: 14,
   }),
