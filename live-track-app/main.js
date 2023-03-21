@@ -35,15 +35,9 @@ const view = new View({
 
 const gpxStyle = {
   'Point': new Style({
-    image: new Circle({
-      fill: new Fill({
-        color: [255, 0, 0, 0.6],
-      }),
-      radius: 7,
-      stroke: new Stroke({
-        color: [255, 0, 0, 1],
-        width: 2,
-      }),
+    image: new Icon({
+      anchor: [0.5, 1],
+      src: 'https://unpkg.com/leaflet@latest/dist/images/marker-icon.png',
     }),
   }),
   'LineString': new Style({
@@ -565,12 +559,6 @@ map.on('contextmenu', function(event) {
     routeMe(currentPostition, destinationCoordinate);
   }
 });
-
-// map.on('click', function(evt) {
-//   map.forEachFeatureAtPixel(evt.pixel, function (f) {
-//   console.log(f.get('name'));
-//   });
-// });
 
 // store time of last interaction
 map.on('pointerdrag', function() {
