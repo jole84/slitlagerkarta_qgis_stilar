@@ -9,7 +9,7 @@ import LineString from 'ol/geom/LineString';
 import Geolocation from 'ol/Geolocation.js';
 import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
-import {Stroke, Style, Icon, Circle, Fill} from 'ol/style.js';
+import {Stroke, Style, Icon} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
 // import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
@@ -37,7 +37,7 @@ const gpxStyle = {
   'Point': new Style({
     image: new Icon({
       anchor: [0.5, 1],
-      src: 'https://unpkg.com/leaflet@latest/dist/images/marker-icon.png',
+      src: 'https://jole84.se/default-marker.png',
     }),
   }),
   'LineString': new Style({
@@ -71,12 +71,6 @@ const trackStyle = {
     stroke: new Stroke({
       width: 10,
       color: [255, 0, 255, 0.5],
-    }),
-  }),
-  'icon': new Style({
-    image: new Icon({
-      anchor: [0.5, 1],
-      src: 'https://openlayers.org/en/main/examples/data/icon.png',
     }),
   }),
 };
@@ -347,14 +341,12 @@ geolocation.once('change', function() {
 });
 
 // switch map logic
-var enableLnt = false;
-if (window.location.href.split('?')[1] == 'Lnt') {
-  enableLnt = true;
-}
-// mapMode 0: slitlagerkarta
-// mapMode 1: slitlagerkarta_nedtonad
-// mapMode 2: slitlagerkarta_nedtonad + night mode
-// mapMode 3: orto
+var enableLnt = window.location.href.split('?').pop().split('&').includes('Lnt');
+// mapMode 0: slitlagerkarta_nedtonad
+// mapMode 1: slitlagerkarta_nedtonad + night mode
+// mapMode 2: orto
+// mapMode 3: topo
+// mapMode 4: slitlagerkarta
 var mapMode = 0;
 function switchMap() {
   var mapDiv = document.getElementById("map");
