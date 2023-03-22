@@ -9,7 +9,7 @@ import LineString from 'ol/geom/LineString';
 import Geolocation from 'ol/Geolocation.js';
 import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
-import {Stroke, Style, Icon} from 'ol/style.js';
+import {Stroke, Style, Icon, Fill, Text} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
 // import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
@@ -38,6 +38,19 @@ const gpxStyle = {
     image: new Icon({
       anchor: [0.5, 1],
       src: 'https://jole84.se/default-marker.png',
+    }),
+    text: new Text({
+      text: 'World Text',
+      font: 'bold 13px Arial,sans-serif',
+      textAlign: 'left',
+      offsetX: 10,
+      fill: new Fill({
+        color: '#aa3300',
+      }),
+      stroke: new Stroke({
+        color: 'white',
+        width: 4,
+      }),
     }),
   }),
   'LineString': new Style({
@@ -142,6 +155,7 @@ var topoweb = new TileLayer({
 var gpxLayer = new VectorLayer({
   source: new VectorSource(),
   style: function (feature) {
+    gpxStyle['Point'].getText().setText(feature.get('name'));
     return gpxStyle[feature.getGeometry().getType()];
   },
 });
