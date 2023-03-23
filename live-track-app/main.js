@@ -40,7 +40,6 @@ const gpxStyle = {
       src: 'https://jole84.se/default-marker.png',
     }),
     text: new Text({
-      text: 'World Text',
       font: 'bold 13px Arial,sans-serif',
       textAlign: 'left',
       offsetX: 10,
@@ -395,6 +394,7 @@ function switchMap() {
     slitlagerkarta_nedtonad.setVisible(false);
     if (enableLnt) {
       ortofoto.setVisible(true);
+      view.setZoom(view.getZoom() + 4);
       mapMode++;
     } else {
       slitlagerkarta.setVisible(true);
@@ -404,6 +404,7 @@ function switchMap() {
   
   else if (mapMode == 3) {
     ortofoto.setVisible(false);
+    view.setZoom(view.getZoom() - 4);
     topoweb.setVisible(true);
     mapMode++;
   }
