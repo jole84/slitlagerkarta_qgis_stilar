@@ -394,7 +394,7 @@ function switchMap() {
     slitlagerkarta_nedtonad.setVisible(false);
     if (enableLnt) {
       ortofoto.setVisible(true);
-      view.setZoom(view.getZoom() + 4);
+      // view.setZoom(view.getZoom() + 3);
       mapMode++;
     } else {
       slitlagerkarta.setVisible(true);
@@ -404,7 +404,7 @@ function switchMap() {
   
   else if (mapMode == 3) {
     ortofoto.setVisible(false);
-    view.setZoom(view.getZoom() - 4);
+    // view.setZoom(view.getZoom() - 3);
     topoweb.setVisible(true);
     mapMode++;
   }
