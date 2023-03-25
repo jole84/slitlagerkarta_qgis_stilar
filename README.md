@@ -37,7 +37,7 @@ EPSG:3857
 	sankmark
 	mark
 
-### Lagerordning VK nedtonad  
+### Lagerordning nedtonad vägkarta 
 	ATK
 	Stratväg_VIS_DK_O_90_P_ficka
 	Stratväg_VIS_DK_O_32_Rastplats
