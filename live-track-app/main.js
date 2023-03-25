@@ -489,24 +489,29 @@ function routeMe(startLonLat, endLonLat) {
         dataProjection: 'EPSG:4326',
         featureProjection: 'EPSG:3857'
       }).getGeometry();
-    
-      // console.log(result.features[0].properties.track-length);
-      // console.log(new Date(result.paths[0].time).toISOString().slice(11,19));
+
+      const trackLength = result.features[0].properties['track-length'] / 1000; // track-length in km
+      const totalTime = result.features[0].properties['total-time']; // track-time in seconds
+
+      const html = [
+        trackLength.toFixed(2) + " km",
+        new Date(totalTime * 1000).toISOString().slice(11,19)
+        ].join('<br />');
+      document.getElementById('info').innerHTML = html;
+
+      console.log(trackLength.toFixed(2) + " km");
+      console.log(new Date(totalTime * 1000).toISOString().slice(11,19));
 
       const routeFeature = new Feature({
         type: 'route',
         geometry: route,
-      });
-      const endMarker = new Feature({
-        type: 'icon',
-        geometry: new Point(route.getCoordinateAt(1)),
       });
 
       // remove previus route
       removeOld(routeLayer);
 
       // finally add route to map
-      routeLayer.getSource().addFeatures([routeFeature, endMarker]);
+      routeLayer.getSource().addFeature(routeFeature);
     });
   });
 }
