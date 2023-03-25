@@ -189,12 +189,11 @@ function removeOld(featureToRemove) {
   });
 }
 
-// fetch('https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/Jonkoping-Eksjo.gpx')
-var gpxFileUrl = window.location.href.split('?').pop().split('&');
-// console.log(gpxFileUrl);
-for (var i = 0; i < gpxFileUrl.length; i++){
-  if (gpxFileUrl[i].includes(".gpx")) {
-    fetch(gpxFileUrl[i])
+// loads gpx file from url "https://jole84.se/live-track/index.html?<filename>.gpx"
+var urlParams = window.location.href.split('?').pop().split('&');
+for (var i = 0; i < urlParams.length; i++){
+  if (urlParams[i].includes(".gpx")) {
+    fetch(urlParams[i])
     .then((response) => {
       return response.text();
     }).then((response) => {
