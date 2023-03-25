@@ -3,7 +3,6 @@
 # For use in QGIS internal python console
 
 layers_to_add = [
-    ["TET", "/home/johan/Karta/DIV/TET.gpkg"],
     ["ATK", "/home/johan/Karta/NVDB/ATK.gpkg"],
     ["textpunkt", "/home/johan/Karta/topografi50/text.gpkg"],
     ["textlinje", "/home/johan/Karta/topografi50/text.gpkg"],
