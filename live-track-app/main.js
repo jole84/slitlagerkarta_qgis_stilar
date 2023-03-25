@@ -189,23 +189,6 @@ function removeOld(featureToRemove) {
   });
 }
 
-// loads gpx file from url "https://jole84.se/live-track/index.html?<filename>.gpx"
-var urlParams = window.location.href.split('?').pop().split('&');
-for (var i = 0; i < urlParams.length; i++){
-  if (urlParams[i].includes(".gpx")) {
-    fetch(urlParams[i])
-    .then((response) => {
-      return response.text();
-    }).then((response) => {
-      var gpxFeatures = (new GPX()).readFeatures(response, {
-        dataProjection:'EPSG:4326',
-        featureProjection: 'EPSG:3857'
-      });
-      gpxLayer.getSource().addFeatures(gpxFeatures);
-    });
-  }
-}
-
 // gpx loader
 var gpxFormat = new GPX();
 var gpxFeatures;
@@ -216,6 +199,7 @@ function handleFileSelect(evt) {
   removeOld(gpxLayer);
   for (var i = 0; i < files.length; i++) {
     console.log(files[i]);
+    document.title = files[i].name;
     var reader = new FileReader();
     reader.readAsText(files[i], "UTF-8");
     reader.onload = function (evt) {
@@ -371,7 +355,6 @@ geolocation.once('change', function() {
 });
 
 // switch map logic
-var enableLnt = window.location.href.split('?').pop().split('&').includes('Lnt');
 // mapMode 0: slitlagerkarta_nedtonad
 // mapMode 1: slitlagerkarta_nedtonad + night mode
 // mapMode 2: orto
@@ -588,6 +571,29 @@ map.on('contextmenu', function(event) {
 map.on('pointerdrag', function() {
   lastInteraction = new Date();
 });
+
+// loads gpx file from url "https://jole84.se/live-track/index.html?../MC_rutter/<filename>.gpx"
+// var enableLnt = window.location.href.split('?').pop().split('&').includes('Lnt');
+var urlParams = window.location.href.split('?').pop().split('&');
+var enableLnt = urlParams.includes('Lnt');
+for (var i = 0; i < urlParams.length; i++){
+  console.log(urlParams[i]);
+  if (urlParams[i].includes(".gpx")) {
+    document.title = urlParams[i].split('/').pop();
+    fetch(urlParams[i])
+    .then((response) => {
+      return response.text();
+    }).then((response) => {
+      var gpxFeatures = (new GPX()).readFeatures(response, {
+        dataProjection:'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+      });
+      gpxLayer.getSource().addFeatures(gpxFeatures);
+    });
+  } else if (urlParams[i].includes("switchMap")) {
+    switchMap();
+  }
+}
 
 // add keyboard controls
 document.addEventListener('keydown', function(event) {
