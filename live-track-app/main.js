@@ -189,6 +189,24 @@ function removeOld(featureToRemove) {
   });
 }
 
+// fetch('https://filedn.eu/lBi7OlMJML8z9XgfydjnDsm/Jonkoping-Eksjo.gpx')
+var gpxFileUrl = window.location.href.split('?').pop().split('&');
+// console.log(gpxFileUrl);
+for (var i = 0; i < gpxFileUrl.length; i++){
+  if (gpxFileUrl[i].includes(".gpx")) {
+    fetch(gpxFileUrl[i])
+    .then((response) => {
+      return response.text();
+    }).then((response) => {
+      var gpxFeatures = (new GPX()).readFeatures(response, {
+        dataProjection:'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+      });
+      gpxLayer.getSource().addFeatures(gpxFeatures);
+    });
+  }
+}
+
 // gpx loader
 var gpxFormat = new GPX();
 var gpxFeatures;
