@@ -5,7 +5,6 @@ Stilar för slitlagerkartan till QGIS
 EPSG:3857
 
 ### Lagerordning topografi 50 slitlager
-	TET
 	ATK
 	textpunkt
 	textlinje
@@ -83,7 +82,7 @@ EPSG:3857
 	Rastplats
 	Parkeringsficka
 
-#### Render settings terrängkartan/slitlager:
+#### Renderingsinställningar terrängkartan/slitlager:
 	256  
 	JPG  
 	Minimum zoom 6  
@@ -110,11 +109,8 @@ EPSG:3857
 	9	6  
 
 #### Remove black tiles
-	find . -name "*.jpg" -type 'f' -size -1652c -delete
+	find . -name "*.jpg" -type 'f' -size -1654c -delete
 	find . -type d -empty -delete
-
-#### Set layer style by expression:
-	'/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/' + substr( @INPUT, 0, -37 ) + '.qml'
 
 #### Text size
 	array(125,
