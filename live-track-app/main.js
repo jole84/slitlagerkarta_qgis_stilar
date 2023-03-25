@@ -44,7 +44,7 @@ const gpxStyle = {
       textAlign: 'left',
       offsetX: 10,
       fill: new Fill({
-        color: '#aa3300',
+        color: '#b41412',
       }),
       stroke: new Stroke({
         color: 'white',
@@ -573,7 +573,6 @@ map.on('pointerdrag', function() {
 });
 
 // loads gpx file from url "https://jole84.se/live-track/index.html?../MC_rutter/<filename>.gpx"
-// var enableLnt = window.location.href.split('?').pop().split('&').includes('Lnt');
 var urlParams = window.location.href.split('?').pop().split('&');
 var enableLnt = urlParams.includes('Lnt');
 for (var i = 0; i < urlParams.length; i++){
