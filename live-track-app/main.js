@@ -4,14 +4,12 @@ import XYZ from 'ol/source/XYZ.js';
 import {fromLonLat, toLonLat} from 'ol/proj.js';
 import TileLayer from 'ol/layer/Tile.js';
 import Overlay from 'ol/Overlay.js';
-import Point from 'ol/geom/Point.js';
 import LineString from 'ol/geom/LineString';
 import Geolocation from 'ol/Geolocation.js';
 import VectorSource from 'ol/source/Vector.js';
 import GPX from 'ol/format/GPX.js';
 import {Stroke, Style, Icon, Fill, Text} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
-// import Polyline from 'ol/format/Polyline.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 const center = fromLonLat([14.18, 57.786]);
@@ -19,6 +17,7 @@ const defaultZoom = 13.7;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
+var extraInfo = "";
 var trackLog = [];
 document.getElementById("saveLogButton").onclick = saveLogButtonFunction;
 document.getElementById("centerButton").onclick = centerFunction;
@@ -93,7 +92,7 @@ var trackLine = new Feature({
 })
 
 var slitlagerkarta = new TileLayer({
-  preload: Infinity,
+//  preload: Infinity,
   source: new XYZ({
     url: 'https://jole84.se/slitlagerkarta/{z}/{x}/{y}.jpg',
       minZoom: 6,
@@ -102,7 +101,7 @@ var slitlagerkarta = new TileLayer({
 });
  
 var slitlagerkarta_nedtonad = new TileLayer({
-  preload: Infinity,
+//  preload: Infinity,
   source: new XYZ({
     url: 'https://jole84.se/slitlagerkarta_nedtonad/{z}/{x}/{y}.jpg',
       minZoom: 6,
@@ -183,6 +182,7 @@ const map = new Map({
   keyboardEventTarget: document,
 });
 
+// clear layer when new feature is added
 function removeOld(featureToRemove) {
   featureToRemove.getSource().getFeatures().forEach(function(layer) {
     featureToRemove.getSource().removeFeature(layer);
@@ -197,9 +197,11 @@ function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
   // remove previously loaded gpx files
   removeOld(gpxLayer);
+  var fileNames = [];
   for (var i = 0; i < files.length; i++) {
     console.log(files[i]);
     document.title = files[i].name;
+    fileNames.push(files[i].name);
     var reader = new FileReader();
     reader.readAsText(files[i], "UTF-8");
     reader.onload = function (evt) {
@@ -210,6 +212,7 @@ function handleFileSelect(evt) {
       gpxLayer.getSource().addFeatures(gpxFeatures);
     }
   }
+  setExtraInfo(fileNames);
   // reaquire wake lock again after file select
   acquireWakeLock();
 }
@@ -284,7 +287,8 @@ geolocation.on('change', function () {
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh',
+    extraInfo
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
@@ -394,7 +398,6 @@ function switchMap() {
     slitlagerkarta_nedtonad.setVisible(false);
     if (enableLnt) {
       ortofoto.setVisible(true);
-      // view.setZoom(view.getZoom() + 3);
       mapMode++;
     } else {
       slitlagerkarta.setVisible(true);
@@ -404,7 +407,6 @@ function switchMap() {
   
   else if (mapMode == 3) {
     ortofoto.setVisible(false);
-    // view.setZoom(view.getZoom() - 3);
     topoweb.setVisible(true);
     mapMode++;
   }
@@ -421,7 +423,7 @@ function saveLogButtonFunction() {
   if (trackLog.length > 5) {
     saveLog();
   } else {
-    document.getElementById('info').innerHTML = "zoomLevel: " + view.getZoom();
+    setExtraInfo(["zoomLevel: ", view.getZoom()]);
   }
 }
 
@@ -453,8 +455,17 @@ function saveLog() {
 </gpx>`;
 
   const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
+  setExtraInfo(["Sparar fil:", filename]);
   download(gpxFile, filename);
 }
+
+function setExtraInfo(infoText) {
+  extraInfo = infoText.join('<br />');
+  document.getElementById('info').innerHTML = extraInfo;
+  setTimeout(function() {
+    extraInfo = "";
+  }, 15000);
+};
 
 // Function to download data to a file
 function download(data, filename) {
@@ -493,14 +504,11 @@ function routeMe(startLonLat, endLonLat) {
       const trackLength = result.features[0].properties['track-length'] / 1000; // track-length in km
       const totalTime = result.features[0].properties['total-time']; // track-time in seconds
 
-      const html = [
-        trackLength.toFixed(2) + " km",
+      // add route information to info box
+      setExtraInfo([
+        trackLength.toFixed(2) + " km", 
         new Date(totalTime * 1000).toISOString().slice(11,19)
-        ].join('<br />');
-      document.getElementById('info').innerHTML = html;
-
-      console.log(trackLength.toFixed(2) + " km");
-      console.log(new Date(totalTime * 1000).toISOString().slice(11,19));
+      ]);
 
       const routeFeature = new Feature({
         type: 'route',
@@ -557,7 +565,7 @@ function routeMe(startLonLat, endLonLat) {
 // });
 // }
 
-// right clock/long press to route from current position to clicked
+// right click/long press to route from current position to clicked
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
@@ -584,6 +592,7 @@ for (var i = 0; i < urlParams.length; i++){
   console.log(urlParams[i]);
   if (urlParams[i].includes(".gpx")) {
     document.title = urlParams[i].split('/').pop();
+    setExtraInfo([urlParams[i].split('/').pop()]);
     fetch(urlParams[i])
     .then((response) => {
       return response.text();

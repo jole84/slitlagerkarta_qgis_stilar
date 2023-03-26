@@ -76,10 +76,6 @@
         if ('wakeLock' in navigator) {
           try {
             wakeLock = await navigator.wakeLock.request('screen');
-            console.log('Wake lock is activated.');
-            wakeLock.addEventListener('release', () => {
-              console.log('Wake Lock was released');
-            });
           } catch (err) {
             console.log(err);
           }
