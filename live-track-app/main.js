@@ -200,7 +200,6 @@ function handleFileSelect(evt) {
   var fileNames = [];
   for (var i = 0; i < files.length; i++) {
     console.log(files[i]);
-    document.title = files[i].name;
     fileNames.push(files[i].name);
     var reader = new FileReader();
     reader.readAsText(files[i], "UTF-8");
@@ -212,6 +211,7 @@ function handleFileSelect(evt) {
       gpxLayer.getSource().addFeatures(gpxFeatures);
     }
   }
+  document.title = fileNames[fileNames.length-1];
   setExtraInfo(fileNames);
   // reaquire wake lock again after file select
   acquireWakeLock();
@@ -585,7 +585,8 @@ map.on('pointerdrag', function() {
   lastInteraction = new Date();
 });
 
-// loads gpx file from url "https://jole84.se/live-track/index.html?../MC_rutter/<filename>.gpx"
+// checks url parameters and loads gpx file from url:
+// "https://jole84.se/live-track/index.html?../MC_rutter/<filename>.gpx"
 var urlParams = window.location.href.split('?').pop().split('&');
 var enableLnt = urlParams.includes('Lnt');
 for (var i = 0; i < urlParams.length; i++){
