@@ -13,7 +13,7 @@ import {Vector as VectorLayer} from 'ol/layer.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 const center = fromLonLat([14.18, 57.786]);
-const defaultZoom = 13.7;
+const defaultZoom = 14;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
@@ -53,14 +53,14 @@ const gpxStyle = {
   }),
   'LineString': new Style({
     stroke: new Stroke({
-      color: [0, 0, 255, 0.5],
-      width: 10,
+      color: [0, 0, 255, 0.6],
+      width: 11,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: [0, 0, 255, 0.5],
-      width: 10,
+      color: [0, 0, 255, 0.6],
+      width: 11,
     }),
   }),
 };
@@ -68,20 +68,20 @@ const gpxStyle = {
 const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.5],
+      color: [255, 0, 0, 0.6],
       width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.5],
+      color: [255, 0, 0, 0.6],
       width: 10,
     }),
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 10,
-      color: [255, 0, 255, 0.5],
+      width: 11,
+      color: [255, 0, 255, 0.6],
     }),
   }),
 };
