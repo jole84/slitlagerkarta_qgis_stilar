@@ -13,7 +13,7 @@ import {Vector as VectorLayer} from 'ol/layer.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 const center = fromLonLat([14.18, 57.786]);
-const defaultZoom = 14;
+var defaultZoom = 14;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
@@ -606,6 +606,8 @@ for (var i = 0; i < urlParams.length; i++){
     });
   } else if (urlParams[i].includes("switchMap")) {
     switchMap();
+  } else if (urlParams[i].includes("zoom=")) {
+    defaultZoom = urlParams[i].split('=').pop();
   }
 }
 
