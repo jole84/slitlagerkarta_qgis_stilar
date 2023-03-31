@@ -54,13 +54,13 @@ const gpxStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.6],
-      width: 11,
+      width: 12,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.6],
-      width: 11,
+      width: 12,
     }),
   }),
 };
@@ -68,19 +68,19 @@ const gpxStyle = {
 const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.6],
+      color: [255, 0, 0, 0.8],
       width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
-      color: [255, 0, 0, 0.6],
+      color: [255, 0, 0, 0.8],
       width: 10,
     }),
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 11,
+      width: 12,
       color: [255, 0, 255, 0.6],
     }),
   }),
@@ -592,13 +592,16 @@ var enableLnt = urlParams.includes('Lnt');
 for (var i = 0; i < urlParams.length; i++){
   console.log(urlParams[i]);
   if (urlParams[i].includes(".gpx")) {
+    if (!urlParams[i].includes("http")){
+      urlParams[i] = "https://jole84.se/rutter/" + urlParams[i];
+    };
     document.title = urlParams[i].split('/').pop();
     setExtraInfo([urlParams[i].split('/').pop()]);
     fetch(urlParams[i])
     .then((response) => {
       return response.text();
     }).then((response) => {
-      var gpxFeatures = (new GPX()).readFeatures(response, {
+      var gpxFeatures = new GPX().readFeatures(response, {
         dataProjection:'EPSG:4326',
         featureProjection: 'EPSG:3857'
       });
