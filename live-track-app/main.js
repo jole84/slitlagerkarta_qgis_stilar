@@ -506,8 +506,9 @@ function routeMe(startLonLat, endLonLat) {
 
       // add route information to info box
       setExtraInfo([
-        trackLength.toFixed(2) + " km", 
-        new Date(totalTime * 1000).toISOString().slice(11,19)
+        "Avstånd: " + trackLength.toFixed(2) + " km", 
+        "Restid: " + new Date(totalTime * 1000).toISOString().slice(11,19),
+        "Ankomsttid: " + new Date(new Date().valueOf() + (totalTime * 1000)).toString().slice(16,25)
       ]);
 
       const routeFeature = new Feature({
