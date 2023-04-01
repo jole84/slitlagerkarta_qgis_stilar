@@ -423,7 +423,7 @@ function saveLogButtonFunction() {
   if (trackLog.length > 5) {
     saveLog();
   } else {
-    setExtraInfo(["zoomLevel: ", view.getZoom()]);
+    setExtraInfo(["zoomLevel: " + view.getZoom()]);
   }
 }
 
@@ -464,7 +464,7 @@ function setExtraInfo(infoText) {
   document.getElementById('info').innerHTML = extraInfo;
   setTimeout(function() {
     extraInfo = "";
-  }, 15000);
+  }, 30000);
 };
 
 // Function to download data to a file
@@ -595,10 +595,12 @@ for (var i = 0; i < urlParams.length; i++){
     if (!urlParams[i].includes("http")){
       urlParams[i] = "https://jole84.se/rutter/" + urlParams[i];
     };
-    document.title = urlParams[i].split('/').pop();
-    setExtraInfo([urlParams[i].split('/').pop()]);
+    var titleString = decodeURIComponent(urlParams[i].split('/').pop());
+    document.title = titleString;
+    setExtraInfo([titleString]);
     fetch(urlParams[i])
     .then((response) => {
+      console.log(response);
       return response.text();
     }).then((response) => {
       var gpxFeatures = new GPX().readFeatures(response, {
