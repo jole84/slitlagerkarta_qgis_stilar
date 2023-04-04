@@ -69,13 +69,13 @@ const trackStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [255, 0, 0, 0.8],
-      width: 10,
+      width: 6,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [255, 0, 0, 0.8],
-      width: 10,
+      width: 6,
     }),
   }),
   'route': new Style({
