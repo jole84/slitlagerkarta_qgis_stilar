@@ -366,7 +366,7 @@ geolocation.once('change', function() {
 var mapMode = 0;
 function switchMap() {
   var mapDiv = document.getElementById("map");
-  var infoDiv = document.getElementById("info");
+  var infoDiv = document.getElementById("infoGroup");
   var centerButton = document.getElementById("centerButton");
   var saveLogButton = document.getElementById("saveLogButton");
   var switchMapButton = document.getElementById("switchMapButton");
@@ -458,17 +458,15 @@ function saveLog() {
   download(gpxFile, filename);
 }
 
+var timeOut; // create timeout variable so it can be cleared
 function setExtraInfo(infoText) {
+  window.clearTimeout(timeOut);
   var extraInfo = infoText.join('<br />');
   document.getElementById('info2').innerHTML = extraInfo;
-  clearExtraInfo();
-};
-
-function clearExtraInfo() {
-  setTimeout(function() {
+  timeOut = setTimeout(function() {
     document.getElementById('info2').innerHTML = "";
   }, 30000);
-}
+};
 
 // Function to download data to a file
 function download(data, filename) {
