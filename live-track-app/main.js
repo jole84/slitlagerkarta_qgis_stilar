@@ -17,7 +17,6 @@ var defaultZoom = 14;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
-var extraInfo = "";
 var trackLog = [];
 document.getElementById("saveLogButton").onclick = saveLogButtonFunction;
 document.getElementById("centerButton").onclick = centerFunction;
@@ -287,8 +286,7 @@ geolocation.on('change', function () {
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh',
-    extraInfo
+    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
@@ -296,6 +294,7 @@ geolocation.on('change', function () {
 // alert user if geolocation fails
 geolocation.on('error', function () {
   alert('Aktivera platsjänster för att se din position på kartan!');
+  document.getElementById('info').innerHTML = "? &#128543"; // sadface
 });
 
 // Geolocation marker
@@ -460,12 +459,16 @@ function saveLog() {
 }
 
 function setExtraInfo(infoText) {
-  extraInfo = infoText.join('<br />');
-  document.getElementById('info').innerHTML = extraInfo;
-  setTimeout(function() {
-    extraInfo = "";
-  }, 30000);
+  var extraInfo = infoText.join('<br />');
+  document.getElementById('info2').innerHTML = extraInfo;
+  clearExtraInfo();
 };
+
+function clearExtraInfo() {
+  setTimeout(function() {
+    document.getElementById('info2').innerHTML = "";
+  }, 30000);
+}
 
 // Function to download data to a file
 function download(data, filename) {
@@ -573,6 +576,7 @@ map.on('contextmenu', function(event) {
   // if click less than 0.2km from current position clear route else start route
   if (getDistanceFromLatLonInKm(currentPostition, destinationCoordinate) < 0.2) {
     removeOld(routeLayer);
+    setExtraInfo([getDistanceFromLatLonInKm(currentPostition, destinationCoordinate).toFixed(3)*1000 + " m"]);
   }else {
     routeMe(currentPostition, destinationCoordinate);
   }
