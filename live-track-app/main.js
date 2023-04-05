@@ -570,11 +570,8 @@ function routeMe(startLonLat, endLonLat) {
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
-  // if click near current position clear route else start route
-  if (
-      currentPostition[0].toFixed(2) == destinationCoordinate[0].toFixed(2) && 
-      currentPostition[1].toFixed(2) == destinationCoordinate[1].toFixed(2)
-    ) {
+  // if click less than 0.2km from current position clear route else start route
+  if (getDistanceFromLatLonInKm(currentPostition, destinationCoordinate) < 0.2) {
     removeOld(routeLayer);
   }else {
     routeMe(currentPostition, destinationCoordinate);
