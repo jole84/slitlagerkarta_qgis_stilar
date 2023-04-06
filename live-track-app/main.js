@@ -13,11 +13,14 @@ import {Vector as VectorLayer} from 'ol/layer.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
 const center = fromLonLat([14.18, 57.786]);
+const documentTitle = "Live-track";
+document.title = documentTitle;
 var defaultZoom = 14;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
 const startTime = new Date();
 var trackLog = [];
+var maxSpeed = 0;
 document.getElementById("saveLogButton").onclick = saveLogButtonFunction;
 document.getElementById("centerButton").onclick = centerFunction;
 document.getElementById('switchMapButton').onclick = switchMap;
@@ -210,7 +213,7 @@ function handleFileSelect(evt) {
       gpxLayer.getSource().addFeatures(gpxFeatures);
     }
   }
-  document.title = fileNames[fileNames.length-1];
+  document.title = fileNames[fileNames.length-1] || documentTitle;
   setExtraInfo(fileNames);
   // reaquire wake lock again after file select
   acquireWakeLock();
@@ -254,13 +257,13 @@ geolocation.on('change', function () {
   const position = geolocation.getPosition();
   const accuracy = geolocation.getAccuracy();
   const heading = geolocation.getHeading() || 0;
-  const speed = geolocation.getSpeed() || 0;
+  const speed = geolocation.getSpeed() * 3.6 || 0;
   const altitude = geolocation.getAltitude() || 0;
   const lonlat = toLonLat(position);
   const currentTime = new Date();
   marker.setPosition(position); // move marker to current location
 
-  if (speed > 1) {
+  if (speed > 3.6) {
     // change view if no interaction occurred last 5 seconds
     if (currentTime - lastInteraction > 5000) {
       updateView(position, heading);
@@ -281,12 +284,16 @@ geolocation.on('change', function () {
     trackLog.push([lonlat[0].toFixed(6), lonlat[1].toFixed(6), altitude.toFixed(2), currentTime]);
     line.appendCoordinate(position);
   }
-  
+
+  if (speed > maxSpeed) {
+    maxSpeed = Math.floor(speed);
+  }
+
   // send text to info box
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    (speed * 3.6).toFixed(1) + ' km/h / ' + Math.round(altitude) + ' möh'
+    speed.toFixed(1) + ' (' + maxSpeed + ') km/h'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
