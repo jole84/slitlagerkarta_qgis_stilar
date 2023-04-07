@@ -337,6 +337,7 @@ function getCenterWithHeading(position, rotation) {
 // center map function
 function centerFunction() {
   const position = (geolocation.getPosition() || center);
+  const heading = geolocation.getHeading() || 0;
   const speed = (geolocation.getSpeed() || 0)
   const duration = 500;
   if (speed > 1){
@@ -344,6 +345,8 @@ function centerFunction() {
     if (new Date() - lastInteraction < 5000) {
       view.setRotation(0);
       lastInteraction = new Date();
+    } else {
+      updateView(position, heading);
     }
   } else {
     view.animate({
