@@ -224,6 +224,15 @@ function degToRad(deg) {
   return (deg * Math.PI * 2) / 360;
 }
 
+// milliseconds to HH:MM:SS
+function toHHMMSS(milliSecondsInt) {
+  var dateObj = new Date(milliSecondsInt);
+  var hours   = dateObj.getUTCHours().toString().padStart(2, '0');
+  var minutes = dateObj.getUTCMinutes().toString().padStart(2, '0');
+  var seconds = dateObj.getSeconds().toString().padStart(2, '0');
+  return hours+':'+minutes+':'+seconds;
+}
+
 // calculate distance between two positions
 function getDistanceFromLatLonInKm([lon1, lat1], [lon2, lat2]) {
   var R = 6371; // Radius of the earth in km
@@ -438,11 +447,11 @@ function saveLog() {
   let gpxFile = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="jole84 webapp">
 <metadata>
-    <desc>GPX log from jole84 webapp</desc>
+    <desc>GPX log created by jole84 webapp</desc>
     <time>${startTime.toISOString()}</time>
 </metadata>
 <trk>
-<name>${startTime.toLocaleString()}</name>
+<name>${startTime.toLocaleString()}, max ${maxSpeed.toFixed(1)} km/h, total ${distanceTraveled.toFixed(2)} km, ${toHHMMSS(new Date() - startTime)}</name>
 <trkseg>`;
 
   for (let i = 0; i < trackLog.length; i++){
@@ -460,7 +469,7 @@ function saveLog() {
 </trk>
 </gpx>`;
 
-  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '-') + '.gpx';
+  const filename = startTime.toLocaleString().replace(/ /g, '_').replace(/:/g, '.') + '.gpx';
   setExtraInfo(["Sparar fil:", filename]);
   download(gpxFile, filename);
 }
@@ -510,13 +519,13 @@ function routeMe(startLonLat, endLonLat) {
       }).getGeometry();
 
       const trackLength = result.features[0].properties['track-length'] / 1000; // track-length in km
-      const totalTime = result.features[0].properties['total-time']; // track-time in seconds
+      const totalTime = result.features[0].properties['total-time'] * 1000; // track-time in milliseconds
 
       // add route information to info box
       setExtraInfo([
         "Avstånd: " + trackLength.toFixed(2) + " km", 
-        "Restid: " + new Date(totalTime * 1000).toISOString().slice(11,19),
-        "Ankomsttid: " + new Date(new Date().valueOf() + (totalTime * 1000)).toString().slice(16,25)
+        "Restid: " + toHHMMSS(totalTime),
+        "Ankomsttid: " + new Date(new Date().valueOf() + totalTime).toString().slice(16,25)
       ]);
 
       const routeFeature = new Feature({
