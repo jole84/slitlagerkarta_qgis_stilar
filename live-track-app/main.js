@@ -336,9 +336,9 @@ function getCenterWithHeading(position, rotation) {
 
 // center map function
 function centerFunction() {
-  const position = (geolocation.getPosition() || center);
+  const position = geolocation.getPosition() || center;
   const heading = geolocation.getHeading() || 0;
-  const speed = (geolocation.getSpeed() || 0)
+  const speed = geolocation.getSpeed() || 0;
   const duration = 500;
   if (speed > 1){
     view.setZoom(defaultZoom);
@@ -609,7 +609,7 @@ map.on('pointerdrag', function() {
 var urlParams = window.location.href.split('?').pop().split('&');
 var enableLnt = urlParams.includes('Lnt');
 for (var i = 0; i < urlParams.length; i++){
-  console.log(urlParams[i]);
+  console.log(decodeURIComponent(urlParams[i]));
   if (urlParams[i].includes(".gpx")) {
     if (!urlParams[i].includes("http")){
       urlParams[i] = "https://jole84.se/rutter/" + urlParams[i];
