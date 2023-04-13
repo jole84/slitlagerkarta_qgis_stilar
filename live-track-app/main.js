@@ -12,7 +12,7 @@ import {Stroke, Style, Icon, Fill, Text} from 'ol/style.js';
 import {Vector as VectorLayer} from 'ol/layer.js';
 import TileWMS from 'ol/source/TileWMS.js';
 
-const center = fromLonLat([14.18, 57.786]);
+var center = fromLonLat([14.18, 57.786]);
 const documentTitle = "Live-track";
 document.title = documentTitle;
 var defaultZoom = 14;
@@ -547,6 +547,7 @@ function routeMe(startLonLat, endLonLat) {
 
 // graphhopper routing
 // const api_key = '89fef6e4-250b-400c-8e85-1ab9107f84a8'; // graphhopper api key
+// import Polyline from 'ol/format/Polyline.js';
 // function routeMe(startLonLat, endLonLat) {
 //   fetch('https://graphhopper.com/api/1/route' +
 //   '?point=' + startLonLat.slice().reverse().join(',') +
@@ -572,16 +573,12 @@ function routeMe(startLonLat, endLonLat) {
 //       type: 'route',
 //       geometry: route,
 //     });
-//     const endMarker = new Feature({
-//       type: 'icon',
-//       geometry: new Point(route.getCoordinateAt(1)),
-//     });
 
 //     // remove previus route
 //     removeOld(routeLayer);
 
 //     // finally add route to map
-//     routeLayer.getSource().addFeatures([routeFeature, endMarker]);
+//     routeLayer.getSource().addFeature(routeFeature);
 //   });
 // });
 // }
@@ -590,6 +587,7 @@ function routeMe(startLonLat, endLonLat) {
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
+  lastInteraction = new Date();
   // if click less than 0.2km from current position clear route else start route
   if (getDistanceFromLatLonInKm(currentPostition, destinationCoordinate) < 0.2) {
     removeOld(routeLayer);
