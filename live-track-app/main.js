@@ -590,6 +590,8 @@ function routeMe(startLonLat, endLonLat) {
 map.on('contextmenu', function(event) {
   var currentPostition = toLonLat(geolocation.getPosition());
   var destinationCoordinate = toLonLat(event.coordinate);
+  console.log(destinationCoordinate[1]);
+  console.log(destinationCoordinate[0]);
   lastInteraction = new Date();
   // if click less than 0.2km from current position clear route else start route
   if (getDistanceFromLatLonInKm(currentPostition, destinationCoordinate) < 0.2) {
