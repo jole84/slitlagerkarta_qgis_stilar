@@ -441,7 +441,10 @@ function saveLogButtonFunction() {
   if (trackLog.length > 5) {
     saveLog();
   } else {
-    setExtraInfo(["zoomLevel: " + view.getZoom()]);
+    setExtraInfo([
+      "zoomLevel = " + view.getZoom(),
+      "trackLog.length = " + trackLog.length
+    ]);
   }
 }
 
@@ -450,8 +453,8 @@ function saveLog() {
   let gpxFile = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gpx version="1.1" creator="jole84 webapp">
 <metadata>
-    <desc>GPX log created by jole84 webapp</desc>
-    <time>${startTime.toISOString()}</time>
+  <desc>GPX log created by jole84 webapp</desc>
+  <time>${startTime.toISOString()}</time>
 </metadata>
 <trk>
 <name>${startTime.toLocaleString()}, max ${maxSpeed.toFixed(1)} km/h, total ${distanceTraveled.toFixed(2)} km, ${toHHMMSS(new Date() - startTime)}</name>
