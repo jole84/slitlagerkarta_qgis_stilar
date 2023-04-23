@@ -617,8 +617,8 @@ for (var i = 0; i < urlParams.length; i++){
     if (!urlParams[i].includes("http")){
       urlParams[i] = "https://jole84.se/rutter/" + urlParams[i];
     };
-    var titleString = documentTitle + " - " + decodeURIComponent(urlParams[i].split('/').pop());
-    document.title = titleString;
+    var titleString = decodeURIComponent(urlParams[i].split('/').pop());
+    document.title = documentTitle + " - " + titleString;
     setExtraInfo([titleString]);
     fetch(urlParams[i])
     .then((response) => {
