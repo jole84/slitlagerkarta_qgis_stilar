@@ -443,7 +443,8 @@ function saveLogButtonFunction() {
   } else {
     setExtraInfo([
       "zoomLevel = " + view.getZoom(),
-      "trackLog.length = " + trackLog.length
+      "trackLog.length = " + trackLog.length,
+      "Spår för kort!"
     ]);
   }
 }
@@ -547,44 +548,6 @@ function routeMe(startLonLat, endLonLat) {
     });
   });
 }
-
-// graphhopper routing
-// const api_key = '89fef6e4-250b-400c-8e85-1ab9107f84a8'; // graphhopper api key
-// import Polyline from 'ol/format/Polyline.js';
-// function routeMe(startLonLat, endLonLat) {
-//   fetch('https://graphhopper.com/api/1/route' +
-//   '?point=' + startLonLat.slice().reverse().join(',') +
-//   '&point=' + endLonLat.slice().reverse().join(',') +
-//   '&type=json&locale=sv-SE&key=' + api_key +
-//   '&elevation=true&profile=car'
-// ).then(function (response) {
-//   response.json().then(function (result) {
-//     const polyline = result.paths[0].points;
-
-//     console.log((result.paths[0].distance / 1000).toFixed(2) + " km");
-//     console.log(new Date(result.paths[0].time).toISOString().slice(11,19));
-
-//     const route = new Polyline({
-//       factor: 1e5,
-//       geometryLayout: 'XYZ'
-//     }).readGeometry(polyline, {
-//       dataProjection: 'EPSG:4326',
-//       featureProjection: 'EPSG:3857',
-//     });
-
-//     const routeFeature = new Feature({
-//       type: 'route',
-//       geometry: route,
-//     });
-
-//     // remove previus route
-//     removeOld(routeLayer);
-
-//     // finally add route to map
-//     routeLayer.getSource().addFeature(routeFeature);
-//   });
-// });
-// }
 
 // right click/long press to route from current position to clicked
 map.on('contextmenu', function(event) {
