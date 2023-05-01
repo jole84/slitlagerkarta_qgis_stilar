@@ -56,13 +56,13 @@ const gpxStyle = {
   'LineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.6],
-      width: 12,
+      width: 10,
     }),
   }),
   'MultiLineString': new Style({
     stroke: new Stroke({
       color: [0, 0, 255, 0.6],
-      width: 12,
+      width: 10,
     }),
   }),
 };
@@ -82,7 +82,7 @@ const trackStyle = {
   }),
   'route': new Style({
     stroke: new Stroke({
-      width: 12,
+      width: 10,
       color: [255, 0, 255, 0.6],
     }),
   }),
