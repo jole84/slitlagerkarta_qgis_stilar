@@ -598,6 +598,9 @@ for (var i = 0; i < urlParams.length; i++){
     switchMap();
   } else if (urlParams[i].includes("zoom=")) {
     defaultZoom = urlParams[i].split('=').pop();
+  } else if (urlParams[i].includes("info=")) {
+    var preferredFontSize = urlParams[i].split('=').pop();
+    document.getElementById("infoGroup").style.fontSize = preferredFontSize;
   }
 }
 
