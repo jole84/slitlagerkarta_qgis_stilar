@@ -302,7 +302,7 @@ geolocation.on('change', function () {
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    speed.toFixed(1) + ' (' + maxSpeed + ') km/h'
+    speed.toFixed(1) + ' (<font style="color:#e60000;">' + maxSpeed + '</font>) km/h'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
@@ -398,7 +398,7 @@ function switchMap() {
   
   else if (mapMode == 1) {
     mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);");
-    infoDiv.setAttribute(           "style", "filter: invert(1);background: rgba(251, 251, 251, 0.8);");
+    infoDiv.setAttribute(           "style", "filter: invert(1) hue-rotate(180deg);background: rgba(251, 251, 251, 0.9);");
     centerButton.setAttribute(      "style", "filter: brightness(65%)");
     saveLogButton.setAttribute(     "style", "filter: brightness(65%)");
     switchMapButton.setAttribute(   "style", "filter: brightness(65%)");
@@ -408,7 +408,7 @@ function switchMap() {
   
   else if (mapMode == 2) {
     mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;background-color: initial;");
-    infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.8);");
+    infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.9);");
     centerButton.setAttribute(      "style", "filter: initial");
     saveLogButton.setAttribute(     "style", "filter: initial");
     switchMapButton.setAttribute(   "style", "filter: initial");
