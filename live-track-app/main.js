@@ -210,6 +210,16 @@ function handleFileSelect(evt) {
         dataProjection:'EPSG:4326',
         featureProjection:'EPSG:3857'
       });
+      if (files.length > 1) { // set random color if more than one file is loaded
+        gpxFeatures.forEach(f => {
+          f.setStyle(new Style({
+              stroke: new Stroke({
+                  color: [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.6],
+                  width: 10
+              })
+          }))
+        });
+      };
       gpxLayer.getSource().addFeatures(gpxFeatures);
     }
   }
