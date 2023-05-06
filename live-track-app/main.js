@@ -58,23 +58,12 @@ const gpxStyle = {
       color: [0, 0, 255, 0.6],
       width: 10,
     }),
-  }),
-  'MultiLineString': new Style({
-    stroke: new Stroke({
-      color: [0, 0, 255, 0.6],
-      width: 10,
-    }),
-  }),
+  })
 };
+gpxStyle['MultiLineString'] = gpxStyle['LineString'];
 
 const trackStyle = {
   'LineString': new Style({
-    stroke: new Stroke({
-      color: [255, 0, 0, 0.8],
-      width: 6,
-    }),
-  }),
-  'MultiLineString': new Style({
     stroke: new Stroke({
       color: [255, 0, 0, 0.8],
       width: 6,
@@ -87,6 +76,7 @@ const trackStyle = {
     }),
   }),
 };
+trackStyle['MultiLineString'] = trackStyle['LineString'];
 
 var line = new LineString([]);
 var trackLine = new Feature({
