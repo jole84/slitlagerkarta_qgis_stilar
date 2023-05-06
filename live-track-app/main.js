@@ -214,7 +214,7 @@ function handleFileSelect(evt) {
         gpxFeatures.forEach(f => {
           f.setStyle(new Style({
               stroke: new Stroke({
-                  color: [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.6],
+                  color: [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.8],
                   width: 10
               })
           }))
