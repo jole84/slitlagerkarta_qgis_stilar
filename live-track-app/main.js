@@ -606,6 +606,7 @@ for (var i = 0; i < urlParams.length; i++){
 
 // add keyboard controls
 document.addEventListener('keydown', function(event) {
+  const zoomStep = 0.2;
   if (event.key != 'a' && event.key != 'Escape') { // store time of last interaction
     lastInteraction = new Date();
   }
@@ -625,9 +626,9 @@ document.addEventListener('keydown', function(event) {
     saveLogButtonFunction();
   }
   if (event.key == 'Escape') { // carpe iter adventure controller minus button
-    view.adjustZoom(-1);
+    view.adjustZoom(-zoomStep);
   }
   if (event.key == 'a') { // carpe iter adventure controller plus button
-    view.adjustZoom(1);
+    view.adjustZoom(zoomStep);
   }
 });
