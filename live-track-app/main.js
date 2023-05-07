@@ -208,8 +208,6 @@ function handleFileSelect(evt) {
       //         width: 10
       //       }),
       //     }));
-      //     console.log(f.getStyle());
-      //     console.log(gpxStyle);
       //     f.getStyle().getText().setText(f.get('name'));
       //   });
       // };
