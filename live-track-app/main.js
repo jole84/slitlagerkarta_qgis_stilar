@@ -203,11 +203,14 @@ function handleFileSelect(evt) {
       // if (files.length > 1) { // set random color if more than one file is loaded
       //   gpxFeatures.forEach(f => {
       //     f.setStyle(new Style({
-      //         stroke: new Stroke({
-      //             color: [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.8],
-      //             width: 10
-      //         }),
-      //     }))
+      //       stroke: new Stroke({
+      //         color: [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.8],
+      //         width: 10
+      //       }),
+      //     }));
+      //     console.log(f.getStyle());
+      //     console.log(gpxStyle);
+      //     f.getStyle().getText().setText(f.get('name'));
       //   });
       // };
       gpxLayer.getSource().addFeatures(gpxFeatures);
