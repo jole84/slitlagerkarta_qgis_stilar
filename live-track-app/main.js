@@ -18,6 +18,7 @@ document.title = documentTitle;
 var defaultZoom = 14;
 let distanceTraveled = 0;
 var lastInteraction = new Date();
+var preferredFontSize;
 const startTime = new Date();
 var trackLog = [];
 var maxSpeed = 0;
@@ -399,7 +400,7 @@ function switchMap() {
   
   else if (mapMode == 1) {
     mapDiv.setAttribute(            "style", "filter: invert(1) hue-rotate(180deg);");
-    infoDiv.setAttribute(           "style", "filter: invert(1) hue-rotate(180deg);background: rgba(251, 251, 251, 0.9);");
+    infoDiv.setAttribute(           "style", "filter: invert(1) hue-rotate(180deg);background: rgba(251, 251, 251, 0.8);");
     centerButton.setAttribute(      "style", "filter: brightness(65%)");
     saveLogButton.setAttribute(     "style", "filter: brightness(65%)");
     switchMapButton.setAttribute(   "style", "filter: brightness(65%)");
@@ -409,7 +410,7 @@ function switchMap() {
   
   else if (mapMode == 2) {
     mapDiv.setAttribute(            "style", "-webkit-filter: initial;filter: initial;background-color: initial;");
-    infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.9);");
+    infoDiv.setAttribute(           "style", "-webkit-filter: initial;filter: initial;background: rgba(251, 251, 251, 0.6);");
     centerButton.setAttribute(      "style", "filter: initial");
     saveLogButton.setAttribute(     "style", "filter: initial");
     switchMapButton.setAttribute(   "style", "filter: initial");
@@ -435,6 +436,7 @@ function switchMap() {
     slitlagerkarta.setVisible(true);
     mapMode = 0;
   }
+  infoDiv.style.fontSize = preferredFontSize;
 };
 
 // logic for saveLogButton
@@ -600,7 +602,7 @@ for (var i = 0; i < urlParams.length; i++){
   } else if (urlParams[i].includes("zoom=")) {
     defaultZoom = urlParams[i].split('=').pop();
   } else if (urlParams[i].includes("info=")) {
-    var preferredFontSize = urlParams[i].split('=').pop();
+    preferredFontSize = urlParams[i].split('=').pop();
     document.getElementById("infoGroup").style.fontSize = preferredFontSize;
   }
 }
