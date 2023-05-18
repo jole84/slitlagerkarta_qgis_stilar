@@ -558,6 +558,7 @@ map.on('contextmenu', function(event) {
   var destinationCoordinate = toLonLat(event.coordinate);
   console.log(destinationCoordinate[1]);
   console.log(destinationCoordinate[0]);
+  console.log(getDistanceFromLatLonInKm(currentPostition, destinationCoordinate).toFixed(3)*1000 + " m");
   lastInteraction = new Date();
   // if click less than 0.2km from current position clear route else start route
   if (getDistanceFromLatLonInKm(currentPostition, destinationCoordinate) < 0.2) {
