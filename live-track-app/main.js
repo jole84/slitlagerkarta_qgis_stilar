@@ -301,10 +301,11 @@ geolocation.on('change', function () {
   }
 
   // send text to info box
+  // style="font-size:120%"
   const html = [
     lonlat[1].toFixed(5) + ', ' + lonlat[0].toFixed(5),
     distanceTraveled.toFixed(2) + ' km / ' + Math.round(accuracy) + ' m',
-    speed.toFixed(1) + ' (<font style="color:#e60000;">' + maxSpeed + '</font>) km/h'
+    '<b style="font-size:120%">' + speed.toFixed(1) + '</b> (<font style="color:#e60000;">' + maxSpeed + '</font>) km/h'
   ].join('<br />');
   document.getElementById('info').innerHTML = html;
 });
