@@ -606,6 +606,10 @@ for (var i = 0; i < urlParams.length; i++){
   } else if (urlParams[i].includes("info=")) {
     preferredFontSize = urlParams[i].split('=').pop();
     document.getElementById("infoGroup").style.fontSize = preferredFontSize;
+  } else if (urlParams[i].includes("onunload")) {
+    window.onunload = window.onbeforeunload = function() {
+      return "";
+    };
   }
 }
 
