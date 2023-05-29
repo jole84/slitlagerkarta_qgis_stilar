@@ -536,7 +536,9 @@ function routeMe(startLonLat, endLonLat) {
       setExtraInfo([
         "Avstånd: " + trackLength.toFixed(2) + " km", 
         "Restid: " + toHHMMSS(totalTime),
-        "Ankomsttid: " + new Date(new Date().valueOf() + totalTime).toString().slice(16,25)
+        "Ankomsttid: " + new Date(new Date().valueOf() + totalTime).toString().slice(16,25),
+        `<a href="http://maps.google.com/maps?q=${endLonLat[1]},${endLonLat[0]}" target="_blank">Gmap</a>`,
+        `<a href="http://maps.google.com/maps?layer=c&cbll=${endLonLat[1]},${endLonLat[0]}" target="_blank">Streetview</a>`
       ]);
 
       const routeFeature = new Feature({
