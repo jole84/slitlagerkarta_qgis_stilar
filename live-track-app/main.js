@@ -1,4 +1,3 @@
-import './style.css';
 import {Feature, Map, View} from 'ol';
 import XYZ from 'ol/source/XYZ.js';
 import {fromLonLat, toLonLat} from 'ol/proj.js';
