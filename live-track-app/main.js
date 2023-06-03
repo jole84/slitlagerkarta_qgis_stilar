@@ -16,7 +16,7 @@ const documentTitle = "Live-track";
 document.title = documentTitle;
 var defaultZoom = 14;
 let distanceTraveled = 0;
-var lastInteraction = new Date();
+var lastInteraction = new Date() - 5000;
 var preferredFontSize;
 const startTime = new Date();
 var trackLog = [];
