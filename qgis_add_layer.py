@@ -5,6 +5,7 @@
 layers_to_add = [
     ["ATK", "/home/johan/Karta/NVDB/ATK.gpkg"],
     ["textpunkt", "/home/johan/Karta/topografi50/text.gpkg"],
+    ["textpunkt", "/home/johan/Karta/topografi1M/text.gpkg"],
     ["textlinje", "/home/johan/Karta/topografi50/text.gpkg"],
     ["transformatoromradespunkt", "/home/johan/Karta/topografi50/ledningar.gpkg"],
     ["kultur_lamning_punkt", "/home/johan/Karta/topografi50/kulturhistorisklamning.gpkg"],
@@ -21,6 +22,7 @@ layers_to_add = [
     ["ralstrafik", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
     ["militart_omrade", "/home/johan/Karta/topografi50/militartomrade.gpkg"],
     ["TNE_FT_VAGDATA", "/home/johan/Karta/NVDB/slitlager.gpkg"],
+    ["vaglinje", "/home/johan/Karta/topografi1M/kommunikation.gpkg"],
     ["ovrig_vag", "/home/johan/Karta/topografi50/kommunikation.gpkg"],
     ["skyddadnatur", "/home/johan/Karta/topografi50/naturvard.gpkg"],
     ["byggnad", "/home/johan/Karta/topografi50/byggnadsverk.gpkg"],
@@ -53,7 +55,10 @@ for layer in layers_to_add:
         print("Layer {} failed to load!".format(layer_name))
     else:
         QgsProject.instance().addMapLayer(vlayer)
-        vlayer.loadNamedStyle(style_file)
+        if layer[1] == "/home/johan/Karta/topografi1M/text.gpkg":
+            vlayer.loadNamedStyle("/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi1M/textpunkt.qml")
+        else:
+            vlayer.loadNamedStyle(style_file)
         
 QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Götaland')[0].id()).setItemVisibilityChecked(False)
 QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Svealand')[0].id()).setItemVisibilityChecked(False)
