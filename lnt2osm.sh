@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ $BBOX ] || BBOX="jkpgmini"
+[ $BBOX ] || BBOX="sve"
 
 if [ "$BBOX" = "jkpg" ]; then
     OSMIUM_BBOX="13.5,57.5,15.5,59.0"
@@ -17,6 +17,8 @@ elif [ "$BBOX" = "gota" ]; then
     OGR_SEA="10.9 55.3 19.4 59.3"
     OGR_BBOX="261500 6129000 771000 6580000"
     OSMOSIS_BBOX="55.3,10.9,59.3,19.4"
+elif [ "$BBOX" = "sve" ]; then
+    OGR_BBOX="240000 6110000 930000 7680000"
 else
     echo "error"
 fi
@@ -486,8 +488,6 @@ ogr2ogr -f MVT combined \
     -dsco MINZOOM=0 \
     -dsco MAXZOOM=14 \
     -dsco COMPRESS=NO \
-    -dsco EXTENT=4096 \
-    -dsco BUFFER=80 \
     -dsco CONF=conf.json \
     $COMBINED \
     byggnadspunkt50 \
