@@ -17,7 +17,7 @@ layersList = [
     ["start_landningsbana", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp FROM start_landningsbana", "anlaggningsomrade_sverige.gpkg"],
     ["start_landningsbana_linje", [["topografi250", 9, 11]], "SELECT geom, objekttypnr, objekttyp FROM start_landningsbana_linje", "anlaggningsomrade_sverige.gpkg"],
     ["anlaggningsomrade", [["topografi50", 13, 14], ["topografi100", 12, 12], ["topografi250", 9, 11]], "SELECT geom, objekttypnr, objekttyp FROM anlaggningsomrade", "anlaggningsomrade_sverige.gpkg"],
-    ["ledningslinje", [["topografi50", 13, 14], ["topografi100", 12, 12], ["topografi250", 11, 11]], "SELECT geom, objekttypnr, objekttyp FROM ledningslinje", "ledningar_sverige.gpkg"],
+    ["ledningslinje", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp FROM ledningslinje", "ledningar_sverige.gpkg"],
     ["byggnadspunkt", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp, rotation FROM byggnadspunkt", "byggnadsverk_sverige.gpkg"],
     ["byggnadsanlaggningspunkt", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp FROM byggnadsanlaggningspunkt", "byggnadsverk_sverige.gpkg"],
     ["kultur_lamning_punkt", [["topografi50", 12, 14]], "SELECT geom, objekttypnr, objekttyp, rotation FROM kultur_lamning_punkt", "kulturhistorisklamning_sverige.gpkg"],
