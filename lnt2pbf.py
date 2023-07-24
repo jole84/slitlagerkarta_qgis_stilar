@@ -69,18 +69,18 @@ layersList = [
 ]
 
 for item in layersList:
-    print(("-" * 30) + item[0] + ("-" * 30)) # target names
+    print(("------------------------------") + item[0] + ("------------------------------")) # target names
     for layerToProcess in item[1]:
-        print('target_name ' + item[0])
+        print('target_name: ' + item[0] + " " + layerToProcess[0])
         jsonString = {'target_name': item[0], 'minzoom': layerToProcess[1], 'maxzoom': layerToProcess[2]}
         jsonStrings[item[0] + layerToProcess[0]] = jsonString
         layerMVT.append(item[0] + (layerToProcess[0]))
-        # ogrCmd = f"ogr2ogr {outputFile} -append -nln {item[0] + layerToProcess[0]} -clipsrc {OGR_BBOX} -dialect \"SQLite\" -sql \"{item[2]}\" $HOME/Karta/{layerToProcess[0]}/{item[3]}".replace("\r", "\t")
-        ogrCmd = f"ogr2ogr {outputFile} -append -nln {item[0] + layerToProcess[0]} -dialect \"SQLite\" -sql \"{item[2]}\" $HOME/Karta/{layerToProcess[0]}/{item[3]}".replace("\r", "\t")
+        ogrCmd = f"ogr2ogr {outputFile} -append -nln {item[0] + layerToProcess[0]} -clipsrc {OGR_BBOX} -dialect \"SQLite\" -sql \"{item[2]}\" $HOME/Karta/{layerToProcess[0]}/{item[3]}".replace("\r", "\t")
+        # ogrCmd = f"ogr2ogr {outputFile} -append -nln {item[0] + layerToProcess[0]} -dialect \"SQLite\" -sql \"{item[2]}\" $HOME/Karta/{layerToProcess[0]}/{item[3]}".replace("\r", "\t")
         # print(ogrCmd) # prints ogr2ogr command
         os.system(ogrCmd) # runs ogr2ogr command
 
-print("MVT")
+print(("------------------------------") + "MVT" + ("------------------------------"))
 ogrMVTCmd = f"ogr2ogr -f MVT combined -progress -dsco MINZOOM=0 -dsco MAXZOOM=14 -dsco BUFFER=160 -dsco COMPRESS=NO -dsco CONF=\"{jsonStrings}\" {outputFile} "
 ogrMVTCmd += " ".join(layerMVT)
 
