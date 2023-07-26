@@ -22,6 +22,7 @@ layersList = [
     ["byggnadsanlaggningspunkt", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp FROM byggnadsanlaggningspunkt", "byggnadsverk_sverige.gpkg"],
     ["kultur_lamning_punkt", [["topografi50", 12, 14]], "SELECT geom, objekttypnr, objekttyp, rotation FROM kultur_lamning_punkt", "kulturhistorisklamning_sverige.gpkg"],
     ["anlaggningsomradespunkt", [["topografi50", 12, 14]], "SELECT geom, objekttypnr, andamal, rotation FROM anlaggningsomradespunkt", "anlaggningsomrade_sverige.gpkg"],
+    ["hydroanlaggningspunkt", [["topografi50", 12, 14]], "SELECT geom, objekttypnr, objekttyp, rotation FROM hydroanlaggningspunkt", "hydrografi_sverige.gpkg"],
     ["naturvardslinje", [["topografi50", 13, 14], ["topografi100", 12, 12]], "SELECT geom, objekttypnr, objekttyp FROM naturvardslinje", "naturvard_sverige.gpkg"],
     ["byggnad", [["topografi50", 13, 14], ["topografi100", 11, 12]], "SELECT geom, objekttypnr, objekttyp FROM byggnad", "byggnadsverk_sverige.gpkg"],
     ["textpunkt", [["topografi50", 13, 14], ["topografi100", 12, 12], ["topografi250", 11, 11], ["topografi1M", 8, 10]], "SELECT geom, karttext AS name, textstorleksklass, textlage, textriktning, texttyp FROM textpunkt", "text_sverige.gpkg"],
