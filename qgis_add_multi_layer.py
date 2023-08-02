@@ -34,6 +34,7 @@ layers_to_add = [
     ["hojdkurvstext", "hojd.gpkg"],
     ["kultur_lamning_linje", "kulturhistorisklamning.gpkg"],
     ["start_landningsbana", "anlaggningsomrade.gpkg"],
+    ["start_landningsbana_linje", "anlaggningsomrade.gpkg"],
     ["hojdlinje", "hojd.gpkg"],
     ["flygplatsomrade", "anlaggningsomrade.gpkg"],
     ["markkantlinje", "mark.gpkg"],
@@ -95,10 +96,7 @@ def addQgisLayer(layer_name, path_to_layer):
 
         if layer_name == "Bakgrund" or layer_name == "land":
             vlayer.setScaleBasedVisibility(False)
-        
-        if layer_name == "ATK":
-            vlayer.setMinimumScale(200000)
-        
+
         if layer_name == "vaglinje":
             vlayer.setMinimumScale(2000000)
             vlayer.setMaximumScale(200000 + 1)
@@ -108,6 +106,7 @@ def addQgisLayer(layer_name, path_to_layer):
 # vlayer.setMaximumScale(1000000.0)
 
 # bakgrund
+layerGroup = ["", 100000000, 10]
 for layer in sverigeFiler:
     addQgisLayer(layer[0], layer[1])
 
@@ -123,9 +122,13 @@ for layer in layers_to_add:
             if layer_name == "vaglinje" and layerGroup[0] != "topografi1M/":
                 continue
 
+            if layer_name == "skyddadnatur" and vagKarta:
+                continue
+
             addQgisLayer(layer_name, path_to_layer)
 
 # ATK
+layerGroup = ["", 200000, 10]
 addQgisLayer(ATK[0], ATK[1])
 
 if vagKarta:
