@@ -82,7 +82,7 @@ for item in layersList:
         os.system(ogrCmd) # runs ogr2ogr command
 
 print(("------------------------------") + "MVT" + ("------------------------------"))
-ogrMVTCmd = f"ogr2ogr -f MVT combined -progress -dsco MINZOOM=0 -dsco MAXZOOM=14 -dsco BUFFER=160 -dsco COMPRESS=NO -dsco CONF=\"{jsonStrings}\" {outputFile} "
+ogrMVTCmd = f"ogr2ogr -f MVT combined -progress -dsco MINZOOM=0 -dsco MAXZOOM=14 -dsco BUFFER=320 -dsco COMPRESS=NO -dsco CONF=\"{jsonStrings}\" {outputFile} "
 ogrMVTCmd += " ".join(layerMVT)
 
 # print(ogrMVTCmd)
