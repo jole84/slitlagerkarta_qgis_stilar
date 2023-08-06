@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Place Sverige_Hastighetsgräns*.gpkg and ATK_matplats.gpkg in atk/
+# Place ISA.gpkg and ATK_matplats.gpkg in folder
 
-isa_file="$(ls -1 atk/Sverige_Hastighetsgräns*.gpkg)"
-atk_file="atk/ATK_matplats.gpkg"
+isa_file="ISA.gpkg"
+atk_file="ATK_matplats.gpkg"
 atk_3857="atk_3857.gpkg"
 isa_3857="isa_3857.gpkg"
 buffered="buffered.gpkg"
@@ -19,25 +19,25 @@ if [ ! -f $isa_file ] || [ ! -f $atk_file ]; then
     exit
 fi
 
-echo "creating atk file..."
+echo "Konverterar ATK fil..."
 $qgis_ogr2ogr $atk_3857 \
     -t_srs "EPSG:3857" \
     $atk_file
 
-echo "creating isa file..."
+echo "Konverterar ISA fil..."
 $qgis_ogr2ogr $isa_3857 \
     -t_srs "EPSG:3857" \
     -skipfailures \
     $isa_file
 
-# buffer
+echo "Buffrar ATK fil..."
 $qgis_process \
     run native:buffer \
     INPUT=$atk_3857 \
     DISTANCE=6 \
     OUTPUT=$buffered
 
-# join buffered+isa
+echo "Joinar buffer + ISA..."
 $qgis_process \
     run native:joinattributesbylocation \
     INPUT=$buffered \
@@ -46,7 +46,7 @@ $qgis_process \
     METHOD=2 \
     OUTPUT=$joined
 
-# join atk+joined
+echo "Joinar ATK + ISA-buffer..."
 $qgis_process \
     run native:joinattributesbylocation \
     INPUT=$atk_3857 \
@@ -55,4 +55,5 @@ $qgis_process \
     METHOD=2 \
     OUTPUT=$output_atk
 
+echo "Tar bort temporära filer..."
 rm $atk_3857 $isa_3857 $buffered $joined
