@@ -94,8 +94,11 @@ def addQgisLayer(layer_name, path_to_layer):
         if layer_name == "TNE_FT_VAGDATA":
             vlayer.setMinimumScale(200000)
 
-        if layer_name == "Bakgrund" or layer_name == "land":
+        if layer_name == "Bakgrund":
             vlayer.setScaleBasedVisibility(False)
+
+        if layer_name == "land":
+            vlayer.setMaximumScale(500000)
 
         if layer_name == "vaglinje":
             vlayer.setMinimumScale(2000000)
@@ -122,8 +125,9 @@ for layer in layers_to_add:
             if layer_name == "vaglinje" and layerGroup[0] != "topografi1M/":
                 continue
 
-            if layer_name == "skyddadnatur" and vagKarta:
-                continue
+            if vagKarta:
+                if layer_name == "skyddadnatur" or layer_name == "hojdlinje" or layer_name == "hojdkurvstext" or layer_name == "sankmark":
+                    continue
 
             addQgisLayer(layer_name, path_to_layer)
 
