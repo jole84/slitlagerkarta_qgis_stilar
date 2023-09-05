@@ -48,6 +48,7 @@ vagKartaLayers = [
     ["VIS_DK_O_90_P_ficka", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
     ["VIS_DK_O_32_Rastplats", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
     ["NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
+    ["Trafikplats_3857", "/home/johan/Karta/NVDB/Trafikplats_vag.gpkg"]
 ]
 
 sverigeFiler = [
