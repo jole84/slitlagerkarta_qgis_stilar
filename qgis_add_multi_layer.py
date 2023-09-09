@@ -101,6 +101,9 @@ def addQgisLayer(layer_name, path_to_layer):
         if layer_name == "land":
             vlayer.setMaximumScale(500000)
 
+        if layer_name == "start_landningsbana_linje":
+            vlayer.setMinimumScale(2000000)
+
         if layer_name == "vaglinje":
             vlayer.setMinimumScale(2000000)
             vlayer.setMaximumScale(200000 + 1)
