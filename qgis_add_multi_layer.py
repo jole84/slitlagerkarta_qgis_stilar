@@ -79,7 +79,7 @@ def addQgisLayer(layer_name, path_to_layer):
     else:
         style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name) # else use topo50 style
     if not vlayer.isValid():
-        print("Layer {} failed to load!".format(layer_name))
+        print("Layer {} from {} failed to load!".format(layer_name, path_to_layer))
     else:
         QgsProject.instance().addMapLayer(vlayer)
         vlayer.loadNamedStyle(style_file)
