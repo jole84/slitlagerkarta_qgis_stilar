@@ -71,12 +71,13 @@ EPSG:3857
 
 #### Beställning Trafikverket homogeniserade:
 	Driftbidrag statligt/Vägdelsnr
+	Gatunamn/Namn
 	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
+	Höjdhinder upp till 4,5 m/Fri höjd
 	Slitlager/Slitlagertyp
+	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
 	Vägbredd/Bredd
 	Vägtrafiknät/Nättyp
-	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
-
 #### Beställning Trafikverket Stratväg:
 	Höjdhinder upp till 4,5 m
 	Rastplats
