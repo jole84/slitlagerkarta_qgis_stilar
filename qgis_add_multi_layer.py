@@ -3,8 +3,8 @@
 # For use in QGIS internal python console
 
 from os.path import exists, isfile
-vagKarta = True
 vagKarta = False
+vagKarta = True
 
 layers_to_add = [
     ["textpunkt", "text.gpkg"],
@@ -23,8 +23,8 @@ layers_to_add = [
     ["transformatoromrade", "ledningar.gpkg"],
     ["ralstrafik", "kommunikation.gpkg"],
     ["militart_omrade", "militartomrade.gpkg"],
+    ["TNE_FT_VAGDATA_SIMPLIFIED", "TNE_FT_VAGDATA_SIMPLIFIED.gpkg"],
     ["TNE_FT_VAGDATA", "slitlager.gpkg"],
-    ["vaglinje", "kommunikation.gpkg"],
     ["ovrig_vag", "kommunikation.gpkg"],
     ["skyddadnatur", "naturvard.gpkg"],
     ["byggnad", "byggnadsverk.gpkg"],
@@ -111,8 +111,7 @@ def addQgisLayer(layer_name, path_to_layer):
         if layer_name == "VIS_DK_O_32_Rastplats":
             vlayer.setMinimumScale(1000000)
 
-        if layer_name == "vaglinje":
-            vlayer.setMinimumScale(2000000)
+        if layer_name == "TNE_FT_VAGDATA_SIMPLIFIED":
             vlayer.setMaximumScale(200000 + 1)
 
 # vlayer.setScaleBasedVisibility(True)
@@ -126,15 +125,15 @@ for layer in sverigeFiler:
 
 for layer in layers_to_add:
     for layerGroup in layerGroups:
-        if exists(mainDirectory + layerGroup[0] + layer[1]) or layer[0] == "TNE_FT_VAGDATA":
+        if exists(mainDirectory + layerGroup[0] + layer[1]) or layer[0] == "TNE_FT_VAGDATA" or layer[0] == "TNE_FT_VAGDATA_SIMPLIFIED":
             layer_name = layer[0]
             path_to_layer = mainDirectory + layerGroup[0] + layer[1]
 
             if layer_name == "TNE_FT_VAGDATA" and layerGroup[0] == "topografi50/":
                 path_to_layer = mainDirectory + "NVDB/" + layer[1]
-            
-            if layer_name == "vaglinje" and layerGroup[0] != "topografi1M/":
-                continue
+
+            if layer_name == "TNE_FT_VAGDATA_SIMPLIFIED" and layerGroup[0] == "topografi50/":
+                path_to_layer = mainDirectory + "NVDB/" + layer[1]
 
             if vagKarta:
                 if layer_name == "skyddadnatur" or layer_name == "hojdlinje" or layer_name == "hojdkurvstext" or layer_name == "sankmark":
