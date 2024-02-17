@@ -3,8 +3,8 @@
 # For use in QGIS internal python console
 
 from os.path import exists, isfile
-vagKarta = False
 vagKarta = True
+vagKarta = False
 
 layers_to_add = [
     ["textpunkt", "text.gpkg"],
@@ -112,6 +112,7 @@ def addQgisLayer(layer_name, path_to_layer):
             vlayer.setMinimumScale(1000000)
 
         if layer_name == "TNE_FT_VAGDATA_SIMPLIFIED":
+            vlayer.setMinimumScale(30000000)
             vlayer.setMaximumScale(200000 + 1)
 
 # vlayer.setScaleBasedVisibility(True)
