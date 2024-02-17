@@ -3,8 +3,7 @@
 # For use in QGIS internal python console
 
 from os.path import exists, isfile
-vagKarta = True
-vagKarta = False
+vagKarta = 
 
 layers_to_add = [
     ["textpunkt", "text.gpkg"],
@@ -153,3 +152,5 @@ if vagKarta:
 # QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Götaland')[0].id()).setItemVisibilityChecked(False)
 # QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Svealand')[0].id()).setItemVisibilityChecked(False)
 # QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Norrland')[0].id()).setItemVisibilityChecked(False)
+
+iface.messageBar().pushMessage("Finished loading!", level=Qgis.Info, duration=5)
