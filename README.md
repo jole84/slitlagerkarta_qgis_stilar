@@ -71,6 +71,7 @@ EPSG:3857
 
 #### Beställning Trafikverket homogeniserade:
 	Driftbidrag statligt/Vägdelsnr
+ 	Funktionell vägklass/Klass
 	Gatunamn/Namn
 	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
 	Höjdhinder upp till 4,5 m/Fri höjd
