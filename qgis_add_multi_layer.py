@@ -22,8 +22,8 @@ layers_to_add = [
     ["transformatoromrade", "ledningar.gpkg"],
     ["ralstrafik", "kommunikation.gpkg"],
     ["militart_omrade", "militartomrade.gpkg"],
-    ["TNE_FT_VAGDATA_SIMPLIFIED", "TNE_FT_VAGDATA_SIMPLIFIED.gpkg"],
-    ["TNE_FT_VAGDATA", "slitlager.gpkg"],
+    ["TNE_FT_VAGDATA_SIMPLIFIED", "vagnat.gpkg"],
+    ["TNE_FT_VAGDATA", "vagnat.gpkg"],
     ["ovrig_vag", "kommunikation.gpkg"],
     ["skyddadnatur", "naturvard.gpkg"],
     ["byggnad", "byggnadsverk.gpkg"],
@@ -46,8 +46,7 @@ ATK = ["ATK", "/home/johan/Karta/NVDB/ATK.gpkg"]
 vagKartaLayers = [
     ["VIS_DK_O_90_P_ficka", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
     ["VIS_DK_O_32_Rastplats", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
-    ["NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/frih_test.gpkg"],
-    # ["NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/Stratvag.gpkg"],
+    ["NVDB_DK_O_24_Hojdhinder45dm", "/home/johan/Karta/NVDB/vagnat.gpkg"],
     ["Trafikplats_3857", "/home/johan/Karta/NVDB/Trafikplats_vag.gpkg"]
 ]
 
