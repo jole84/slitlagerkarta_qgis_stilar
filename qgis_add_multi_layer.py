@@ -2,6 +2,9 @@
 
 # For use in QGIS internal python console
 
+# QgsExpressionContextUtils.setProjectVariable(QgsProject.instance(), 'myvar','hello world')
+# QgsExpressionContextUtils.projectScope(QgsProject.instance()).variable('myvar')
+
 from os.path import exists, isfile
 vagKarta = 
 
@@ -145,8 +148,11 @@ layerGroup = ["", 200000, 10]
 addQgisLayer(ATK[0], ATK[1])
 
 if vagKarta:
+    QgsExpressionContextUtils.setProjectVariable(QgsProject.instance(), 'vagKarta', True)
     for layer in vagKartaLayers:
         addQgisLayer(layer[0], layer[1])
+else:
+    QgsExpressionContextUtils.setProjectVariable(QgsProject.instance(), 'vagKarta', False)
         
 # QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Götaland')[0].id()).setItemVisibilityChecked(False)
 # QgsProject.instance().layerTreeRoot().findLayer(QgsProject.instance().mapLayersByName('Svealand')[0].id()).setItemVisibilityChecked(False)
