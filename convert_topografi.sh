@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -n "$1" ]; then
+    cd $1
+fi
+
 unzip "*.zip"
 
 for FILE in *_sverige.gpkg
