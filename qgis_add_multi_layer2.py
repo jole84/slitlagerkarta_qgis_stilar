@@ -2,10 +2,10 @@
 from os.path import exists, isfile
 
 # For use in QGIS internal python console
-vagKarta = False
+vagKarta = True
 
 mainDirectory = "/home/johan/Karta/"
-
+gitDirectory = "/home/johan/git/"
 
 layers_to_add = [
     ["textpunkt", "text.gpkg"],
@@ -44,18 +44,18 @@ layers_to_add = [
 ]
 
 vagKartaLayers = [
-    ["VIS_DK_O_90_P_ficka", "Stratvag.gpkg"],
-    ["VIS_DK_O_32_Rastplats", "Stratvag.gpkg"],
-    ["NVDB_DK_O_24_Hojdhinder45dm", "vagnat.gpkg"],
-    ["Trafikplats_3857", "Trafikplats_vag.gpkg"]
+    ["VIS_DK_O_90_P_ficka", "Stratvag.gpkg", ["NVDB/", 200000, 10]],
+    ["VIS_DK_O_32_Rastplats", "Stratvag.gpkg", ["NVDB/", 1000000, 10]],
+    ["NVDB_DK_O_24_Hojdhinder45dm", "vagnat.gpkg", ["NVDB/", 200000, 10]],
+    ["Trafikplats_3857", "Trafikplats_vag.gpkg", ["NVDB/", 250000, 10]]
 ]
 
 sverigeFiler = [
-    ["Bakgrund", "Sverige.gpkg"],
-    ["land", "Sverige.gpkg"],
-    # ["Svealand", "Sverige.gpkg"],
-    # ["Norrland", "Sverige.gpkg"],
-    # ["Götaland", "Sverige.gpkg"],
+    ["Bakgrund", "Sverige.gpkg", ["", 1000000000, 10]],
+    ["land", "Sverige.gpkg", ["", 1000000000, 500000]],
+    # ["Svealand", "Sverige.gpkg", ["", 1000000000, 10]],
+    # ["Norrland", "Sverige.gpkg", ["", 1000000000, 10]],
+    # ["Götaland", "Sverige.gpkg", ["", 1000000000, 10]],
 ]
 
 # layer name, minscale, maxscale
@@ -74,21 +74,20 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
     maxscale = layerGroup[2]
     path_to_layer = mainDirectory + layerGroup[0] + layerSource + "|layername=" + layer_name
 
-    if vagKarta and isfile("/home/johan/git/slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)): # check if style exists in stil_vagkarta dir:
-        style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)
+    if vagKarta and isfile(gitDirectory + "slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)): # check if style exists in stil_vagkarta dir:
+        style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_vagkarta/{}.qml".format(layer_name)
     else:
-        style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name) # else use topo50 style
+        style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name) # else use topo50 style
     
     # undantag:
-    if vagKarta:
-        if layer_name == "skyddadnatur" or layer_name == "hojdlinje" or layer_name == "hojdkurvstext" or layer_name == "sankmark":
-            return
+    if vagKarta and layer_name in ["skyddadnatur", "hojdlinje", "hojdkurvstext", "sankmark"]:
+        return
     
-    if layer_name == "Bakgrund" or layer_name == "land":
-        path_to_layer = "/home/johan/git/slitlagerkarta_qgis_stilar/Sverige.gpkg|layername=" + layer_name
+    if layerSource == "Sverige.gpkg":
+        path_to_layer = gitDirectory + "slitlagerkarta_qgis_stilar/Sverige.gpkg|layername=" + layer_name
 
     if layer_name == "textpunkt" and layerGroup[0] != "topografi50/":
-        style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi1M/textpunkt.qml"
+        style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_topografi1M/textpunkt.qml"
         
     if layer_name == "TNE_FT_VAGDATA":
         if layerGroup[0] != "topografi50/":
@@ -103,26 +102,16 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
         minscale = 30000000
         maxscale = 200000 + 1
         if vagKarta:
-            style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_vagkarta/TNE_FT_VAGDATA_SIMPLIFIED.qml"
+            style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_vagkarta/TNE_FT_VAGDATA_SIMPLIFIED.qml"
         else:
-            style_file = "/home/johan/git/slitlagerkarta_qgis_stilar/stil_topografi50/TNE_FT_VAGDATA_SIMPLIFIED.qml"
-
-    if layer_name == "land":
-        minscale = 1000000000
-        maxscale = 500000
+            style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_topografi50/TNE_FT_VAGDATA_SIMPLIFIED.qml"
     
     if layer_name == "start_landningsbana_linje":
         minscale = 2000000
 
-    if layer_name == "Trafikplats_3857":
-        minscale = 500000
-        
-    if layer_name == "VIS_DK_O_32_Rastplats":
-        minscale = 1000000
-
     vlayer = QgsVectorLayer(path_to_layer, layer_name, "ogr")
     if not vlayer.isValid():
-        print("Layer {} from {} failed to load!".format(layer_name, layerSource))
+        print("Layer {} from {} failed to load!".format(layer_name, layerGroup[0]))
     else:
         QgsProject.instance().addMapLayer(vlayer)
         vlayer.loadNamedStyle(style_file)
@@ -136,7 +125,7 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
 
 # call addQgisLayer
 for layer in sverigeFiler:
-    addQgisLayer(layer[0], layer[1], ["", 200000, 10])
+    addQgisLayer(layer[0], layer[1], layer[2])
 
 for layer in layers_to_add:
     for layerGroup in layerGroups:
@@ -145,7 +134,7 @@ for layer in layers_to_add:
 if vagKarta:
     QgsExpressionContextUtils.setProjectVariable(QgsProject.instance(), 'vagKarta', True)
     for layer in vagKartaLayers:
-        addQgisLayer(layer[0], layer[1], ["NVDB/", 1000000, 10])
+        addQgisLayer(layer[0], layer[1], layer[2])
 else:
     QgsExpressionContextUtils.setProjectVariable(QgsProject.instance(), 'vagKarta', False)
 
