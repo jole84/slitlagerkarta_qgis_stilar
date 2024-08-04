@@ -12,17 +12,17 @@ ogr2ogr $OUTPUT \
     -where "Vagtr_474 = 1" \
     $INPUT
 
-echo "Skapar förenklat vägnät..."
-ogr2ogr $OUTPUT \
-    -nln "TNE_FT_VAGDATA_SIMPLIFIED" \
-    -nlt MULTILINESTRING \
-    -progress \
-    -simplify 50 \
-    -skipfailures \
-    -t_srs "EPSG:3857" \
-    -update \
-    -where "Klass_181 <= 6 AND Vagtr_474 = 1 AND Slitl_152 = 1 OR Vagtr_474 = 1 AND Slitl_152 = 1 AND Vagna_406 IS NOT NULL" \
-    $INPUT
+# echo "Skapar förenklat vägnät..."
+# ogr2ogr $OUTPUT \
+#     -nln "TNE_FT_VAGDATA_SIMPLIFIED" \
+#     -nlt MULTILINESTRING \
+#     -progress \
+#     -simplify 50 \
+#     -skipfailures \
+#     -t_srs "EPSG:3857" \
+#     -update \
+#     -where "Klass_181 <= 6 AND Vagtr_474 = 1 AND Slitl_152 = 1 OR Vagtr_474 = 1 AND Slitl_152 = 1 AND Vagna_406 IS NOT NULL" \
+#     $INPUT
 
 echo "Skapar höjdhinderlager"
 ogr2ogr $OUTPUT \
