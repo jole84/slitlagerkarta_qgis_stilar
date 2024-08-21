@@ -80,9 +80,6 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
         style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_topografi50/{}.qml".format(layer_name) # else use topo50 style
     
     # undantag:
-    if layer_name == "administrativ_grans" and layerGroup[0] == "topografi50/" or layerGroup[0] == "topografi100/":
-        return
-    
     if vagKarta and layer_name in ["skyddadnatur", "hojdlinje", "hojdkurvstext", "sankmark"]:
         return
     
