@@ -2,7 +2,7 @@
 from os.path import exists, isfile
 
 # For use in QGIS internal python console
-vagKarta = True
+vagKarta = False
 
 mainDirectory = "/home/johan/Karta/"
 gitDirectory = "/home/johan/git/"
@@ -10,6 +10,7 @@ gitDirectory = "/home/johan/git/"
 layers_to_add = [
     ["textpunkt", "text.gpkg"],
     ["textlinje", "text.gpkg"],
+    ["vaglinje", "kommunikation.gpkg"],
     ["transformatoromradespunkt", "ledningar.gpkg"],
     ["kultur_lamning_punkt", "kulturhistorisklamning.gpkg"],
     ["hydroanlaggningspunkt", "hydrografi.gpkg"],
@@ -86,6 +87,14 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
     if layerSource == "Sverige.gpkg":
         path_to_layer = gitDirectory + "slitlagerkarta_qgis_stilar/Sverige.gpkg|layername=" + layer_name
 
+    if layer_name == "vaglinje" and layerGroup[0] != "topografi100/":
+        return
+    
+    if layer_name == "vaglinje" and layerGroup[0] == "topografi100/":
+        layer_name = "vägnummer"
+        minscale = 1000000
+        maxscale = 1000
+
     if layer_name == "textpunkt" and layerGroup[0] != "topografi50/":
         style_file = gitDirectory + "slitlagerkarta_qgis_stilar/stil_topografi1M/textpunkt.qml"
         
@@ -109,7 +118,7 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
     if layer_name == "start_landningsbana_linje":
         minscale = 2000000
 
-    vlayer = QgsVectorLayer(path_to_layer, layer_name, "ogr")
+    vlayer = QgsVectorLayer(path_to_layer, layer_name + "_" + layerGroup[0], "ogr")
     if not vlayer.isValid():
         print("Layer {} from {} failed to load!".format(layer_name, layerGroup[0]))
     else:
