@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 INPUT="$HOME/Karta/NVDB/vagnat.gdb/"
 OUTPUT="$HOME/Karta/NVDB/vagnat.gpkg"
