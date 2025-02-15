@@ -7,9 +7,7 @@ xmlpayload = """
 <REQUEST>
   <LOGIN authenticationkey="fa68891ca1284d38a637fe8d100861f0"/>
   <QUERY objecttype="TrafficSafetyCamera" namespace="road.infrastructure" schemaversion="1">
-    <FILTER>
-        <EQ name="Name" value="Östergården" />
-    </FILTER>
+    <FILTER></FILTER>
     <INCLUDE>Name</INCLUDE>
     <INCLUDE>RoadNumber</INCLUDE>
     <INCLUDE>Bearing</INCLUDE>
@@ -28,7 +26,7 @@ def getSpeed(x, y):
         <LOGIN authenticationkey="fa68891ca1284d38a637fe8d100861f0"/>
         <QUERY objecttype='Hastighetsgräns' namespace='vägdata.nvdb_dk_o' schemaversion='1.3'>
             <FILTER>
-                <NEAR name='Geometry.WKT-SWEREF99TM-3D' value="{x} {y}" maxdistance="10m" />
+                <NEAR name='Geometry.WKT-SWEREF99TM-3D' value="{x} {y}" maxdistance="20m" />
             </FILTER>
             <INCLUDE>Högsta_tillåtna_hastighet</INCLUDE>
         </QUERY>
@@ -39,7 +37,6 @@ def getSpeed(x, y):
     speed_list = []
     for camera in data['RESPONSE']['RESULT'][0]['Hastighetsgräns']:
         speed_list.append(camera["Högsta_tillåtna_hastighet"])
-    print(speed_list)
     return int(max(set(speed_list), key=speed_list.count))
 
 camera_list = []
