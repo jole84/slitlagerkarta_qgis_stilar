@@ -46,7 +46,7 @@ layers_to_add = [
 
 vagKartaLayers = [
     ["VIS_DK_O_90_P_ficka", "Stratvag.gpkg", ["NVDB/", 200000, 10]],
-    ["VIS_DK_O_32_Rastplats", "Stratvag.gpkg", ["NVDB/", 1000000, 10]],
+    ["Rastplats", "Rastplats.gpkg", ["NVDB/", 1000000, 10]],
     ["NVDB_DK_O_24_Hojdhinder45dm", "vagnat.gpkg", ["NVDB/", 200000, 10]],
     ["Trafikplats_3857", "Trafikplats_vag.gpkg", ["NVDB/", 250000, 10]]
 ]

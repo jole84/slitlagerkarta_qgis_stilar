@@ -1,5 +1,5 @@
 #!/bin/bash
-# /usr/bin/python3 /home/johan/git/private/python/atk_download.py
+# /usr/bin/python3 /home/johan/git/private/python/trafikverket_atk_download.py
 # Place ISA.gpkg and ATK_matplats.gpkg in folder
 
 isa_file="ISA.gpkg"
