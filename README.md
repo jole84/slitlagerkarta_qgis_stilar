@@ -77,10 +77,14 @@ EPSG:3857
 	Funktionell vägklass/Klass
 	Gatunamn/Namn
 	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
+	Hastighetsgräns/Högsta tillåtna hastighet (Bakriktningen)
 	Slitlager/Slitlagertyp
 	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
 	Vägbredd/Bredd
 	Vägtrafiknät/Nättyp
+	Vägtyp/körfältsbeskrivning
+	Övrigt vägnamn/Namn
+	Antal körfält2/Körfältsantal
 #### Beställning Trafikverket Stratväg:
 	Parkeringsficka
 
