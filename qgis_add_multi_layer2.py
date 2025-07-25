@@ -25,8 +25,9 @@ layers_to_add = [
     ["transformatoromrade", "ledningar.gpkg"],
     ["ralstrafik", "kommunikation.gpkg"],
     ["militart_omrade", "militartomrade.gpkg"],
-    ["TNE_FT_VAGDATA_SIMPLIFIED", "vagnat.gpkg"],
+    ["TNE_FT_VAGDATA_SIMPLIFIED", "vagnat_simplified.gpkg"],
     ["TNE_FT_VAGDATA", "vagnat.gpkg"],
+    ["kurvighet", "kurvighet.gpkg"],
     ["ovrig_vag", "kommunikation.gpkg"],
     ["skyddadnatur", "naturvard.gpkg"],
     ["byggnad", "byggnadsverk.gpkg"],
@@ -103,11 +104,17 @@ def addQgisLayer(layer_name, layerSource, layerGroup):
             return
         path_to_layer = mainDirectory + "NVDB/vagnat.gpkg|layername=TNE_FT_VAGDATA"
         minscale = 200000
+    
+    if layer_name == "kurvighet":
+        if layerGroup[0] != "topografi50/" or vagKarta:
+            return
+        path_to_layer = mainDirectory + "NVDB/kurvighet.gpkg|layername=kurvighet"
+        minscale = 500000
 
     if layer_name == "TNE_FT_VAGDATA_SIMPLIFIED":
         if layerGroup[0] != "topografi50/":
             return
-        path_to_layer = mainDirectory + "NVDB/vagnat.gpkg|layername=TNE_FT_VAGDATA"
+        path_to_layer = mainDirectory + "NVDB/vagnat_simplified.gpkg|layername=TNE_FT_VAGDATA_SIMPLIFIED"
         minscale = 30000000
         maxscale = 200000 + 1
         if vagKarta:
