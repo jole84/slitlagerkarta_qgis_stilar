@@ -18,3 +18,5 @@ do
         $FILE
     rm $LAYERNAME"_sverige.zip"
 done
+
+rm "*_sverige.gpkg"

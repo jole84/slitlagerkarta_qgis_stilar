@@ -85,6 +85,9 @@ EPSG:3857
 	Vägtyp/körfältsbeskrivning
 	Övrigt vägnamn/Namn
 	Antal körfält2/Körfältsantal
+	
+	Tättbebyggt område
+	Gatutyp/Typ
 #### Beställning Trafikverket Stratväg:
 	Parkeringsficka
 

@@ -1,34 +1,24 @@
 #!/bin/sh
 
-INPUT="$HOME/Karta/NVDB/vagnat.gdb"
-OUTPUT="$HOME/Karta/NVDB/vagnat.gpkg"
+INPUT="$HOME/Karta/NVDB/vagnat.gpkg"
+OUTPUT="$HOME/Karta/NVDB/vagnat_SIMPLE_TEST.gpkg"
 
 echo "Skapar vägnät..."
 ogr2ogr $OUTPUT \
     -nln "TNE_FT_VAGDATA" \
-    -progress \
+    -clipsrc 1450000 7800000 1700000 8100000 \
     -skipfailures \
     -t_srs "EPSG:3857" \
-    -where "Vagtr_474 = 1" \
+    -sql @simple.sql \
     $INPUT
 
-echo "Skapar förenklat vägnät..."
-ogr2ogr "$HOME/Karta/NVDB/vagnat_simplified.gpkg" \
-    -nln "TNE_FT_VAGDATA_SIMPLIFIED" \
-    -nlt MULTILINESTRING \
-    -progress \
-    -skipfailures \
-    -t_srs "EPSG:3857" \
-    "$HOME/Karta/topografi250/kommunikation_sverige.gpkg" vaglinje
 
-echo "Skapar höjdhinderlager"
-ogr2ogr $OUTPUT \
-    -t_srs "epsg:3857" \
-    -dialect sqlite \
-    -sql "select Line_Interpolate_Point(SHAPE,0.5), Azimuth(StartPoint(SHAPE), EndPoint(SHAPE)) as rotation, Fri_h_143 as Fri_hojd from TNE_FT_VAGDATA where Fri_h_143 is not null and Vagtr_474 = 1" \
-    -nln NVDB_DK_O_24_Hojdhinder45dm \
-    -nlt MULTIPOINT \
-    -update \
-    $INPUT
+# vagnat.gpd
+    # -clipsrc 435000 6400000 500000 6450000 \
 
 # -spat_srs "EPSG:4236" -spat 14 57.5 15 58 \
+# TattbebyggtOmrade = 0
+
+# Typ_512 IN (10, 20)
+
+# Typ_512 (10 övergripande länk - 100 småväg)
