@@ -70,24 +70,25 @@ EPSG:3857
 	mark
 
 #### Beställning Trafikverket homogeniserade:
-	Höjdhinder upp till 4,5 m/Fri höjd
-	Cirkulationsplats(Framriktningen)
+	Antal körfält2/Körfältsantal
 	Cirkulationsplats(Bakriktningen)
+	Cirkulationsplats(Framriktningen)
 	Driftbidrag statligt/Vägdelsnr
 	Funktionell vägklass/Klass
 	Gatunamn/Namn
-	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
+	Gatutyp/Typ?
 	Hastighetsgräns/Högsta tillåtna hastighet (Bakriktningen)
+	Hastighetsgräns/Högsta tillåtna hastighet (Framriktningen)
+	Höjdhinder upp till 4,5 m/Fri höjd
 	Slitlager/Slitlagertyp
 	Strategiskt vägnät för tyngre transporter/Vägnät för tyngre transporter
+	Tättbebyggt område
 	Vägbredd/Bredd
+	Vägnummer/Europaväg
+	Vägnummer/Huvudnummer
 	Vägtrafiknät/Nättyp
 	Vägtyp/körfältsbeskrivning
-	Övrigt vägnamn/Namn
-	Antal körfält2/Körfältsantal
-	
-	Tättbebyggt område
-	Gatutyp/Typ
+<!-- 	Övrigt vägnamn/Namn -->
 #### Beställning Trafikverket Stratväg:
 	Parkeringsficka
 
